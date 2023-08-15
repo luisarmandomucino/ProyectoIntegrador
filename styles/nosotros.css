@@ -1,0 +1,30 @@
+.container-purple{
+    background-color: #8E7CC3;
+}
+
+.container-pink{
+    background-color: #F89BDD;
+}
+
+body{
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.title{
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 4em;
+    
+}
+
+.img-size{
+    width: 20em;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+p{
+    text-align: justify;
+}
