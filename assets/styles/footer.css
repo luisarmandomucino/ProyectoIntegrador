@@ -1,0 +1,26 @@
+h1,h2{
+    font-family: 'Cherry Bomb One', cursive;
+    color: white;
+}
+
+p{
+    font-family: 'IBM Plex Serif', serif;
+    color: white;
+    
+}
+
+.iconsSocialMedia i{
+    font-size: 40px;
+}
+
+.contactInformation i{
+    font-size: 35px;
+}
+
+#footerSuperior{
+    background-color: #8E7CC3;
+}
+
+#footerInferior{
+    background-color: #6A329F;
+}
