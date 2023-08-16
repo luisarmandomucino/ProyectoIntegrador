@@ -14,10 +14,12 @@ body{
 .title{
     font-family: 'Cherry Bomb One', cursive;
     font-size: 4em;
+    margin:0.5em 0;
     
 }
 
 .img-size{
+    margin:2em 0 ;
     width: 20em;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -28,4 +30,16 @@ body{
 
 p{
     text-align: justify;
+    margin-top: 3em;
+}
+
+@media  (max-width:600px){
+    .img-size{
+        width: 15em;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
 }
