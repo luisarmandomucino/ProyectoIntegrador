@@ -31,6 +31,7 @@ body{
 p{
     text-align: justify;
     margin-top: 3em;
+    font-size: 1.2em;
 }
 
 @media  (max-width:600px){
