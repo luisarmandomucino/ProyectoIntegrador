@@ -7,31 +7,24 @@
     background-color: #F89BDD;
 }
 
-body{
-    font-family: 'IBM Plex Serif', serif;
-}
-
 .title{
     font-family: 'Cherry Bomb One', cursive;
     font-size: 4em;
-    margin:0.5em 0;
-    
+    margin: 0.5em 0;
 }
 
 .img-size{
     margin:2em 0 ;
     width: 20em;
+    min-width: 20em;
+    max-width: 20em;
+    max-height: 30em;
+    min-height: 25em;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-}
-
-p{
-    text-align: justify;
-    margin-top: 3em;
-    font-size: 1.2em;
 }
 
 @media  (max-width:600px){
@@ -44,3 +37,4 @@ p{
         -o-border-radius: 10px;
     }
 }
+

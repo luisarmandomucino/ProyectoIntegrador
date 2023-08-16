@@ -1,29 +1,4 @@
-.navbar{
-    background-color: #FFD966 ;
+.letra-negra :is(h1,h2,h3,h4,h5,h6,p){
+    color: black;
 }
 
-.navbar ul{
-    width: 100%;
-    
-}
-
-.navbar{
-    transition: none;
-    transform: none;
-}
-
-.navbar  a{
-    color: #fff;
-    margin: 0;
-}
-
-.nav-link {
-    font-family: "Cherry Bomb One";
-    font-size: 24px ; 
-    color: #8E7CC3;
-    
-}
-
-.navbar-brand img{
-    margin-left: 20px;
-}   

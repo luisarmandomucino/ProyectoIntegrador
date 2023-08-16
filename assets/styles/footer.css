@@ -1,12 +1,12 @@
-h1,h2{
+.footer h1,h2,h3,h4,h5{
     font-family: 'Cherry Bomb One', cursive;
     color: white;
 }
 
-p{
+.footer p{
     font-family: 'IBM Plex Serif', serif;
     color: white;
-    
+    font-size: 0.9rem;
 }
 
 .iconsSocialMedia i{
@@ -23,4 +23,20 @@ p{
 
 #footerInferior{
     background-color: #6A329F;
+}
+
+.fitWithElement{
+    display: inline-block;
+    width: fit-content;
+}
+
+@media (max-width : 760px) {
+    .last-footer-div{
+        text-align: center;
+    }
+    .fitWithElement{
+        display: inline-block;
+        width: 100%;
+    }
+    
 }
