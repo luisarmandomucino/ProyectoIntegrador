@@ -1,0 +1,44 @@
+.container-purple{
+    background-color: #8E7CC3;
+    color: #fff;
+}
+
+.container-pink{
+    background-color: #F89BDD;
+}
+
+.title{
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 4em;
+    margin: 0.5em 0;
+}
+
+.img-size{
+    margin:2em 0 ;
+    width: 20em;
+    min-width: 20em;
+    max-width: 20em;
+    max-height: 30em;
+    min-height: 25em;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.img-size:hover{
+    transform: scale(1.2);
+}
+
+@media  (max-width:600px){
+    .img-size{
+        width: 15em;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+}
+

@@ -1,0 +1,24 @@
+img{
+    max-width: 100%;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box ;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+footer{
+    margin-top: auto;
+}
+p,label{
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.2em;
+}
+
+h1,h2,h3,h4,h5,h6,button,input[type="text"]{
+    font-family: "Cherry Bomb One";
+}
