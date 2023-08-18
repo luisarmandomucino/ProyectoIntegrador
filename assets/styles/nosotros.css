@@ -27,6 +27,10 @@
     -o-border-radius: 10px;
 }
 
+.img-size:hover{
+    transform: scale(1.2);
+}
+
 @media  (max-width:600px){
     .img-size{
         width: 15em;

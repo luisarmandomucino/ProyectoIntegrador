@@ -1,10 +1,10 @@
 .navbar{
     background-color: #FFD966 ;
+    z-index: 3;
 }
 
 .navbar ul{
     width: 100%;
-    
 }
 
 .navbar{
@@ -13,7 +13,7 @@
 }
 
 .navbar  a{
-    color: #fff;
+    color: #333;
     margin: 0;
 }
 
