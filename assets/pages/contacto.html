@@ -78,7 +78,65 @@
                 </div>
             </div>
         </nav>
+        
+        <!-- Form -->
+        <main class="contact container">
+            <div class="row g-3">
+                <div class="row mw-100">
+                    <div class="col-md-6">
+                        <h1 class="text-center">¡Contáctanos!  <i class="bi bi-send"></i></h1><br>
+                        <p class="text-center">Si tienes alguna duda, comentario o sugerencia, puedes contactárnos y nos comunicaremos contigo lo antes posible.</p>
+                    </div>
+                </div>
+                <div class="row row-reverse-form">
+                    <div class="col-md-6 contact-container" id="contact-container2">
+                        <div class="row mw-100 m-0 p-0">
+                            <div class="col-12 m-0 p-0" id="messages-box">
+                            </div>
+                        </div>
+                        <form id="contact-form" action="https://formsubmit.co/allanolivier1997@gmail.com" method="POST">
 
+                            <div class="div-input col-md-12">
+                                <label for="validationName"  class="form-label">Nombre</label>
+                                <input type="text" name="validationName" class="form-control" id="validationName" value="Luis" required>
+                            </div>
+                            <div class="div-input col-md-12">
+                                <label for="validationLastName" class="form-label">Apellido</label>
+                                <input type="text" name="validationLastName" class="form-control" id="validationLastName" value="armando" required>
+                            </div>
+                            <div class="div-input col-md-12">
+                                <label for="validationTel" class="form-label">Teléfono</label>
+                                <input type="text" name="validationTel" class="form-control" id="validationTel" value="0123456789" required>
+                            </div>
+                            <div class="div-input col-md-12">
+                                <label for="validationEmail" class="form-label">Correo electrónico</label>
+                                <input type="email" name="validationEmail" class="form-control" id="validationEmail" value="allanolivier1997@gmail.com" placeholder="name@example.com">
+                            </div>
+                            <div class="div-input mb-12">
+                                <label for="validationAsunto" class="form-label">Asunto</label>
+                                <textarea class="form-control" id="validationAsunto" rows="3">Prueba</textarea>
+                            </div>
+                        
+                            <div class="row mw-100">
+                                <div class="col-12 text-center">
+                                    <button type="submit" id="form-button" class="submit form-div-button text-center">
+                                        <i class="bi bi-send"></i>
+                                        Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                
+                    <div class="col-md-6">
+                        <img src="/assets/img/contact-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
         <footer class="footer container mw-100">
             <div class="row px-4 py-4" id="footerSuperior">
                 <div class="col-lg-2">
@@ -92,7 +150,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <h4>Acerca de la compañia</h4>
+                    <h4>Acerca de la compañía</h4>
                     <p>Bubble Bear no es solo una empresa; es una comunidad. Nos
                         encanta unir a las personas a través de nuestra pasión
                         compartida por la tapioca. Queremos ser parte de tu vida
@@ -132,6 +190,7 @@
             </div>
         </footer>
 
+        <script src="/assets/js/script.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
