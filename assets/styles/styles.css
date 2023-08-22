@@ -2,3 +2,46 @@
     color: black;
 }
 
+.contact{
+    margin-top: 200px;
+}
+
+.contact-container{
+    padding: 30px 50px;
+    background-color: #F89BDD;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    margin-bottom: 50px;
+    
+}
+
+.div-input{
+    margin-bottom: 20px;
+}
+
+.form-div-button{
+    background-color: #2C2081;
+    color: white;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-top: 20px;
+}
+
+p.alert{
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+@media(max-width:768px){
+    .row-reverse-form{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
