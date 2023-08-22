@@ -1,11 +1,8 @@
-
-
-
 function dataValidation( event ){
     //event.preventDefault();
-
+    
     let message = [];
-    const messagesBox = document.getElementById("messages-box")
+
     const firstName = document.getElementById("validationName").value;
     const lastName = document.getElementById("validationLastName").value;
     const telNumber = document.getElementById("validationTel").value;
@@ -24,15 +21,24 @@ function dataValidation( event ){
         message.push("<p class='alert'>Hace falta el número de telefono</p>");
     }
     
-    if (!asunto) {
-        message.push("<p class='alert'>Hace falta el asunto</p>");
-    }
-
     if (!email) {
         message.push("<p class='alert'>Hace falta el email</p>");
     }
 
-    messagesBox.innerHTML = message.join("");
+    if (!asunto) {
+        message.push("<p class='alert'>Hace falta el asunto</p>");
+    }
+
+    message = message.join("");
+
+    if(message){
+        Swal.fire({
+            icon: 'error',
+            html: message,
+            title: 'Error',
+          });
+    }
+
 }
 
 const formButton = document.getElementById("form-button");
@@ -47,15 +53,11 @@ const form = document.getElementById("contact-form");
         let email = document.getElementById("validationEmail").value;
         let message = document.getElementById("validationAsunto").value;
 
-          
           let emailData = {
                 to: "allanolivier1997@gmail.com",
                 subject: "Nuevo mensaje de contacto",
                 body: "Nombre: " + name + "\nCorreo electrónico: " + email + "\nMensaje: " + message
             };
 
-         
             alert("Mensaje enviado con éxito");
         });
-
-
