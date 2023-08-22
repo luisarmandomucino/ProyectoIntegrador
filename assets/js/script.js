@@ -17,7 +17,6 @@ function dataValidation( event ){
     }
 
     if(!lastName){
-        console.log("lastname")
         message.push( "<p class='alert'>Hace falta el apellido</p>");
     }
 
