@@ -1,12 +1,12 @@
-.letra-negra :is(h1,h2,h3,h4,h5,h6,p){
+.black-text-color :is(h1, h2, h3, h4, h5, h6, p) {
     color: black;
 }
 
-.contact{
+.contact {
     margin-top: 200px;
 }
 
-.contact-container{
+.contact-container {
     padding: 30px 50px;
     background-color: #F89BDD;
     border-radius: 12px;
@@ -15,14 +15,13 @@
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
     margin-bottom: 50px;
-    
 }
 
-.div-input{
+.div-input {
     margin-bottom: 20px;
 }
 
-.form-div-button{
+.form-div-button {
     background-color: #2C2081;
     color: white;
     padding: 15px 0;
@@ -32,16 +31,22 @@
     margin-top: 20px;
 }
 
-p.alert{
+p.alert {
     background-color: red;
     color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 0px 0;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-@media(max-width:768px){
-    .row-reverse-form{
+@media(max-width:768px) {
+    .row-reverse-form {
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    .contact-container {
+        padding: 30px 30px;
     }
 }
