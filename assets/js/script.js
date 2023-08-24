@@ -2,7 +2,6 @@ function dataValidation( event ){
     //event.preventDefault();
     
     let message = [];
-
     const firstName = document.getElementById("validationName").value;
     const lastName = document.getElementById("validationLastName").value;
     const telNumber = document.getElementById("validationTel").value;
