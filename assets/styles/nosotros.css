@@ -1,25 +1,20 @@
 .container-purple {
-    background-color: #8E7CC3;
+    background-color: var(--moradito);
     color: #fff;
 }
 
 .container-pink {
-    background-color: #F89BDD;
+    background-color: var(--rosadito);
 }
 
 .title {
-    font-family: 'Cherry Bomb One', cursive;
-    font-size: 4em;
-    margin: 0.5em 0;
+    margin-bottom: 5rem;
 }
 
 .img-size {
     margin: 2em 0;
-    width: 20em;
-    min-width: 100%;
-    max-width: 20em;
-    max-height: 30em;
-    min-height: 300px;
+    height: 400px;
+    width: 350px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -40,10 +35,9 @@
     -o-transform: scale(1.1);
 }
 
-@media ( max-width:600px ) {
+@media (max-width:600px) {
     .img-size {
-        width: 15em;
-        height: 370px;
+        height: 300px;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -52,6 +46,6 @@
     }
 }
 
-.main-nosotros{
+.main-nosotros {
     margin-top: 150px;
 }

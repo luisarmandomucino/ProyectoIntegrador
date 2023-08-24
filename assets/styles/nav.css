@@ -1,34 +1,39 @@
-.navbar{
-    background-color: #FFD966 ;
+.navbar {
+    background-color: var(--amarillo);
     z-index: 3;
 }
 
-.navbar ul{
+.navbar ul {
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.navbar{
-    transition: none;
-    transform: none;
-}
-
-.navbar  a{
-    color: #333;
+.navbar a {
+    color: #000;
     margin: 0;
 }
 
 .nav-link {
-    font-family: "Cherry Bomb One";
-    font-size: 24px ; 
-    color: #8E7CC3;
-    
+    font-size: 1.4rem;
+}
+
+.navbar-brand img {
+    margin-left: 20px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
 }
 
 .navbar-brand img{
-    margin-left: 20px;
-}   
+    height: 70px;
+    width: 70px;
+}
 
-.navbar{
-    position: fixed;
-    width: 100%;
+@media(max-width:1000px){
+    .navbar ul{
+        align-items: end;
+    }
 }
