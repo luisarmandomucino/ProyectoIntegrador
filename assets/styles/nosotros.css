@@ -1,39 +1,43 @@
-.container-purple{
-    background-color: #8E7CC3;
+.container-purple {
+    background-color: var(--moradito);
     color: #fff;
 }
 
-.container-pink{
-    background-color: #F89BDD;
+.container-pink {
+    background-color: var(--rosadito);
 }
 
-.title{
-    font-family: 'Cherry Bomb One', cursive;
-    font-size: 4em;
-    margin: 0.5em 0;
+.title {
+    margin-bottom: 5rem;
 }
 
-.img-size{
-    margin:2em 0 ;
-    width: 20em;
-    min-width: 20em;
-    max-width: 20em;
-    max-height: 30em;
-    min-height: 25em;
+.img-size {
+    margin: 2em 0;
+    height: 400px;
+    width: 350px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    transition: ease-in-out 300ms;
+    -webkit-transition: ease-in-out 300ms;
+    -moz-transition: ease-in-out 300ms;
+    -ms-transition: ease-in-out 300ms;
+    -o-transition: ease-in-out 300ms;
 }
 
-.img-size:hover{
-    transform: scale(1.2);
+.img-size:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
-@media  (max-width:600px){
-    .img-size{
-        width: 15em;
+@media (max-width:600px) {
+    .img-size {
+        height: 300px;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -42,4 +46,6 @@
     }
 }
 
-
+.main-nosotros {
+    margin-top: 150px;
+}

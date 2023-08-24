@@ -28,7 +28,7 @@
     </head>
     <body>
         <!-- Bootstrap Nav Bar -->
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg p-0">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html"><img
                         src="/assets/img/bubble_bear_logo.png"
@@ -83,20 +83,24 @@
         <main class="contact container">
             <div class="row">
                 <div class="row m-0 p-0 mw-100">
-                    <div class="col-md-6">
+                    <div class=" col-md-6">
                         <h1 class="text-center">¡Contáctanos! <i
                                 class="bi bi-send"></i></h1><br>
                         <p class="text-center">Si tienes alguna duda, comentario
                             o sugerencia, puedes contactárnos y nos
                             comunicaremos contigo lo antes posible.</p>
                     </div>
+                    
                 </div>
                 <div class="row row-reverse-form p-0 mw-100 m-0">
                     <div class="col-md-6 contact-container"
                         id="contact-container2">
-                        
-                        <form id="contact-form"
-                            action="https://formsubmit.co/allanolivier1997@gmail.com"
+                        <div class="row m-0 p-0">
+                            <div class="col-12 m-0 p-0" id="form-error-info">
+                            </div>
+                        </div>
+                        <form class="form-register" id="contact-form"
+                            action="https://formspree.io/f/myyqwdjb"
                             method="POST">
 
                             <div class="div-input col-md-12">
@@ -114,7 +118,7 @@
                             </div>
                             <div class="div-input col-md-12">
                                 <label for="validationTel" class="form-label">Teléfono</label>
-                                <input type="text" name="validationTel"
+                                <input type="tel" name="validationTel"
                                     class="form-control" id="validationTel"
                                     value="0123456789" required>
                             </div>
@@ -132,8 +136,8 @@
                                     id="validationAsunto" rows="3">Prueba</textarea>
                             </div>
 
-                            <div class="row mw-100">
-                                <div class="col-12 text-center">
+                            <div class="row mw-100 m-0">
+                                <div class="col-12 text-center m-0">
                                     <button type="submit" id="form-button"
                                         class="submit form-div-button text-center">
                                         <i class="bi bi-send"></i>
@@ -174,24 +178,24 @@
                         Únete a nosotros en nuestras redes sociales para
                         compartir tus experiencias, descubrir eventos
                         emocionantes y formar parte de la familia
-                        TapiocaDelight.</p>
+                        tapioca.</p>
                     <p> -Alan Espitia CEO</p>
                 </div>
                 <div class="col-lg-3">
                     <h4>Información de contacto</h4>
                     <div class="contactInformation">
                         <div class="row">
-                            <i class="bi bi-house col-2"></i>
-                            <p class="col-10">Parque Central Benito Juarez s/n
+                            <i class="bi bi-house col-2 text-center"></i>
+                            <p class="col-10 m-0">Parque Central Benito Juarez s/n
                                 Col. Centro Veracruz-Llave 76120</p>
                         </div>
                         <div class="row">
-                            <i class="bi bi-telephone-fill col-2"></i>
-                            <p class="col-10">1234567890</p>
+                            <i class="bi bi-telephone-fill col-2 m-0 text-center"></i>
+                            <p class="col-10 m-0">1234567890</p>
                         </div>
                         <div class="row">
-                            <i class="bi bi-envelope col-2"></i>
-                            <p class="col-10">correo@bubblebear.com</p>
+                            <i class="bi bi-envelope col-2 m-0 text-center"></i>
+                            <p class="col-10 m-0">correo@bubblebear.com</p>
                         </div>
                     </div>
                 </div>
