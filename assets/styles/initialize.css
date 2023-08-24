@@ -1,25 +1,79 @@
-img{
+:root {
+    --rosadito: #F89BDD;
+    --azulFuerte: #2C2081;
+    --moradito: #8E7CC3;
+    --morado: #6A329F;
+    --amarillo: #FFD966;
+    --rosado: #E07BDA;
+}
+
+img {
     max-width: 100%;
 }
 
-body{
+body {
     margin: 0;
-    box-sizing: border-box ;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-footer{
+footer {
     margin-top: auto;
 }
 
-p,label,input,textarea{
+p, label, input, textarea {
     font-family: 'IBM Plex Serif', serif;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
-h1,h2,h3,h4,h5,h6,button{
+h1, h2, h3, h4, h5, h6, button, li a {
     font-family: "Cherry Bomb One";
 }
 
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 0.8rem;
+}
+
+h6 {
+    font-size: 0.6rem;
+}
+
+button {
+    font-size: 1.5rem;
+}
+
+@media(max-width:768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media(min-width:2440px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media(min-width:4096px) {
+    html {
+        font-size: 26px;
+    }
+}
