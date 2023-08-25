@@ -49,27 +49,27 @@ function dataValidation( event ){
 
 }
 
-const formButton = document.getElementById("form-button");
+/* Funcion de Emailjs */
 
-formButton.addEventListener("click", event => dataValidation( event ))
+const btn = document.getElementById("form-button");
 
-const form = document.getElementById("contact-form");
-    form.addEventListener("submit", function(event) {
-       event.preventDefault(); 
-       
-        let name = document.getElementById("validationName").value;
-        let email = document.getElementById("validationEmail").value;
-        let message = document.getElementById("validationAsunto").value;
-       
-          let emailData = {
-                to: "allanolivier1997@gmail.com",
-                subject: "Nuevo mensaje de contacto",
-                body: "Nombre: " + name + "\nCorreo electrónico: " + email + "\nMensaje: " + message
-            };
+document.getElementById('contact-form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
-            Swal.fire({
-                icon: 'success',
-                text: 'Mensaje enviado con éxito',
-                showConfirmButton: true
-            }) 
-        });
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_9d6ywk8';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      Swal.fire({
+        icon: 'success',
+        text: 'Mensaje enviado con éxito',
+        showConfirmButton: true
+    }) 
+    }, (err) => {
+      alert(JSON.stringify(err));
+    });
+});
