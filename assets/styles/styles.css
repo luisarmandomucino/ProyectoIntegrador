@@ -77,14 +77,3 @@ p.alert {
 
 
 
-.containerProduct{
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    min-height: 30rem;
-    background-color: var(--moradito);
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-}
