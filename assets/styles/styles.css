@@ -88,3 +88,12 @@ p.alert {
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
+
+.carrusel {
+
+    margin: 80px auto; 
+    width: fit-content;
+    
+
+
+}
