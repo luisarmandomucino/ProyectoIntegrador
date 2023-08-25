@@ -49,31 +49,6 @@ function dataValidation( event ){
 
 }
 
-
-/* formButton.addEventListener("click", event => dataValidation( event ))
-
-const form = document.getElementById("contact-form");
-form.addEventListener("submit", function(event) {
-    event.preventDefault(); 
-    
-    let name = document.getElementById("validationName").value;
-    let email = document.getElementById("validationEmail").value;
-    let message = document.getElementById("validationAsunto").value;
-    
-    let emailData = {
-        to: "allanolivier1997@gmail.com",
-        subject: "Nuevo mensaje de contacto",
-        body: "Nombre: " + name + "\nCorreo electrónico: " + email + "\nMensaje: " + message
-    };
-    
-    Swal.fire({
-        icon: 'success',
-        text: 'Mensaje enviado con éxito',
-        showConfirmButton: true
-    }) 
-}); */
-
-
 /* Funcion de Emailjs */
 
 const btn = document.getElementById("form-button");
