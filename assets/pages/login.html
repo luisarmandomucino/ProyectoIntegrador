@@ -28,8 +28,8 @@
     </head>
     <body>
         <!-- Bootstrap Nav Bar -->
-        <nav class="navbar navbar-expand-lg p-0">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg m-0 p-0">
+            <div class="container-fluid m-0">
                 <a class="navbar-brand" href="/index.html"><img
                         src="/assets/img/bubble_bear_logo.png"
                         alt="Logo Bubble Bear"></a>
@@ -78,85 +78,33 @@
                 </div>
             </div>
         </nav>
+        
+        <!--Login-->
+        <main class="container container-login-main align-items-center justify-content-center text-center">
 
-        <!-- Form -->
-        <main class="contact container">
-            <div class="row">
-                <div class="row m-0 p-0 mw-100">
-                    <div class=" col-md-6">
-                        <h1 class="text-center">¡Contáctanos! <i
-                                class="bi bi-send"></i></h1><br>
-                        <p class="text-center">Si tienes alguna duda, comentario
-                            o sugerencia, puedes contactárnos y nos
-                            comunicaremos contigo lo antes posible.</p>
-                    </div>
-                    
+            <section class="col section-login">
+                <div class="row">
+                    <h1>Inicio de sesión</h1>                    
                 </div>
-                <div class="row row-reverse-form p-0 mw-100 m-0">
-                    <div class="col-md-6 contact-container"
-                        id="contact-container2">
-                        <div class="row m-0 p-0">
-                            <div class="col-12 m-0 p-0" id="form-error-info">
-                            </div>
-                        </div>
-                        <form class="form-register" id="contact-form"
-                            action="https://formspree.io/f/myyqwdjb"
-                            method="POST">
+                <div class="row">
 
-                            <div class="div-input col-md-12">
-                                <label for="validationName" class="form-label">Nombre</label>
-                                <input type="text" name="validationName"
-                                    class="form-control" id="validationName"
-                                    value="Luis" required>
-                            </div>
-                            <div class="div-input col-md-12">
-                                <label for="validationLastName"
-                                    class="form-label">Apellido</label>
-                                <input type="text" name="validationLastName"
-                                    class="form-control" id="validationLastName"
-                                    value="armando" required>
-                            </div>
-                            <div class="div-input col-md-12">
-                                <label for="validationTel" class="form-label">Teléfono</label>
-                                <input type="tel" name="validationTel"
-                                    class="form-control" id="validationTel"
-                                    value="0123456789" required>
-                            </div>
-                            <div class="div-input col-md-12">
-                                <label for="validationEmail" class="form-label">Correo
-                                    electrónico</label>
-                                <input type="email" name="validationEmail"
-                                    class="form-control" id="validationEmail"
-                                    value="allanolivier1997@gmail.com"
-                                    placeholder="name@example.com">
-                            </div>
-                            <div class="div-input mb-12">
-                                <label for="validationAsunto" class="form-label">Asunto</label>
-                                <textarea class="form-control"
-                                    id="validationAsunto" rows="3">Prueba</textarea>
-                            </div>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="correo">
 
-                            <div class="row mw-100 m-0">
-                                <div class="col-12 text-center m-0">
-                                    <button type="submit" id="form-button"
-                                        class="submit form-div-button text-center">
-                                        <i class="bi bi-send"></i>
-                                        Enviar
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-
-                    <div class="col-md-6">
-                        <img src="/assets/img/contact-img.png" alt>
-                    </div>
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña">
+                    <span><a href="#">¿Olvidasete la contraseña?</a></span>
                 </div>
-            </div>
+            </section> 
+
+
         </main>
 
-        <!-- Footer -->
+
+
+
+        
+                <!-- Footer -->
         <footer class="footer container mw-100">
             <div class="row px-4 py-4" id="footerSuperior">
                 <div class="col-lg-2">
@@ -210,14 +158,10 @@
             </div>
         </footer>
 
-
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="/assets/js/script.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
             crossorigin="anonymous"></script>
-
+            <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script>
     </body>
 </html>
