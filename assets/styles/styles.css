@@ -93,7 +93,10 @@ p.alert {
 
     margin: 80px auto; 
     width: fit-content;
+
+}
+
+.pink { 
+    background-color: var(--rosadito);
     
-
-
 }
