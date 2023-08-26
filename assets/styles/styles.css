@@ -103,3 +103,11 @@ input[type="email"], input[type="password"] {
     border-radius: 5px;
 }
 
+#login-button {
+    margin-bottom: 20px;  
+}
+
+span {
+    display: block; 
+    margin-bottom: 10px;  
+}
