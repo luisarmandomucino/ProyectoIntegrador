@@ -56,7 +56,7 @@ p.alert {
     }
 }
 
-.container-login-main{
+.container-login-main {
     color: #fff;
     margin-top: 10rem;
     margin-bottom: 10rem;
@@ -64,23 +64,21 @@ p.alert {
     max-width: 80%;
     background-color: var(--moradito);
     border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
 }
-.section-login{
-    
+.section-login {
     width: 50%;
-    margin: 0 auto;
 }
-
 
 
 .containerProduct{
     margin-top: 10rem;
     margin-bottom: 10rem;
-    min-height: 30rem;
+    min-height: 50rem;
     background-color: var(--moradito);
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -99,4 +97,27 @@ p.alert {
 .pink { 
     background-color: var(--rosadito);
     
+}
+.titulo {
+    margin-bottom: 4rem;
+}
+.input-group {
+    margin-bottom: 2rem;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-button {
+    margin-bottom: 20px;  
+}
+
+span {
+    display: block; 
+    margin-bottom: 10px;  
 }
