@@ -64,21 +64,50 @@
     max-width: 80%;
     background-color: var(--moradito);
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+.section-login {
+    width: 50%;
+}
+
+
+.containerProduct{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    min-height: 50rem;
+    background-color: var(--moradito);
+    border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
 
-.section-login {
-    width: 50%;
-    margin: 0 auto;
+
+.titulo {
+    margin-bottom: 4rem;
+}
+.input-group {
+    margin-bottom: 2rem;
 }
 
-.h1-title {
-    margin-top: 150px;
-    color: black;
-    text-align: center;
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+#login-button {
+    margin-bottom: 20px;  
+}
 
+span {
+    display: block; 
+    margin-bottom: 10px;  
+}
