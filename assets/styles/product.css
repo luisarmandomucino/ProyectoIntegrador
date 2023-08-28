@@ -1,0 +1,67 @@
+h2, h3{
+    color:black
+}
+
+.section-product {
+    padding: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    min-height: 20rem;
+    background-color: var(--moradito);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.spanDescription{
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.buttonBuy{
+    background-color: var(--azulFuerte);
+    color: white;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-style: none;
+}
+
+.buttonAdd{
+    background-color: var(--morado);
+    color: white;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-style: none;
+}
+
+.sectionCarouselProducts{
+    margin: 0;
+    background-color: var(--rosado);
+    color: black;
+    padding: 20px 50px;
+}
+
+i{
+    font-size: 35px;
+}
+
+
+.card{
+    margin: 0 20px;
+}
+
+.card-body{
+    background-color: var(--amarillo);
+    padding: 0;
+}
+
+.card-img-top{
+    background-color: var(--rosado);
+}
+
