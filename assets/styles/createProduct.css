@@ -1,0 +1,27 @@
+.createProduct{
+    background-color: var(--rosadito);
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 5em;
+}
+
+
+#save-button{
+    background-color: var(--azulFuerte);
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+}
+
+.form-label {
+
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.container2-createProduct{
+    margin: 5em auto;
+    width: 60%;  
+}
