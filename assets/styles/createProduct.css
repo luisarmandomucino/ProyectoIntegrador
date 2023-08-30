@@ -5,7 +5,6 @@
     margin-bottom: 5em;
 }
 
-
 #save-button{
     background-color: var(--azulFuerte);
     color: white;
@@ -17,7 +16,6 @@
 }
 
 .form-label {
-
     font-family: 'IBM Plex Serif', serif;
 }
 

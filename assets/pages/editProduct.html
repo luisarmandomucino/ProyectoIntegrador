@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/assets/styles/footer.css" />
     <link rel="stylesheet" href="/assets/styles/styles.css" />
     <link rel="stylesheet" href="/assets/styles/nosotros.css" />
-    <link rel="stylesheet" href="/assets/styles/admin.css" />
+    <link rel="stylesheet" href="/assets/styles/createProduct.css" />
     <link
       rel="shortcut icon"
       href="/assets/img/bubble_bear_logo.png"
@@ -34,12 +34,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <title>Administrador</title>
+    <title>Nosotros</title>
   </head>
   <body>
     <!-- Bootstrap Nav Bar -->
-    <nav class="navbar navbar-expand-lg m-0 p-0">
-      <div class="container-fluid m-0">
+    <nav class="navbar navbar-expand-lg p-0">
+      <div class="container-fluid">
         <a class="navbar-brand" href="/index.html"
           ><img src="/assets/img/bubble_bear_logo.png" alt="Logo Bubble Bear"
         /></a>
@@ -65,10 +65,7 @@
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link text-end"
-                aria-current="page"
-                href="/assets/pages/products.html"
+              <a class="nav-link text-end" href="/assets/pages/products.html"
                 >Productos</a
               >
             </li>
@@ -100,14 +97,6 @@
               <a
                 class="nav-link text-end"
                 aria-current="page"
-                href="/assets/pages/admin.html"
-                >Administrador</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-end"
-                aria-current="page"
                 href="/assets/pages/carrito.html"
               >
                 <svg
@@ -129,71 +118,108 @@
       </div>
     </nav>
 
-    <!-- Admin -->
-    <main id="admin" class="text-center">
-      <h2 id="title-admin">Admin</h2>
-      <section id="products" class="mw-100 py-2">
-        <div class="row justify-content-around my-3 mx-3">
-          <i class="bi bi-arrow-down col-3"></i>
-          <p class="col-3">Productos</p>
+    <!-- Edit product-->
+    <main class="container mw-100 createProduct text-center">
+      <h1>Modificar Producto</h1>
 
-          <!-- createProduct.html -->
-          <div class="col-3">
-            <a class="icon-link" href="./createProduct.html">
-              <i class="bi bi-plus-square"></i>
-          </a>
+      <div class="container2-createProduct">
+        <form action="/assets/pages/admin.html" id="formEditProduct">
+          <div class="row my-3">
+            <div class="col-md-6 col-sm-12">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Nombre del producto:
+              </label>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <input
+                type="text"
+                value="Explosión chocolate"
+                class="form-control"
+                id="nom-producto"
+              />
+            </div>
           </div>
-         
-        </div>
 
-        <div class="row  d-flex justify-content-between mw-100 min-vw-100">
-          <p class="col-md-2">ID</p>
-          <p class="col-md-2 title-img">Imagen</p>
-          <p class="col-md-2">Nombre</p>
-          <p class="col-md-2">Precio</p>
-          <p class="col-md-2 title-desc">Descripción</p>
-          <p class="col-md-2">Acciones</p>
-        </div>
-
-        <div
-          class="cardProductExample row d-flex justify-content-between align-items-center my-3 py-2 px-2 mw-100 m-0 "
-        >
-          <p class="id-product col-md-2">1</p>
-          <img
-            class="img-product col-md-2"
-            src="/assets/img/Carmelo.png"
-            alt="bebida de tapioca"
-          />
-          <p class="name-product col-md-2">Crazy Ihcigo</p>
-          <p class="price-product col-md-2">$80</p>
-          <p class="description-product col-md-2">Rica bebida</p>
-          <div class="icons col-md-2">
-            <!-- checkoutProduct.html -->
-
-            <a
-              class="icon-link"
-              aria-current="page"
-              href="./checkoutProduct.html"
-            >
-              <i class="bi bi-eye-fill"></i>
-            </a>
-            <!-- editProduct.html -->
-
-            <a class="icon-link" aria-current="page" href="editProduct.html">
-              <i class="bi bi-gear-fill"></i>
-            </a>
-
-            <!--  -->
-
-            <i class="bi bi-x-square-fill"></i>
+          <div class="row my-3">
+            <div class="col-md-6 col-sm-12">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Precio:</label
+              >
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <input type="text" value="$80" class="form-control" id="price" />
+            </div>
           </div>
-        </div>
-      </section>
 
-      <!-- <section id="orders" class="mw-100 my-2">
-      </section>
-      <section id="asuntos" class="mw-10 my-2">
-      </section> -->
+          <div class="row my-3">
+            <div class="col-md-6 col-sm-12">
+              <label
+                for="exampleFormControlInput1"
+                class="form-label"
+                >Tamaño</label
+              >
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <input type="text" value="Grande" class="form-control" id="size" />
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-md-6 col-sm-12">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Numero de existencias:
+              </label>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <input type="text" value="50" class="form-control" id="stock" />
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-md-6 col-sm-12">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Ocultar:
+              </label>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <input type="text" value="1" class="form-control" id="disguise" />
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Descripción</label
+              >
+              <textarea
+                class="form-control"
+                id="descripcion"
+                rows="3"
+              >Deliciosa bebida de chocolate</textarea>
+            </div>
+          </div>
+
+    
+          <div class="row my-3">
+            <div class="col-12">
+              <label for="formFile" class="form-label">Carga aquí tu foto</label>
+            </div>
+          </div>
+
+          <div class="row img-products-box">
+            <div class="col-sm-6">
+              <img src="/assets/img/Carmelo.png" class="col-sm-3 img-form-producto" alt="">
+            </div>
+            <div class="col-sm-6">
+              <input class="form-control col-sm-6" type="file" id="formFile">
+            </div>
+          </div>
+
+          <button type="submit" id="save-button" class="text-center">
+            Guardar
+          </button>
+        </form>
+      </div>
     </main>
 
     <!-- footer  -->
@@ -256,11 +282,5 @@
         </p>
       </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
   </body>
 </html>
