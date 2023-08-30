@@ -162,3 +162,8 @@
     display: flex;
     align-items: center;
 }
+
+.h1-title{
+    margin-top: 150px;
+    text-align: center;
+}
