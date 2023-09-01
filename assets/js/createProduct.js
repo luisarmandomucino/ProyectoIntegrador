@@ -64,3 +64,4 @@ form.addEventListener("submit", function(event){
 //     //reader.readAsDataURL(this.files[0]);
 // })
 
+//Validacion de datos
