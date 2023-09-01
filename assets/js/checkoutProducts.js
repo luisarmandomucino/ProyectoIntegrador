@@ -31,7 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Índice de objeto no válido.');
     }
 
-  });
+let i;
+for( i=0; i<storedData.length;i++){
+    if(storedData[i].id == storedId){
+        break;
+    }
+}
+});
+const productoUno =  storedData[i] ;//storedData[1]
 
 
 

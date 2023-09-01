@@ -12,7 +12,8 @@ class Product{
 
     calculateProductID(){ //Calculating ID for each product
         if(localStorage.getItem("products")){
-            return JSON.parse(localStorage.getItem("products")).length;
+            let productos = JSON.parse(localStorage.getItem("products"));
+            return parseInt(productos[productos.length-1].id) + 1;
         }else{
             return 0;
         }
@@ -46,22 +47,22 @@ function downloadDataLocalStorage(){
 };
 
 function displayCards(products){
-    // //Creating cards from array of objects
-    // let productCards = products.map( product => 
-    //     `<a href="#" class="grid-product-item">
-    //         <img src="${product.photo}" class="card-img-top" alt="Bebida Crazy Ichigo(Maracuya)">
-    //         <div class="card-body">
-    //         <p class="card-description text-center" > ${product.name} </p>
-    //         <p class="card-description text-center"> ${product.price} </p>
-    //         <p class="card-text">${product.description}</p>
-    //         </div>
-    //     </a>`
-    //     );
-    // //Getting product container to display products
-    // const productosContainer = document.getElementById("grid-products-container");
+    //Creating cards from array of objects
+    let productCards = products.map( product => 
+        `<a href="#" class="grid-product-item">
+            <img src="${product.photo}" class="card-img-top" alt="Bebida Crazy Ichigo(Maracuya)">
+            <div class="card-body">
+            <p class="card-description text-center" > ${product.name} </p>
+            <p class="card-description text-center"> ${product.price} </p>
+            <p class="card-text">${product.description}</p>
+            </div>
+        </a>`
+        );
+    //Getting product container to display products
+    const productosContainer = document.getElementById("grid-products-container");
 
-    // //Display array of products in DOM
-    // productosContainer.innerHTML = productCards.join("");
+    //Display array of products in DOM
+    productosContainer.innerHTML = productCards.join("");
             
 };
 
@@ -107,82 +108,9 @@ downloadDataLocalStorage();
 // Botón Ver producto 
 
 
-const viewProduct = document.getElementById("checkoutProduct");
-viewProduct.addEventListener (`click`, ()=> { 
-    // if (localSotrage.getItem("prodcuts") ) { 
-    //     const storedData = JSON.parse( localSotrage.getItem("products"));
-    // };
-    
-    const keyProduct = "1";
-    localStorage.setItem("product", keyProduct );
-
-    
-
-    
-
-}); 
 
 
 
 
 
 
-
-
-
-
-
-
-//---------modificar producto----------
-
-const editProduct = document.getElementById("editProduct")
-editProduct.addEventListener('click', ()=>{
-    
-    console.log('Hola');
-    
-   /*  const idProducto = document.getElementsByClassName("id-product");
-    idContenido = idProducto.innerHTML;
-    console.log(idContenido);
-
-
-    localStorage
- */
-
-
-
-});
-
-
-
-
-
-
-
-// Eliminar producto
-const deleteProduct = document.getElementById("deleteProduct");
-deleteProduct.addEventListener('click', ()=>{
-    /*  -- Tomar el contenido de la etiqueta id  -- */
-    /* nos lleva a la etiqueta padre: cardProductExample */
-    const cardProductExample = deleteProduct.parentNode.parentNode;
-
-    /* ahora nos vamos una etiqueta hija para tomar el valor de ID*/
-    const idProduct = parseInt(cardProductExample.querySelector('.id-product').innerHTML) 
-
-    /* ahora buscamos este id en el localStorage y lo eliminamos*/
-    let storedData = JSON.parse(localStorage.getItem("products"));
-    
-    console.log(storedData)
-    storedData = storedData.filter( product => {
-        return product.id !== idProduct
-    } )
-    console.log(storedData)
-
-    /* guardamos los datos actualizados al local storage */
-    localStorage.setItem("products",JSON.stringify(storedData));
-
-    
-    /* refrescar pagina al terminar de eliminar el producto */
-    /* setTimeout(function() {
-        location.reload();
-    }, 2000); */
-})

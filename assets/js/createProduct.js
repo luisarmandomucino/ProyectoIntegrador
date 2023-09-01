@@ -49,12 +49,14 @@ form.addEventListener("submit", function(event){
     const descriptionNewProduct = document.getElementById("description");
     const photoFileNewProduct = document.getElementById("photoFile");
     const priceNewProduct = document.getElementById("price");
+        
+
 
         const productInf = new NewProduct(nameNewProduct.value, priceNewProduct.value, sizeNewProduct.value, stockNewProduct.value, disguiseNewProduct.value, descriptionNewProduct.value, photoFileNewProduct.value)
 
         productInf.loadDataLocalStorage();
-        
 });
+
 
 //         document.getElementById("photoFile").addEventListener("change",()=>{
 //     const reader = new FileReader();
@@ -64,4 +66,3 @@ form.addEventListener("submit", function(event){
 //     //reader.readAsDataURL(this.files[0]);
 // })
 
-//Validacion de datos
