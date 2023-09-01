@@ -1,4 +1,4 @@
-<html lang="en">
+fdsr<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,12 +23,12 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/styles/initialize.css">
-    <link rel="stylesheet" href="/assets/styles/nav.css">
-    <link rel="stylesheet" href="/assets/styles/footer.css">
-    <link rel="stylesheet" href="/assets/styles/styles.css">
-    <link rel="stylesheet" href="/assets/styles/createProduct.css">
-    <link rel="shortcut icon" href="/assets/img/bubble_bear_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/initialize.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/createProduct.css">
+    <link rel="shortcut icon" href="../img/bubble_bear_logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   </head>
@@ -37,7 +37,7 @@
     <nav class="navbar navbar-expand-lg m-0 p-0">
       <div class="container-fluid m-0">
         <a class="navbar-brand" href="/index.html"
-          ><img src="/assets/img/bubble_bear_logo.png" alt="Logo Bubble Bear"
+          ><img src="../img/bubble_bear_logo.png" alt="Logo Bubble Bear"
         ></a>
         <button
           class="navbar-toggler"
@@ -72,7 +72,7 @@
               <a
                 class="nav-link text-end"
                 aria-current="page"
-                href="/assets/pages/contacto.html"
+                href="../pages/contacto.html"
                 >Contacto</a
               >
             </li>
@@ -80,7 +80,7 @@
               <a
                 class="nav-link text-end"
                 aria-current="page"
-                href="/assets/pages/nosotros.html"
+                href="../pages/nosotros.html"
                 >Nosotros</a
               >
             </li>
@@ -96,7 +96,15 @@
               <a
                 class="nav-link text-end"
                 aria-current="page"
-                href="/assets/pages/carrito.html"
+                href="../pages/admin.html"
+                >Administrador</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-end"
+                aria-current="page"
+                href="../pages/carrito.html"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,15 +124,19 @@
         </div>
       </div>
     </nav>
-    <!-- Create product-->
 
+    <!-- Create product-->
     <main class="container mw-100 createProduct text-center">
 
         <h1>Crear producto</h1>
 
-         <div class="container2-createProduct">            
+         <div class="container2-createProduct">
+            <div class="row m-0 p-0">
+              <div class="col-12 m-0 p-0" id="form-error-info">
+              </div>
+            </div>           
       
-            <form action="/assets/pages/admin.html">
+            <form action="../pages/admin.html" id="formCreateProduct">
               <div class="row my-3">
                 <div class="col-md-6 col-sm-12">
                   <label for="exampleFormControlInput1" class="form-label"
@@ -176,7 +188,7 @@
                   </label>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                  <input type="email" class="form-control" id="disguise">
+                  <input type="text" class="form-control" id="disguise" >
                 </div>
               </div>
             
@@ -201,78 +213,12 @@
             <button type="submit" id="save-button" class="text-center">
               Guardar
             </button>
+            <a type="button" href="../pages/admin.html" style="background-color: red;">
+              Cancelar
+            </a>
           </form>
 
         </div>
-
-      
-
-      <!-- <section class="">
-        <section class="row">
-          <div class="col-6">
-            <h2>Nombre del producto</h2>
-          </div>
-          <div class="col-6">
-            <input type="text" />
-          </div>
-        </section>
-
-        <section class="row">
-          <div class="col-6">
-            <h2>Precio</h2>
-          </div>
-          <div class="col-6">
-            <input type="text" />
-          </div>
-        </section>
-
-        <section class="row">
-          <div class="col-6">
-            <h2>Tamaño</h2>
-          </div>
-          <div class="col-6">
-            <input type="text" />
-          </div>
-        </section>
-
-        <section class="row">
-          <div class="col-6">
-            <h2>Numero de existencias</h2>
-          </div>
-          <div class="col-6">
-            <input type="text" />
-          </div>
-        </section>
-
-        <section class="row">
-          <div class="col-6">
-            <h2>Ocultar</h2>
-          </div>
-          <div class="col-6">
-            <input type="text" />
-          </div>
-        </section>
-
-        <section class="row">
-          <div class="col-6">
-            <h2>Descripcion</h2>
-          </div>
-          <div class="col-6">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-          </div>
-        </section>
-
-        <section class="row">
-          <div class="col-6">
-            <h2>Foto</h2>
-          </div>
-          <div class="col-6">
-            <input type="text" />
-          </div>
-        </section>
-
-      </section> -->
-
      
     </main>
 
@@ -336,5 +282,6 @@
         </p>
       </div>
     </footer>
+    <script src="../js/createAdmin.js"></script>
   </body>
 </html>

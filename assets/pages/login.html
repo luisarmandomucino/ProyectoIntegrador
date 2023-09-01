@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +16,11 @@
         <link
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="/assets/styles/initialize.css">
-        <link rel="stylesheet" href="/assets/styles/nav.css">
-        <link rel="stylesheet" href="/assets/styles/footer.css">
-        <link rel="stylesheet" href="/assets/styles/styles.css">
-        <link rel="shortcut icon" href="/assets/img/bubble_bear_logo.png"
+        <link rel="stylesheet" href="../styles/initialize.css">
+        <link rel="stylesheet" href="../styles/nav.css">
+        <link rel="stylesheet" href="../styles/footer.css">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="shortcut icon" href="../img/bubble_bear_logo.png"
             type="image/x-icon">
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-lg m-0 p-0">
             <div class="container-fluid m-0">
                 <a class="navbar-brand" href="/index.html"><img
-                        src="/assets/img/bubble_bear_logo.png"
+                        src="../img/bubble_bear_logo.png"
                         alt="Logo Bubble Bear"></a>
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
@@ -49,23 +49,27 @@
                                 href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-end" href="/assets/pages/products.html">Productos</a>
+                            <a class="nav-link text-end" href="../pages/products.html">Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-end" aria-current="page"
-                                href="/assets/pages/contacto.html">Contacto</a>
+                                href="../pages/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-end" aria-current="page"
-                                href="/assets/pages/nosotros.html">Nosotros</a>
+                                href="../pages/nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-end" aria-current="page"
-                                href="/assets/pages/login.html">Login</a>
+                                href="../pages/login.html">Login</a>
+                        <li class="nav-item">
+                                    <a class="nav-link text-end" aria-current="page"
+                                        href="../pages/admin.html">Administrador</a>
+                        </li>        
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-end" aria-current="page"
-                                href="/assets/pages/carrito.html">
+                                href="../pages/carrito.html">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     width="50" height="50" fill="currentColor"
                                     class="bi bi-cart3" viewBox="0 0 16 16">
@@ -87,32 +91,37 @@
                 <div class="row titulo">
                     <h1>Inicio de sesión</h1>                    
                 </div>
-                <div class="row">
-                    <div class="input-group">
-                        <label class="email" for="correo">Correo Electrónico</label>
-                        <input type="email" id="correo">
-                    </div>
-                    <div class="input-group">
-                        <label for="contraseña">Contraseña</label>
-                        <input type="password" id="contraseña">
-                        <span> <a href="#">¿Olvidaste la contraseña?</a></span>
-                    </div>
-                    <div>
 
-                        <button type="submit" id="login-button" class="login form-div-button text-center">
-                            Iniciar sesión 
-                        </button>
-                        <span> ¿No tienes cuenta? </span>
-                        <span><a href="#">Crear cuenta</a></span>
+                <form action="/index.html">
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label class="email" for="correo">Correo Electrónico</label>
+                            <input class="entrada" type="email" id="correo">
+                        </div>
+                        <div class="input-group">
+                            <label for="contraseña">Contraseña</label>
+                            <input class="entrada" type="password" id="contraseña">
+                            <span> <a href="#">¿Olvidaste la contraseña?</a></span>
+                        </div>
+                        <div>
+    
+                            <button type="submit" id="login-button" class="login form-div-button text-center">
+                                Iniciar sesión 
+                            </button>
+                            <span class="space"> ¿No tienes cuenta? </span>
+                            <span class="space"><a href="#">Crear cuenta</a></span>
+                        </div>
                     </div>
+
+                </form>
                     
             </section>
         
         </main>
 
 
-
-
+        
         
                 <!-- Footer -->
         <footer class="footer container mw-100">

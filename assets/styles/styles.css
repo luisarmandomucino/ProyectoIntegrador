@@ -110,8 +110,9 @@
 #img-inicio{
     margin-bottom: 80px;
 }
- 
-/* .container-fluid{
+
+/* prohibido utilizar clases predefinidas de bootstrap
+.container-fluid{ 
     display: flex;
     margin: 80px 0px 80px 0px;
     
@@ -127,27 +128,40 @@
     margin-bottom: 2rem;
 }
 
-/* input[type="email"], input[type="password"] { BASURA DE CÓDIGO, 
+.entrada{
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
-} */
+}
 
 #login-button {
     margin-bottom: 20px;  
 }
 
-/* span { BASURA DE CÓDIGO
+.space {
     display: block; 
     margin-bottom: 10px;  
-} */
-
+}
 
 #carouselExampleIndicators { 
 
     padding: 80px;
     border-radius: 20px;
     
+}
+
+
+.img-form-producto{
+    width: 10rem;
+}
+
+.img-products-box{
+    display: flex;
+    align-items: center;
+}
+
+.h1-title{
+    margin-top: 150px;
+    text-align: center;
 }
