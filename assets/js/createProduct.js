@@ -1,17 +1,14 @@
 //---------------Crear producto
-//Obtener datos con el Id del forms
-//Obtener la informacion del form
-
 class NewProduct {
     constructor( name, price, size, stock, disguise, description, photoFile){
-        this.id = calculateProductID();
-        this.nameNewProduct = name;
-        this.priceNewProduct = price;
-        this.sizeNewProduct = size;
-        this.stockNewProduct = stock;
-        this.disguiseNewProduct = disguise;
-        this.descriptionNewProduct = description;
-        this.photoFileNewProduct = photoFile;
+        this.id = this.calculateProductID();
+        this.name = name;
+        this.price = price;
+        this.size = size;
+        this.stock = stock;
+        this.disguise = disguise;
+        this.description = description;
+        this.photoFile = photoFile;
         
     }
 
@@ -19,7 +16,7 @@ class NewProduct {
         if(localStorage.getItem("products")){
             let productos = JSON.parse(localStorage.getItem("products"));
             console.log(productos)
-            return parseInt([productos.length-1].id) + 1;
+            return parseInt(productos[productos.length-1].id) + 1;
         }else{
             return 0;
         }
@@ -41,42 +38,35 @@ class NewProduct {
     };
 };
 
-const form = document.forms["formCreateProduct"];
+const form = document.getElementById;
 
-form.addEventListener("click", function(event){
-    event.preventDefault();
+form.addEventListener("submit", function(event){
+    //event.preventDefault();
     const nameNewProduct = document.getElementById("nom-producto");
     const sizeNewProduct = document.getElementById("size");
     const stockNewProduct = document.getElementById("stock");
     const disguiseNewProduct = document.getElementById("disguise");
     const descriptionNewProduct = document.getElementById("description");
     const photoFileNewProduct = document.getElementById("photoFile");
-    const priceNewProduct = document.getElementById("price");  
-
+    const priceNewProduct = document.getElementById("price");
         
-    
-        const productInf = [];
-        productInf.push(new NewProduct(id, nameNewProduct.value, priceNewProduct.value, sizeNewProduct.value, stockNewProduct.value, disguiseNewProduct.value ))
-
-        console.log(productInf);
 
 
+        const productInf = new NewProduct(nameNewProduct.value, priceNewProduct.value, sizeNewProduct.value, stockNewProduct.value, disguiseNewProduct.value, descriptionNewProduct.value, photoFileNewProduct.value)
+
+        productInf.loadDataLocalStorage();
         
-        
-    
 
 
-
-    
-
-    
-
-
-console.log(newProduct); 
-
-
-
-
-
+  
     
 });
+
+
+//         document.getElementById("photoFile").addEventListener("change",()=>{
+//     const reader = new FileReader();
+//     reader.addEventListener("load",()=>{
+//         localStorage.setItem("img",reader.result);
+//     });
+//     //reader.readAsDataURL(this.files[0]);
+// })

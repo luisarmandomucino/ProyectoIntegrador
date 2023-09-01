@@ -85,3 +85,15 @@ viewProduct.forEach(product => product.addEventListener("click", () => {
     localStorage.setItem("product", keyProduct);
 
 })); 
+
+/* edit product */
+const editProduct = document.querySelectorAll(".editProduct");
+editProduct.forEach(product => product.addEventListener("click", () => {
+    // if (localSotrage.getItem("prodcuts") ) { 
+    //     const storedData = JSON.parse( localSotrage.getItem("products"));
+    // };
+
+    const keyProduct = product.getAttribute("idProduct");
+    localStorage.setItem("productModify", keyProduct);
+
+})); 
