@@ -7,11 +7,14 @@
 
 function localStorageData(){
 
-    const data = localStorage.getItem('products');
+  if(localStorage.getItem('products')){
+   const data = localStorage.getItem('products');
     const products = JSON.parse(data);
     console.log(products);
     showProducts(products);
 
+  }
+ 
 }
 let products = localStorageData();
 
@@ -19,27 +22,29 @@ function showProducts(products) {
     let productCard = products.map((product)=>
          
         `
-        <p class="id-product col-2">${product.id}</p>
-        <img class="img-product col-2" src="${product.photo}" alt="bebida de tapioca"/>
-        <p class="name-product col-2">${product.name}</p>
-        <p class="price-product col-2">${product.price}</p>
-        <p class="description-product col-md-2">${product.description}</p>
-        <div class="icons col-2">
-        
-
-          <a class="icon-link checkoutProduct" aria-current="page" idProduct="${product.id}" href="./checkoutProduct.html" >
-            <i class="bi bi-eye-fill"></i>
-          </a>          
-
-          <a class="icon-link editProduct" aria-current="page" idProduct="${product.id}" href="editProduct.html">
-            <i class="bi bi-gear-fill"  ></i>
-          </a>          
-
-          <a class="icon-link deleteProduct" idProduct="${product.id}" aria-current="page" idProduct="${product.id}" href="./admin.html">
-       
-            <i class="bi bi-x-square-fill "  ></i>
-          </a>    
+        <div class="row text-center align-items-center justify-content-between">
+          <p class="id-product col-2">${product.id}</p>
+          <img class="img-product col-2" src="${product.photo}" alt="bebida de tapioca"/>
+          <p class="name-product col-2">${product.name}</p>
+          <p class="price-product col-2">${product.price}</p>
+          <p class="description-product col-md-2">${product.description}</p>
+          <div class="icons col-2">
           
+
+            <a class="icon-link checkoutProduct" aria-current="page" idProduct="${product.id}" href="./checkoutProduct.html" >
+              <i class="bi bi-eye-fill"></i>
+            </a>          
+
+            <a class="icon-link editProduct" aria-current="page" idProduct="${product.id}" href="editProduct.html">
+              <i class="bi bi-gear-fill"  ></i>
+            </a>          
+
+            <a class="icon-link deleteProduct" idProduct="${product.id}" aria-current="page" idProduct="${product.id}" href="./admin.html">
+        
+              <i class="bi bi-x-square-fill "  ></i>
+            </a>    
+            
+          </div>
         </div>
       `
     ); 
