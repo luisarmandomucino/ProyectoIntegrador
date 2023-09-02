@@ -1,4 +1,4 @@
-function dataValidation(event) {
+function dataValidation() {
   //event.preventDefault();
 
   let message = [];
@@ -63,7 +63,7 @@ document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-
+    dataValidation();
     btn.value = "Sending...";
 
     const serviceID = "default_service";

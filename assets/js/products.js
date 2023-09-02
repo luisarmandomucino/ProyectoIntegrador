@@ -13,7 +13,7 @@ class Product{
     calculateProductID(){ //Calculating ID for each product
         if(localStorage.getItem("products")){
             let productos = JSON.parse(localStorage.getItem("products"));
-            return parseInt([productos.length-1].id) + 1;
+            return parseInt(productos[productos.length-1].id) + 1;
         }else{
             return 0;
         }

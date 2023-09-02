@@ -121,8 +121,12 @@
     <main class="container mw-100 createProduct text-center">
 
         <h1>Crear producto</h1>
-
-         <div class="container2-createProduct">            
+          
+        <div>
+         <div class="container2-createProduct">    
+          <div class="row m-0 p-0">
+            <div class="col-12 m-0 p-0" id="form-error-info"></div>
+          </div>        
       
             <form action="/assets/pages/admin.html" id="formCreateProduct">
               <div class="row my-3">
@@ -149,12 +153,12 @@
       
               <div class="row my-3">
                 <div class="col-md-6 col-sm-12">
-                  <label for="exampleFormControlInput1" class="form-label"
+                  <label for="exampleFormControlInput1"  class="form-label"
                     >Tamaño</label
                   >
                 </div>
                 <div class="col-md-6 col-sm-12">
-                  <input type="text" class="form-control" id="size">
+                  <input type="text" class="form-control"  id="size">
                 </div>
               </div>
       
@@ -197,7 +201,7 @@
                   <input class="form-control" type="file" id="photoFile">
                  </div>
               </div>
-
+          
             <button type="submit" id="save-button" class="text-center">
               Guardar
             </button>
