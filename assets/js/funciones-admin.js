@@ -6,11 +6,13 @@
 
 
 function localStorageData(){
-
-    const data = localStorage.getItem('products');
+    if (localStorage.getItem('products')){
+        const data = localStorage.getItem('products');
     const products = JSON.parse(data);
     console.log(products);
     showProducts(products);
+    }
+    
 
 }
 let products = localStorageData();
