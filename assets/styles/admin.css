@@ -1,7 +1,7 @@
 #admin{
     margin-top: 150px;
     color: white;
-    
+
 }
 
 #admin i{
@@ -43,6 +43,11 @@
     .description-product,
     .title-img{
         display: none;
+    
+    }
+    .titulos{
+        
+        font-size: 0.2em;
     }
     
 }
@@ -51,3 +56,6 @@
 #deleteProduct{
     cursor: pointer;
 }
+
+
+
