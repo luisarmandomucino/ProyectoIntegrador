@@ -31,17 +31,6 @@ hide.setAttribute("value",productoUno.hide);
 //buscamos el producto en el arreglo del local storage
 /* mostrar los datos del producto en los inputs */
 
-
-let reader;
-document.getElementById("formFile").addEventListener("change", function () {
-    reader = new FileReader();
- 
-    reader.addEventListener("load", () => {
-
-    });
-    reader.readAsDataURL(this.files[0]);
-})
-
    
 
 
@@ -52,7 +41,7 @@ class NewProduct {
         this.price = price;
         this.size = size;
         this.stock = stock;
-        this.disguise = disguise;
+        this.hide = disguise;
         this.description = description;
         this.photo = photoFile;
         
@@ -97,6 +86,18 @@ class NewProduct {
     //saveButton.addEventListener("click", () => {
         const form = document.forms["formEditProduct"];
 
+        
+/*Cargar imágenes */
+let reader;
+document.getElementById("formFile").addEventListener("change", function () {
+    reader = new FileReader();
+
+    reader.addEventListener("load", () => {
+
+    });
+    reader.readAsDataURL(this.files[0]);
+})
+/********************************************* */
     form.addEventListener("submit", function(){
       
         const nameNewProduct = document.getElementById("nom-producto");
@@ -115,7 +116,8 @@ class NewProduct {
             stockNewProduct.value, 
             disguiseNewProduct.value, 
             descriptionNewProduct.value, 
-            "/assets/img/Carmelo.png")
+            reader?.result || productoUno.photo
+            );
      
         productInf.loadDataLocalStorage();
        
