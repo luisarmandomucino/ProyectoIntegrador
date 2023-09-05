@@ -153,9 +153,9 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    if (!reader?.result) {
-        message.push("<p class='alert'>Hace falta agregar la foto</p>");
-    }
+    // if (!reader?.result) {
+    //     message.push("<p class='alert'>Hace falta agregar la foto</p>");
+    // }
 
     message = message.join("");
     infoErrorBox.innerHTML = message;
