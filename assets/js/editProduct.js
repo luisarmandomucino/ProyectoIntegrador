@@ -101,7 +101,8 @@ form.addEventListener("submit", function (event) {
     const sizeInput = document.getElementById('size').value;
     const stockInput = document.getElementById('stock').value;
     const disguiseInput = document.getElementById('disguise').value;
-    //const descriptionInput = document.getElementById('description').value;
+    const descriptionInput = document.getElementById('descripcion').value;
+    
 
     //const numRegExp =  /\d{10}/;
     const lettersRegExp = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
@@ -147,9 +148,9 @@ form.addEventListener("submit", function (event) {
         );
     }
 
-    /* if (!descriptionInput) {
+    if (!descriptionInput) {
         message.push("<p class='alert'>Ingrese la descripcion del producto</p>");
-    } */
+    }
 
 
     if (!reader?.result) {
