@@ -107,9 +107,7 @@
     margin-bottom: 80px;
 }
 
-#img-inicio{
-    margin-bottom: 80px;
-}
+
 
 /* prohibido utilizar clases predefinidas de bootstrap
 .container-fluid{ 
@@ -124,6 +122,23 @@
     margin-top: 80px;
     justify-content: space-around;
 }
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color:dimgray;  */
+    padding: 20px;
+    border-radius: 5px;
+    text-align:center;
+    color:#fff;
+    font-size: 80px;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: bold;
+    flex: content;
+  }
+  
 
 .titulo {
     margin-bottom: 4rem;
