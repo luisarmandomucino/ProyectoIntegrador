@@ -103,10 +103,11 @@
     margin-bottom: 80px;
 }
 
-#img-inicio{
-    margin-bottom: 80px;
-}
-
+ #img-inicio{
+    max-width: 100%;
+    text-align: center;
+  }
+ 
 
 
 /* prohibido utilizar clases predefinidas de bootstrap
@@ -117,13 +118,31 @@
 }
 */
 
-.bubble {
+.image-container {/* nuevo */
     margin-bottom: 80px;
-    margin-top: 80px;
-    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  #img-crepa {/* nuevo */
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    
+  
+  }
+  
+
+.bubble {/* nuevo */
+    margin-bottom: 40px;
+    margin-top: 40px;
+ 
+    
 }
 
-.text-overlay {
+.text-overlay {/* nuevo */
     position: absolute;
     top: 50%;
     left: 50%;
