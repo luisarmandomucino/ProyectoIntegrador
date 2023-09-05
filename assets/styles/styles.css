@@ -119,7 +119,11 @@
 }
 */
 
-
+.bubble {
+    margin-bottom: 80px;
+    margin-top: 80px;
+    justify-content: space-around;
+}
 
 .titulo {
     margin-bottom: 4rem;

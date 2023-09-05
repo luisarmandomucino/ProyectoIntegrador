@@ -153,8 +153,6 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    
-
     message = message.join("");
     infoErrorBox.innerHTML = message;
     //
