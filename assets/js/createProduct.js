@@ -1,40 +1,40 @@
 //---------------Crear producto
 class NewProduct {
-  constructor( name, price, size, stock, disguise, description, photoFile){
-      this.id = this.calculateProductID();
-      this.name = name;
-      this.price = price;
-      this.size = size;
-      this.stock = stock;
-      this.hide = disguise;
-      this.description = description;
-      this.photo = photoFile;
-      
+  constructor(name, price, size, stock, disguise, description, photoFile) {
+    this.id = this.calculateProductID();
+    this.name = name;
+    this.price = price;
+    this.size = size;
+    this.stock = stock;
+    this.hide = disguise;
+    this.description = description;
+    this.photo = photoFile;
+
   }
 
-  calculateProductID(){ //Calculating ID for each product
-      if(localStorage.getItem("products")){
-          let productos = JSON.parse(localStorage.getItem("products"));
-          console.log(productos)
-          return parseInt(productos[productos.length-1].id) + 1;
-      }else{
-          return 0;
-      }
+  calculateProductID() { //Calculating ID for each product
+    if (localStorage.getItem("products")) {
+      let productos = JSON.parse(localStorage.getItem("products"));
+      console.log(productos)
+      return parseInt(productos[productos.length - 1].id) + 1;
+    } else {
+      return 0;
+    }
   };
 
-  loadDataLocalStorage(){  //Function to save data in LS
-      let arrayOfProducts = []; //Creating array of products
-      let products;
-      if(localStorage.getItem("products")){
+  loadDataLocalStorage() {  //Function to save data in LS
+    let arrayOfProducts = []; //Creating array of products
+    let products;
+    if (localStorage.getItem("products")) {
 
-          products = JSON.parse(localStorage.getItem("products"));
-          products.push(this);
-      }else{
-          products = [this];
-      }
-      
-      localStorage.setItem("products",JSON.stringify(products));
-      
+      products = JSON.parse(localStorage.getItem("products"));
+      products.push(this);
+    } else {
+      products = [this];
+    }
+
+    localStorage.setItem("products", JSON.stringify(products));
+
   };
 };
 
@@ -52,12 +52,12 @@ document.getElementById("photoFile").addEventListener("change", function () {
 
 const form = document.getElementById("formCreateProduct");
 
-form.addEventListener("submit", function(event){
-  
+form.addEventListener("submit", function (event) {
+
   const saveButton = document.getElementById("formCreateProduct");
 
   const infoErrorBox = document.getElementById('form-error-info');
-  const  nomProductoInput= document.getElementById('nom-producto').value;//.value solo se puede utilizar cuando se quiere obtener el valor de una etiq. input.
+  const nomProductoInput = document.getElementById('nom-producto').value;//.value solo se puede utilizar cuando se quiere obtener el valor de una etiq. input.
   const priceInput = document.getElementById('price').value;
   const sizeInput = document.getElementById('size').value;
   const stockInput = document.getElementById('stock').value;
@@ -66,11 +66,11 @@ form.addEventListener("submit", function(event){
 
   //const numRegExp =  /\d{10}/;
   const lettersRegExp = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
-const nRegExp = /^\d{1,}$/;
+  const nRegExp = /^\d{1,}$/;
   const hideRegExp = /^[0-1]{1}$/;
   let message = [];  //cambie el const a let por que me marcaba un error.
-  
-  if (!nomProductoInput) {  
+
+  if (!nomProductoInput) {
     message.push("<p class='alert'>Hace falta el nombre del producto</p>");
   } else if (!lettersRegExp.test(nomProductoInput)) {
     message.push(
@@ -100,31 +100,31 @@ const nRegExp = /^\d{1,}$/;
     );
   }
 
-    if (!disguiseInput) {
+  if (!disguiseInput) {
     message.push("<p class='alert'>Ingrese 0 o 1</p>");
   } else if (!hideRegExp.test(disguiseInput)) {
     message.push(
       "<p class='alert'>El campo ocultar se llena con 0 o 1</p>"
     );
   }
-  
+
   if (!descriptionInput) {
     message.push("<p class='alert'>Ingrese la descripcion del producto</p>");
-  } 
-  
- 
-  if( ! reader?.result ){
+  }
+
+
+  if (!reader?.result) {
     message.push("<p class='alert'>Hace falta agregar la foto</p>");
   }
 
   message = message.join("");
-  infoErrorBox.innerHTML = message; 
- //
+  infoErrorBox.innerHTML = message;
+  //
 
 
-if ( message != [] ){ //Si hay errores
+  if (message != []) { //Si hay errores
     event.preventDefault(); //No nos manda a admin
-  }else{ //Si no hay errores
+  } else { //Si no hay errores
     //event.preventDefault(); 
 
 
@@ -149,5 +149,9 @@ if ( message != [] ){ //Si hay errores
   }
 
 });
+
+
+
+
 
 
