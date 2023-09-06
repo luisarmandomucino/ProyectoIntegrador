@@ -147,12 +147,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background-color:dimgray;  */
+    
     padding: 20px;
     border-radius: 5px;
     text-align:center;
     color:#fff;
-    font-size: 80px;
+    /* font-size: 80px; */
     font-family: 'IBM Plex Serif', serif;
     font-weight: bold;
     flex: content;

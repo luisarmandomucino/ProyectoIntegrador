@@ -53,6 +53,14 @@ function dataValidation() {
 
   message = message.join("");
   infoErrorBox.innerHTML = message;
+
+  if(message){
+      return false;
+  }else{
+   infoErrorBox.innerHTML="";
+    return true;
+  }
+  
 }
 
 /* Funcion de Emailjs */
@@ -63,7 +71,8 @@ document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    dataValidation();
+    let message = dataValidation();
+    if(message){
     btn.value = "Sending...";
 
     const serviceID = "default_service";
@@ -81,6 +90,8 @@ document
         alert(JSON.stringify(err));
       }
     );
+    }
+ 
   });
 
 
