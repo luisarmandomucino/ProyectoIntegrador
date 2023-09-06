@@ -23,7 +23,6 @@ class NewProduct {
   };
 
   loadDataLocalStorage() {  //Function to save data in LS
-    let arrayOfProducts = []; //Creating array of products
     let products;
     if (localStorage.getItem("products")) {
 
@@ -47,14 +46,12 @@ document.getElementById("photoFile").addEventListener("change", function () {
 
   });
   reader.readAsDataURL(this.files[0]);
-})
+});
 /********************************************* */
 
 const form = document.getElementById("formCreateProduct");
 
 form.addEventListener("submit", function (event) {
-
-  const saveButton = document.getElementById("formCreateProduct");
 
   const infoErrorBox = document.getElementById('form-error-info');
   const nomProductoInput = document.getElementById('nom-producto').value;//.value solo se puede utilizar cuando se quiere obtener el valor de una etiq. input.
@@ -119,14 +116,10 @@ form.addEventListener("submit", function (event) {
 
   message = message.join("");
   infoErrorBox.innerHTML = message;
-  //
-
 
   if (message != []) { //Si hay errores
     event.preventDefault(); //No nos manda a admin
   } else { //Si no hay errores
-    //event.preventDefault(); 
-
 
     const nameNewProduct = document.getElementById("nom-producto");
     const sizeNewProduct = document.getElementById("size");
@@ -149,9 +142,4 @@ form.addEventListener("submit", function (event) {
   }
 
 });
-
-
-
-
-
 
