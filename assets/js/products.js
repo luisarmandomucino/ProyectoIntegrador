@@ -53,7 +53,7 @@ function displayCards(products){
             <img src="${product.photo}" class="card-img-top" alt="Bebida Crazy Ichigo(Maracuya)">
             <div class="card-body">
             <p class="card-description text-center" > ${product.name} </p>
-            <p class="card-description text-center"> ${product.price} </p>
+            <p class="card-description text-center"> $${product.price} </p>
             <p class="card-text">${product.description}</p>
             </div>
         </a>`
@@ -102,15 +102,3 @@ function createProducts(){
 }
 
 downloadDataLocalStorage();
-
-
-
-// Botón Ver producto 
-
-
-
-
-
-
-
-
