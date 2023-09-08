@@ -3,7 +3,8 @@
     color: black;
     margin-top: 150px;
     margin-bottom: 5em;
-
+    max-width: 60%;
+    border-radius: 20px;
 }
 
 #save-button {

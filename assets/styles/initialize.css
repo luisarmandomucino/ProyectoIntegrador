@@ -27,8 +27,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url(/assets/img/Fondo\ Ositos.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
-
 
 footer {
     margin-top: auto;
@@ -71,26 +75,35 @@ button {
     font-size: 1.5rem;
 }
 
-@media(max-width:768px) {
+
+@media(max-width:4096px) {
     html {
-        font-size: 12px;
+        font-size: 22px !important;
+    }
+}
+
+@media(max-width:2440px) {
+    html {
+        font-size: 15px !important;
     }
 }
 
 @media(max-width:991px) {
     html {
-        font-size: 14px;
+        font-size: 14px !important;
     }
 }
 
-@media(min-width:2440px) {
+@media(max-width:768px) {
     html {
-        font-size: 20px;
+        font-size: 12px !important;
     }
 }
 
-@media(min-width:4096px) {
+@media(max-width:418px) {
     html {
-        font-size: 26px;
+        font-size: 10px !important;
     }
 }
+
+

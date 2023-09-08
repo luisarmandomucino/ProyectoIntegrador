@@ -57,23 +57,35 @@
     }
 }
 
-.container-login-main {
-    color:black;
+.container-login-main{
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
+}
+.container-login {
+    color:black;
+
     min-height: 30rem;
-    max-width: 50%;
+    max-width: 500px;
     background-color: var(--rosadito);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 5rem;
+    padding: 0 50px;
+    padding-bottom: 2rem;
+}
+
+#contrasena, #correo{
+    border-radius: 12px;
+}
+  
+.titulo{
+    margin-top: 3rem;
 }
 
 .section-login {
-    width: 50%;
+    width: 100%;
 }
 
 .containerProduct{
@@ -95,7 +107,6 @@
 
 .pink { 
     background-color: var(--rosadito);
-    
 }
 
 .container-purple{
@@ -108,18 +119,8 @@
     max-width: 100%;
     text-align: center;
   }
- 
 
-
-/* prohibido utilizar clases predefinidas de bootstrap
-.container-fluid{ 
-    display: flex;
-    margin: 80px 0px 80px 0px;
-    
-}
-*/
-
-.image-container {/* nuevo */
+.image-container {
     margin-bottom: 80px;
     position: relative;
     width: 100%;
@@ -127,33 +128,28 @@
     
   }
 
-  #img-crepa {/* nuevo */
+  #img-crepa {
     width: 70%;
     height: 70%;
     object-fit: contain;
-    
-  
+    border-radius: 30px;
   }
   
 
-.bubble {/* nuevo */
+.bubble {
     margin-bottom: 40px;
-    margin-top: 40px;
- 
-    
+    margin-top: 40px;   
 }
 
-.text-overlay {/* nuevo */
+.text-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
     padding: 20px;
     border-radius: 5px;
     text-align:center;
     color:#fff;
-    /* font-size: 80px; */
     font-family: 'IBM Plex Serif', serif;
     font-weight: bold;
     flex: content;
@@ -163,6 +159,7 @@
 .titulo {
     margin-bottom: 4rem;
 }
+
 .input-group {
     margin-bottom: 2rem;
 }
@@ -184,12 +181,9 @@
 }
 
 #carouselExampleIndicators { 
-
     padding: 80px;
     border-radius: 20px;
-    
 }
-
 
 .img-form-producto{
     width: 10rem;
@@ -208,23 +202,17 @@
 #carouselExampleIndicators {
     width: 50%;
     margin-top: 150px;
-   
-
 }
   
-  
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     #carouselExampleIndicators {
-      width: 100%;  
-      margin-top: 150px;
+        width: 100%;  
+        margin-top: 150px;
     }
-  }
-
-body{
-    background-image: url(/assets/img/Fondo\ Ositos.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-
 }
+
+/* .navbar {
+    cursor: url("/assets/img/cafe-frio.png"), 
+    auto;
+} */
+

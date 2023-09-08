@@ -32,6 +32,8 @@ class User {
         localStorage.setItem("users", JSON.stringify(users));
 
     };
+
+
 };
 
 let reader;
@@ -57,7 +59,7 @@ document.getElementById("photoFile").addEventListener("change", function () {
 
 const btn = document.getElementById("form-button");
 
-btn.addEventListener("click", function (e) {
+btn.addEventListener("submit", function (e) {
 
 
     const infoErrorBox = document.getElementById('form-error-info');
@@ -155,10 +157,9 @@ btn.addEventListener("click", function (e) {
     if (message != []) { //Si hay errores
         e.preventDefault(); //No nos manda a admin
     } else { //Si no hay errores
-
-
-
+       
         const user = new User(name.value, phone.value, email.value, password.value, birthday.value, address.value);
+        user.emailExists();
         user.loadDataLocalStorage();
 
     }

@@ -9,21 +9,17 @@
 .main-signup{
     margin-top: 100px;
     margin-bottom: 100px;
-
 }
 
 .gatito{
     display:flex;
     align-items:center;
     justify-content:end;
-    
 }
 
 .gatito img{
-
     height:300px;
     width:235px;
-
 }
 
 .signup-h2{
@@ -38,11 +34,10 @@
        width:100% ;
        max-width: 500px ;
     }
+
     .gatito{
-  
        max-width: 500px ;
-    }
-       
+    }  
 }
 
 @media(max-width:700px){
@@ -51,14 +46,12 @@
         max-width: 100% ;
         padding: 30px;
     }
-
-
 }
+
 body{
     background-image: url(/assets/img/FondoCuenta2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-
 }
