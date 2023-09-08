@@ -70,34 +70,34 @@ function createProducts(){
     const products = [];
     let product;
    
-    product = new Product("Caramelo","$80","grande",50,1,"/assets/img/carmelo.webp","Dulce bebida con perlas de tapioca en caramelo suave y delicioso.");
+    product = new Product("Caramelo","80","grande",50,1,"/assets/img/carmelo.webp","Dulce bebida con perlas de tapioca en caramelo suave y delicioso.");
     product.loadDataLocalStorage();
 
-    product = new Product("Explosión de chocolate", "$70", "grande", 50, 1,"/assets/img/chocolate.webp","Sedosa bebida con perlas de tapioca sumergidas en un cremoso y rico chocolate.")
+    product = new Product("Explosión de chocolate", "70", "grande", 50, 1,"/assets/img/chocolate.webp","Sedosa bebida con perlas de tapioca sumergidas en un cremoso y rico chocolate.")
     product.loadDataLocalStorage();
 
-    product = new Product("Fresa Refresher", "$60", "grande", 50, 1, "/assets/img/fresaRefresher.webp","Refrescante bebida con perlas de tapioca en aroma y sabor a fresa jugosa.")
+    product = new Product("Fresa Refresher", "60", "grande", 50, 1, "/assets/img/fresaRefresher.webp","Refrescante bebida con perlas de tapioca en aroma y sabor a fresa jugosa.")
     product.loadDataLocalStorage();
 
-    product = new Product("Granada", "$50", "grande", 50, 1, "/assets/img/granada.webp","Vibrante bebida con perlas de tapioca y el dulzor único de la granada.")
+    product = new Product("Granada", "50", "grande", 50, 1, "/assets/img/granada.webp","Vibrante bebida con perlas de tapioca y el dulzor único de la granada.")
     product.loadDataLocalStorage();
 
-    product = new Product("Ken", "$90", "grande", 50, 1, "/assets/img/ken.webp","Refrescante bebida con perlas de tapioca en sabor a uva jugosa y dulce.");
+    product = new Product("Ken", "90", "grande", 50, 1, "/assets/img/ken.webp","Refrescante bebida con perlas de tapioca en sabor a uva jugosa y dulce.");
     product.loadDataLocalStorage();
 
-    product = new Product("Mora Azul", "$70", "grande", 50, 1, "/assets/img/moraazul.webp","Deliciosa bebida con perlas de tapioca y el sabor agridulce de las moras azules.");
+    product = new Product("Mora Azul", "70", "grande", 50, 1, "/assets/img/moraazul.webp","Deliciosa bebida con perlas de tapioca y el sabor agridulce de las moras azules.");
     product.loadDataLocalStorage();
 
-    product = new Product("Kiwi Refresher", "$80", "grande", 50, 1, "/assets/img/kiwirefresher.webp","Refrescante bebida con perlas de tapioca en sabor a kiwi tropical y vivaz.");
+    product = new Product("Kiwi Refresher", "80", "grande", 50, 1, "/assets/img/kiwirefresher.webp","Refrescante bebida con perlas de tapioca en sabor a kiwi tropical y vivaz.");
     product.loadDataLocalStorage();
 
-    product = new Product("Maracuyá", "$60", "grande", 50, 1, "/assets/img/maracuya.webp","Exótica bebida con perlas de tapioca y el sabor audaz del maracuyá.");
+    product = new Product("Maracuyá", "60", "grande", 50, 1, "/assets/img/maracuya.webp","Exótica bebida con perlas de tapioca y el sabor audaz del maracuyá.");
     product.loadDataLocalStorage();
 
-    product = new Product("Maracuyá", "$60", "grande", 50, 1, "/assets/img/maracuya.webp","Exótica bebida con perlas de tapioca y el sabor audaz del maracuyá.");
+    product = new Product("Maracuyá", "60", "grande", 50, 1, "/assets/img/maracuya.webp","Exótica bebida con perlas de tapioca y el sabor audaz del maracuyá.");
     product.loadDataLocalStorage();
     
-    product = new Product("Vanilla", "$65", "grande", 50, 1, "/assets/img/vanilla.webp"," Suave bebida con perlas de tapioca y el delicado aroma de la vainilla.");
+    product = new Product("Vanilla", "65", "grande", 50, 1, "/assets/img/vanilla.webp"," Suave bebida con perlas de tapioca y el delicado aroma de la vainilla.");
     product.loadDataLocalStorage();    
 }
 
