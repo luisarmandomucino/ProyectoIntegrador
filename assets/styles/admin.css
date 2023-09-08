@@ -1,0 +1,91 @@
+#admin{
+    margin-top: 150px;
+    color: white;
+    margin-bottom: 100px;
+}
+
+#admin i{
+    font-size: 25px;
+}
+
+
+#title-admin{
+    color: black;
+}
+
+#products{
+    background-color: var(--morado);
+  
+}
+
+#orders{
+    background-color: var(--rosado);
+}
+
+#asuntos{
+    background-color: var(--azulFuerte);
+}
+
+.cardProductExample{
+    background-color: var(--moradito);
+}
+
+.icons{
+    color: black;
+}
+
+.img-product{
+    max-width: 150px;
+}
+
+@media(max-width:767px){
+    .img-product,
+    .title-desc,
+    .description-product,
+    .title-img{
+        display: none;
+    
+    }
+    .titulos{
+        
+        font-size: 0.2em;
+    }
+    
+}
+
+
+#deleteProduct{
+    cursor: pointer;
+}
+
+
+
+.header-product {
+    display: grid;
+    grid-template-columns: 10% 10% 20% 10% 35% 15%;
+    align-items: center;
+}
+
+.header-product img {
+    margin: 0 auto;
+}
+
+@media(max-width:767px) {
+    .header-product {
+        display: grid;
+        grid-template-columns: 10% 35% 15% 40%;
+    }
+
+    .icon-actions-products a i {
+        font-size: 25px ;
+    }
+}
+
+.icon-actions-products {
+    gap: 10px;
+}
+
+.icon-actions-products  i {
+    font-size: 30px;
+}
+
