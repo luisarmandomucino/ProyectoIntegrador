@@ -34,6 +34,7 @@
     background-color: red;
     color: white;
     text-align: center;
+    font-size:1rem;
     padding: 0px 0;
     width: 100%;
     margin-bottom: 10px;
@@ -57,12 +58,12 @@
 }
 
 .container-login-main {
-    color: #fff;
+    color:black;
     margin-top: 10rem;
     margin-bottom: 10rem;
     min-height: 30rem;
-    max-width: 80%;
-    background-color: var(--moradito);
+    max-width: 50%;
+    background-color: var(--rosadito);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -79,7 +80,7 @@
     margin-top: 10rem;
     margin-bottom: 10rem;
     min-height: 50rem;
-    background-color: var(--moradito);
+    background-color: var(--rosadito);
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -202,4 +203,28 @@
 .h1-title{
     margin-top: 150px;
     text-align: center;
+}
+
+#carouselExampleIndicators {
+    width: 50%;
+    margin-top: 150px;
+   
+
+}
+  
+  
+  @media (max-width: 767px) {
+    #carouselExampleIndicators {
+      width: 100%;  
+      margin-top: 150px;
+    }
+  }
+
+body{
+    background-image: url(/assets/img/Fondo\ Ositos.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
 }

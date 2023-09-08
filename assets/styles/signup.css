@@ -1,12 +1,29 @@
 .container-signup{
     background-color: var(--rosadito);
-    color: white;
-    margin-top: 100px;
-    margin-bottom: 25em;
-    padding: 70px 100px;
+    padding: 70px 70px;
     border-radius: 25px;
     color: black;
-    width: 900px;
+    width: 700px;
+}
+
+.main-signup{
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+.gatito{
+    display:flex;
+    align-items:center;
+    justify-content:end;
+    
+}
+
+.gatito img{
+
+    height:300px;
+    width:235px;
+
 }
 
 .signup-h2{
@@ -14,23 +31,18 @@
     margin-bottom: 50px;
 }
 
-body{
-    background-image: url('https://media.tenor.com/loGxn5Y8Y4kAAAAi/peach-goma-boba-running-happy.gif');
-    background-size: 300px;
-    background-repeat: no-repeat;
-    /* background-position: 1900px 800px; */
 
-    background-position: 100% calc(80% - 200px);/*Hay que posicionar la imagen con respecto al porcentaje de la pantalla */
-}
-
-@media(max-width:900px){
+ @media(max-width:1050px){
     .container-signup{
-        width: 700px;
+       padding: 70px 30px;
+       width:100% ;
+       max-width: 500px ;
     }
-       body{
-        background-size: 200px;
-        background-position: 100% calc(100% - 541px);
+    .gatito{
+  
+       max-width: 500px ;
     }
+       
 }
 
 @media(max-width:700px){
@@ -40,9 +52,13 @@ body{
         padding: 30px;
     }
 
-    body{
-        background-size: 200px;
-        background-position: 100% calc(100% - 651px);
-    }
-}
 
+}
+body{
+    background-image: url(/assets/img/FondoCuenta2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}

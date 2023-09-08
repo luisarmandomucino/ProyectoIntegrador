@@ -1,8 +1,9 @@
 .createProduct {
     background-color: var(--rosadito);
-    color: white;
+    color: black;
     margin-top: 150px;
     margin-bottom: 5em;
+
 }
 
 #save-button {
@@ -28,3 +29,4 @@
     max-width: 100%;
     max-height: 100%;
 }
+
