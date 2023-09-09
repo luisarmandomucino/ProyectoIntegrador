@@ -1,0 +1,26 @@
+.scroll-container {
+    background-color: var(--rosadito);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; 
+    max-height: 400px; 
+    overflow-y: auto; 
+    border-radius: 10px;
+}
+
+#tituloAviso{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; 
+}
+
+.content {
+    width: 100vh;
+    text-align: justify;
+    margin-top: 75em;
+}
+
