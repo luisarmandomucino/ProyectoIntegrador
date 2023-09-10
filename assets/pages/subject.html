@@ -83,15 +83,16 @@
         <div class="col-12 m-0 p-0" id="form-error-info"></div>
       </div>        
   
-        <form action="/assets/pages/admin.html" id="formSubject">
-          <div class="row my-5">
+      <form action="/index.html" id="formSubject" class="p-0 w-100 text-center">
+          <div class="row my-3">
             <div class="col-md-6 col-sm-12">
               <label for="exampleFormControlInput1" class="form-label"
                 >Nombre:
               </label>
             </div>
-            
+
             <div class="col-md-6 col-sm-12">
+              <div id="error-name"></div>
               <input type="text" class="form-control" id="nombre">
             </div>
           </div>
@@ -103,6 +104,7 @@
               >
             </div>
             <div class="col-md-6 col-sm-12">
+              <div id="error-email"></div>
               <input type="email" class="form-control" id="email">
             </div>
           </div>
@@ -114,6 +116,7 @@
               >
             </div>
             <div class="col-md-6 col-sm-12">
+              <div id="error-subject"></div>
               <input type="text" class="form-control"  id="subject">
             </div>
           </div>
@@ -123,9 +126,11 @@
               <label for="description" class="form-label">Descripción</label>
             </div>
             <div class="col-md-6 col-sm-12">
+              <div id="error-description"></div>
               <textarea class="form-control" id="description" rows="6"></textarea>
             </div>
           </div>
+
           <div class="row my-5">
             <div class="col-md-6 col-sm-12">
               <label for="exampleFormControlInput1" class="form-label"
@@ -133,6 +138,7 @@
               </label>
             </div>
             <div class="col-md-6 col-sm-12">
+              <div id="error-time"></div>
               <input type="time" class="form-control" id="time">
             </div>
           </div>
@@ -144,19 +150,6 @@
     </div>
  
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!--footer-->
 <footer class="footer container mw-100">
@@ -198,6 +191,8 @@
         <p class="col-md-6 fitWidthElement">@2023 Bubble Bear. All Rights Reserved</p>
         <p class="col-md-6 fitWidthElement">Política de Privacidad | Términos y condiciones</p>
     </div>
+
+    <script src="/assets/js/subject.js"></script>
 </footer>
 </body>
 </html>

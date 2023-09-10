@@ -229,3 +229,12 @@
     color: white;
     padding: 10px 80px;
 }
+
+.my-alert {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+  }
+
+  
