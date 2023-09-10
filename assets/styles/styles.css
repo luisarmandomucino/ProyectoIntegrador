@@ -215,4 +215,17 @@
     cursor: url("/assets/img/cafe-frio.png"), 
     auto;
 } */
+.container-subject{
+    color: white;
+    background-color: var(--rosadito);
+    margin-top: 120px;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+}
 
+#send-button{
+    background-color: var(--azulFuerte);
+    color: white;
+    padding: 10px 80px;
+}
