@@ -1,5 +1,5 @@
 .scroll-container {
-    background-color: var(--rosadito);
+    background-color: #D5D0D0;
     
     display: flex;
     justify-content: center;
@@ -21,6 +21,6 @@
 .content {
     width: 100vh;
     text-align: justify;
-    margin-top: 102em;
+    margin-top: 110em;
 }
 
