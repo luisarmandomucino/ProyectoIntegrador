@@ -1,5 +1,4 @@
 const form = document.getElementById("formLogin");
-
 form.addEventListener("submit", function(event){
     
     const infoErrorBox = document.getElementById('form-error-info');
@@ -9,7 +8,6 @@ form.addEventListener("submit", function(event){
     const password = document.getElementById("contrasena");
     const emailError = document.getElementById("error-email");
     const passwordError = document.getElementById("error-password");
-   
     
     if( !email.value ){
         message.push("<p class='alert'>Ingresa tu email </p>")
@@ -32,7 +30,6 @@ form.addEventListener("submit", function(event){
             const users = JSON.parse(localStorage.getItem("users"));
 
             const emailFound = users.filter( value => value.email == email.value );
-
             if( emailFound.length > 0 ){
                 emailError.innerHTML = "";
 
@@ -54,5 +51,3 @@ form.addEventListener("submit", function(event){
         }
     }
 });
-
-

@@ -61,6 +61,7 @@
     margin-top: 10rem;
     margin-bottom: 5rem;
 }
+
 .container-login {
     color:black;
 
@@ -125,7 +126,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    
   }
 
   #img-crepa {
@@ -134,7 +134,6 @@
     object-fit: contain;
     border-radius: 30px;
   }
-  
 
 .bubble {
     margin-bottom: 40px;
@@ -154,7 +153,6 @@
     font-weight: bold;
     flex: content;
   }
-  
 
 .titulo {
     margin-bottom: 4rem;
@@ -210,9 +208,3 @@
         margin-top: 150px;
     }
 }
-
-/* .navbar {
-    cursor: url("/assets/img/cafe-frio.png"), 
-    auto;
-} */
-

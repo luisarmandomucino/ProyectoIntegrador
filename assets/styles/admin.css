@@ -8,7 +8,6 @@
     font-size: 25px;
 }
 
-
 #title-admin{
     color: black;
 }
@@ -44,21 +43,15 @@
     .description-product,
     .title-img{
         display: none;
-    
     }
     .titulos{
-        
         font-size: 0.2em;
     }
-    
 }
-
 
 #deleteProduct{
     cursor: pointer;
 }
-
-
 
 .header-product {
     display: grid;
@@ -88,4 +81,3 @@
 .icon-actions-products  i {
     font-size: 30px;
 }
-
