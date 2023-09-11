@@ -1,0 +1,26 @@
+.section-products{
+    background-color: var(--rosadito);
+    padding: 20px;
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 5em;
+    max-width: 60%;
+    border-radius: 20px;
+    height: 50vh;
+    width: auto;
+    margin-left: 40px;
+}
+
+.addedProduct{
+    background-color: var(--moradito);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    
+}
+
+#img{
+
+    border: 20px; 
+    margin-right: 20px;
+}
