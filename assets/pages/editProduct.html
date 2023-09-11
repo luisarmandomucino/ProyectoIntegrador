@@ -37,6 +37,7 @@
     <title>Nosotros</title>
   </head>
   <body>
+
     <!-- Bootstrap Nav Bar -->
     <nav class="navbar navbar-expand-lg p-0">
       <div class="container-fluid">
@@ -92,6 +93,10 @@
                 href="/assets/pages/login.html"
                 >Login</a
               >
+            <li class="nav-item">
+                <a class="nav-link text-end" aria-current="page"
+                    href="/assets/pages/admin.html">Administrador</a>
+            </li>
             </li>
             <li class="nav-item">
               <a
@@ -117,13 +122,24 @@
         </div>
       </div>
     </nav>
+ <!-- Bootstrap Nav Bar -->
 
     <!-- Edit product-->
-    <main class="container mw-100 createProduct text-center">
-      <h1>Modificar Producto</h1>
+    <main class="container createProduct text-center">
+      <div class="titulo">
+        <h1>Modificar Producto</h1>
+      </div>
 
       <div class="container2-createProduct">
+
+        <div class="row m-0 p-0">
+          <div class="col-12 m-0 p-0" id="form-error-info"></div>
+        </div> 
+        
         <form action="/assets/pages/admin.html" id="formEditProduct">
+          <div class="row m-0 p-0">
+            <div class="col-12 m-0 p-0" id="form-error-info"></div>
+          </div>
           <div class="row my-3">
             <div class="col-md-6 col-sm-12">
               <label for="exampleFormControlInput1" class="form-label"
@@ -198,7 +214,6 @@
               ></textarea>
             </div>
           </div>
-
     
           <div class="row my-3">
             <div class="col-12">
@@ -278,10 +293,16 @@
           @2023 Bubble Bear. All Rights Reserved
         </p>
         <p class="col-md-6 fitWidthElement">
-          Política de Privacidad | Términos y condiciones
+          <a href="/assets/pages/avisoPrivacidad.html"> Política de Privacidad </a>  | Términos y condiciones
         </p>
       </div>
     </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
     <script src="/assets/js/editProduct.js"></script>
   </body>
 </html>

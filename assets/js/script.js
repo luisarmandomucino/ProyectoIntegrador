@@ -1,9 +1,7 @@
 function dataValidation() {
-  //event.preventDefault();
 
   let message = [];
 
-  //Form inputs
   const infoErrorBox = document.getElementById("form-error-info");
   const firstName = document.getElementById("validationName").value;
   const lastName = document.getElementById("validationLastName").value;
@@ -11,9 +9,7 @@ function dataValidation() {
   const email = document.getElementById("validationEmail").value;
   const asunto = document.getElementById("validationAsunto").value;
 
-  //Validation of form inputs with RegExp
-  const nameRegExp =
-    /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
+  const nameRegExp = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
   const emailRegexp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const numeroRegexp = /\d{10}/;
 
@@ -53,9 +49,14 @@ function dataValidation() {
 
   message = message.join("");
   infoErrorBox.innerHTML = message;
-}
 
-/* Funcion de Emailjs */
+  if (message) {
+    return false;
+  } else {
+    infoErrorBox.innerHTML = "";
+    return true;
+  }
+};
 
 const btn = document.getElementById("form-button");
 
@@ -63,25 +64,22 @@ document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    dataValidation();
-    btn.value = "Sending...";
-
-    const serviceID = "default_service";
-    const templateID = "template_9d6ywk8";
-
-    emailjs.sendForm(serviceID, templateID, this).then(
-      () => {
-        Swal.fire({
-          icon: "success",
-          text: "Mensaje enviado con éxito",
-          showConfirmButton: true,
-        });
-      },
-      (err) => {
-        alert(JSON.stringify(err));
-      }
-    );
+    let message = dataValidation();
+    if (message) {
+      btn.value = "Sending...";
+      const serviceID = "default_service";
+      const templateID = "template_9d6ywk8";
+      emailjs.sendForm(serviceID, templateID, this).then(
+        () => {
+          Swal.fire({
+            icon: "success",
+            text: "Mensaje enviado con éxito",
+            showConfirmButton: true,
+          });
+        },
+        (err) => {
+          alert(JSON.stringify(err));
+        }
+      );
+    }
   });
-
-
-  
