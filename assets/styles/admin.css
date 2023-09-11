@@ -50,7 +50,6 @@
 }
 
 @media(max-width:767px) {
-
     .img-product,
     .title-desc,
     .description-product,
@@ -162,7 +161,7 @@
 
 .header-pedido {
     display: grid;
-    grid-template-columns: 10% 15% 15% 30% 30%;
+    grid-template-columns: 7.5% 20% 15% 32.5% 25%;
     align-items: center;
 }
 

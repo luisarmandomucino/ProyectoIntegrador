@@ -3,7 +3,7 @@
     color: black;
     margin-top: 150px;
     margin-bottom: 5em;
-    max-width: 60%;
+    max-width: 700px;
     border-radius: 20px;
 }
 
@@ -15,6 +15,8 @@
     padding: 10px;
     width: 200px;
     margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .form-label {
@@ -22,12 +24,22 @@
 }
 
 .container2-createProduct {
-    margin: 5em auto;
-    width: 60%;
+    /* margin: 5em auto; */
+    padding: 0 50px;
 }
 
-.img-product{
+.img-product {
     max-width: 100%;
     max-height: 100%;
 }
 
+@media(max-width:767px) {
+    .container2-createProduct {
+        padding: 0 30px;
+    }
+
+    .createProduct{
+        width: 95% ;
+        max-width: 95%;
+    }
+}
