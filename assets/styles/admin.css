@@ -1,11 +1,7 @@
 #admin {
     margin-top: 150px;
     color: white;
-<<<<<<< HEAD
-    
-=======
     margin-bottom: 50px;
->>>>>>> 25514875e044274e09e82c8bd709f3dbd86c35c3
 }
 
 .arrow-productos {
@@ -26,11 +22,11 @@
 
 #products {
     background-color: var(--morado);
-    border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    border-radius: 15px;
 }
 
 #orders {
@@ -60,8 +56,6 @@
     .title-img {
         display: none;
     }
-<<<<<<< HEAD
-=======
 
     .titulos {
         font-size: 0.2em;
@@ -76,13 +70,10 @@
         font-size: 25px;
         font-weight: 900;
     }
->>>>>>> 25514875e044274e09e82c8bd709f3dbd86c35c3
 }
 
 #deleteProduct {
     cursor: pointer;
-<<<<<<< HEAD
-=======
 }
 
 .header-product {
@@ -124,26 +115,26 @@
 
 .fila-container {
     display: block;
-    transition: all 0.5s ease-in;
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.5s ease-in;
     -ms-transition: all 0.5s ease-in;
     -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
 
-    border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    border-radius: 15px;
 }
 
 .hidden {
     display: none;
-    transition: all 0.5s ease-in;
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.5s ease-in;
     -ms-transition: all 0.5s ease-in;
     -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
 }
 
 .visuallyhidden {
@@ -152,12 +143,12 @@
 
 .pedidos {
     background-color: var(--rosado);
-    border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     margin-bottom: 50px;
+    border-radius: 15px;
 }
 
 .pedidos h2 {
@@ -191,11 +182,11 @@ i {
 .asuntos {
     background-color: var(--azulFuerte);
     color: white;
-    border-radius: 15px;
+    -o-border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    border-radius: 15px;
     margin-bottom: 50px;
 }
 
@@ -211,5 +202,4 @@ i {
 
 .asuntos-container {
     background-color: var(--moradito);
->>>>>>> 25514875e044274e09e82c8bd709f3dbd86c35c3
 }
