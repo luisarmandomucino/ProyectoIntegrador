@@ -34,7 +34,7 @@ function showProducts(products) {
         </div>   
       `
     ); 
-    console.log(productCard)
+
     let product = document.getElementById("containerProducts");
     product.innerHTML = productCard.join("");
 };
