@@ -3,7 +3,7 @@ h2, h3{
 }
 
 .section-product {
-    padding: 40px;
+    padding: 20px;
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 50px;
@@ -49,6 +49,13 @@ h2, h3{
 
 i{
     font-size: 35px;
+}
+
+@media(min-width:1200px) {
+    .img-product{
+        max-width: 500px;
+    }
+    
 }
 
 
