@@ -1,0 +1,25 @@
+.satisfaction {
+    margin-top: 200px;
+}
+
+.encuesta-container {
+    padding: 30px 50px;
+    background-color: var(--rosadito);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    margin-bottom: 50px;
+}
+
+@media(max-width:767px) {
+    .row-reverse-form {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .encuesta-container {
+        padding: 30px 25px;
+    }
+}
