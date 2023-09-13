@@ -15,6 +15,7 @@
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
     margin-bottom: 50px;
+    margin-top: 0px;
 }
 
 .div-input {
@@ -34,6 +35,7 @@
     background-color: red;
     color: white;
     text-align: center;
+    font-size:1rem;
     padding: 0px 0;
     width: 100%;
     margin-bottom: 10px;
@@ -60,28 +62,36 @@
     color: black;
     margin-top: 10rem;
     margin-bottom: 10rem;
-    min-height: 20rem;
+    min-height: 30rem;
     max-width: 50%;
     background-color: var(--rosadito);
-    border-radius: 25px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content:flex-start;
     padding-bottom: 5rem;
+}
         
+#contraseña, #correo{
+    border-radius: 12px;
+}
+
+.titulo{
+    margin-top: 3rem;
 }
 
 
 .section-login {
     width: 50%;
+    
 }
 
 .containerProduct{
     margin-top: 10rem;
     margin-bottom: 10rem;
     min-height: 50rem;
-    background-color: var(--moradito);
+    background-color: var(--rosadito);
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -132,6 +142,7 @@
     width: 70%;
     height: 70%;
     object-fit: contain;
+    border-radius: 50px;
     
   
   }
@@ -204,4 +215,28 @@
 .h1-title{
     margin-top: 150px;
     text-align: center;
+}
+
+#carouselExampleIndicators {
+    width: 50%;
+    margin-top: 150px;
+   
+
+}
+  
+  
+  @media (max-width: 767px) {
+    #carouselExampleIndicators {
+      width: 100%;  
+      margin-top: 150px;
+    }
+  }
+
+body{
+    background-image: url(/assets/img/Fondo\ Ositos.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
 }
