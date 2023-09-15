@@ -108,12 +108,15 @@
 
 .pink { 
     background-color: var(--rosadito);
+    margin:  10em auto;
+    border-radius: 1em;
 }
 
 .container-purple{
     background-color: var(--moradito);
     margin: 80px 0px 80px 0px;
     margin-bottom: 80px;
+    border-radius: 1em;
 }
 
  #img-inicio{

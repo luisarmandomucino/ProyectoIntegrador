@@ -95,12 +95,12 @@ button {
 
 @media(max-width:768px) {
     html {
-        font-size: 12px !important;
+        font-size: 13px !important;
     }
 }
 
 @media(max-width:418px) {
     html {
-        font-size: 10px !important;
+        font-size: 12px !important;
     }
 }
