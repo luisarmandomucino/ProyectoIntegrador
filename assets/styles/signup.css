@@ -27,7 +27,6 @@
     margin-bottom: 50px;
 }
 
-
  @media(max-width:1050px){
     .container-signup{
        padding: 70px 30px;
@@ -35,7 +34,7 @@
        max-width: 500px ;
     }
 
-    .gatito{
+.gatito{
        max-width: 500px ;
     }  
 }

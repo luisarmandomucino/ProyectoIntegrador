@@ -104,10 +104,10 @@
               >
             </li>
             <li class="nav-item">
-              <a
+              <a aria-label="page"
                 class="nav-link text-end"
                 aria-current="page"
-                href="/assets/pages/carrito.html"
+                href="/assets/pages/verPedido.html"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,12 +127,13 @@
         </div>
       </div>
     </nav>
+    <!-- Bootstrap Nav Bar -->
 
     <!-- Carrusel -->
     <div
       id="carouselExampleIndicators"
-      class="carousel slide carrusel text-center align-items-center justify-content-center p-0"
-    >
+      class="carousel slide carrusel text-center align-items-center justify-content-center p-0">
+
       <div class="carousel-indicators">
         <button
           type="button"
@@ -178,20 +179,19 @@
           />
         </div>
       </div>
+
       <button
         class="carousel-control-prev"
         type="button"
         data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
+        data-bs-slide="prev">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="75"
           height="70"
           fill="black"
           class="bi bi-arrow-left-circle"
-          viewBox="0 0 16 16"
-        >
+          viewBox="0 0 16 16">
           <path
             fill-rule="evenodd"
             d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
@@ -202,16 +202,14 @@
         class="carousel-control-next"
         type="button"
         data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
+        data-bs-slide="next">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="70"
           height="70"
           fill="black"
           class="bi bi-arrow-right-circle"
-          viewBox="0 0 16 16"
-        >
+          viewBox="0 0 16 16">
           <path
             fill-rule="evenodd"
             d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
@@ -221,8 +219,7 @@
     </div>
 
     <div
-      class="container pink text-center justify-content-center aling-items-center mw-100"
-    >
+      class="container pink text-center justify-content-center aling-items-center mw-100">
       <div class="row">
         <div class="col-md-6">
           <img
@@ -281,12 +278,10 @@
         <img
           class="rounded-4 w-75"
           src="/assets/img/Highcompressed_1719674812 (1).jpeg"
-          alt="crepa-tea"
-        />
+          alt="crepa-tea"/>
         <div class="row">
           <div class="text-overlay text-black">
-            <!-- El texto no es responsivo -->
-            <!-- nuevo -->
+
             <h1>Conoce nuestros productos</h1>
           </div>
         </div>
@@ -355,6 +350,7 @@
     <!-- Footer -->
     <footer class="footer container mw-100">
       <div class="row px-4 py-4" id="footerSuperior">
+
         <div class="col-lg-2">
           <h4>Redes Sociales</h4>
           <div class="col-12 iconsSocialMedia">
@@ -365,6 +361,7 @@
             <i class="bi bi-facebook"></i>
           </div>
         </div>
+
         <div class="col-lg-7">
           <h4>Acerca de la compañía</h4>
           <p>
@@ -377,6 +374,7 @@
           </p>
           <p>-Alan Espitia CEO</p>
         </div>
+
         <div class="col-lg-3">
           <h4>Información de contacto</h4>
           <div class="contactInformation">
@@ -398,15 +396,15 @@
           </div>
         </div>
       </div>
+
       <div
         class="last-footer-div row px-5 py-3 d-flex justify-content-between"
-        id="footerInferior"
-      >
+        id="footerInferior">
         <p class="col-md-6 fitWidthElement">
           @2023 Bubble Bear. All Rights Reserved
         </p>
         <p class="col-md-6 fitWidthElement">
-          Política de Privacidad | Términos y condiciones
+          <a href="/assets/pages/avisoPrivacidad.html"> Política de Privacidad </a> | Términos y condiciones
         </p>
       </div>
     </footer>

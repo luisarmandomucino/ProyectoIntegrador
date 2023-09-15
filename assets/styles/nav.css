@@ -1,10 +1,7 @@
 .navbar {
     background-color: var(--amarillo);
     z-index: 3;
-   
-
 }
-
 
 .navbar ul {
     max-width: 100vw;
@@ -16,13 +13,11 @@
 .navbar a {
     color: #000;
     margin: 0;
-    
 }
 
 .nav-link {
     font-size: 1.4rem;
     cursor: url(/assets/img/cafe-frio.png);
-    
 }
 
 .navbar-brand img {
@@ -32,7 +27,6 @@
 .navbar {
     position: fixed;
     width: 100%;
-    
 }
 
 .navbar-brand img{
@@ -52,9 +46,4 @@
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
-    /* cursor: url("/assets/img/Safeimagekit-resized-img.png"); */
 } 
-
-
-
-
