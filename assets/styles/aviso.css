@@ -20,7 +20,7 @@
 .content {
     width: 100vh;
     text-align: justify;
-    margin-top: 100em;
+    margin-top: 110em;
 }
 
 @media screen and (min-width: 300px) and (max-width: 600px){
