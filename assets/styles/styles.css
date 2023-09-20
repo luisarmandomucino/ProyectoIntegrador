@@ -61,6 +61,7 @@
     margin-top: 10rem;
     margin-bottom: 5rem;
 }
+
 .container-login {
     color:black;
 
@@ -107,12 +108,16 @@
 
 .pink { 
     background-color: var(--rosadito);
+    margin:  10em 10em 10em 10em ;    
+    border-radius: 1em;
+    align-self: center; 
 }
 
 .container-purple{
     background-color: var(--moradito);
     margin: 80px 0px 80px 0px;
     margin-bottom: 80px;
+    border-radius: 1em;
 }
 
  #img-inicio{
@@ -125,7 +130,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    
   }
 
   #img-crepa {
@@ -134,7 +138,6 @@
     object-fit: contain;
     border-radius: 30px;
   }
-  
 
 .bubble {
     margin-bottom: 40px;
@@ -154,7 +157,6 @@
     font-weight: bold;
     flex: content;
   }
-  
 
 .titulo {
     margin-bottom: 4rem;
@@ -210,9 +212,9 @@
         margin-top: 150px;
     }
 }
-
-/* .navbar {
-    cursor: url("/assets/img/cafe-frio.png"), 
-    auto;
-} */
+@media (max-width: 767px) {
+    .pink {
+        max-width: 90%;
+    }
+}
 

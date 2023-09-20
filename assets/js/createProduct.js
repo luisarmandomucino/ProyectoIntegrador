@@ -9,10 +9,10 @@ class NewProduct {
     this.hide = disguise;
     this.description = description;
     this.photo = photoFile;
-
   }
 
-  calculateProductID() { //Calculating ID for each product
+/*Calculating ID for each product*/
+  calculateProductID() {
     if (localStorage.getItem("products")) {
       let productos = JSON.parse(localStorage.getItem("products"));
       console.log(productos)
@@ -22,22 +22,20 @@ class NewProduct {
     }
   };
 
-  loadDataLocalStorage() {  //Function to save data in LS
+/*Function to save data in LS*/
+  loadDataLocalStorage() {
     let products;
     if (localStorage.getItem("products")) {
-
       products = JSON.parse(localStorage.getItem("products"));
       products.push(this);
     } else {
       products = [this];
     }
-
     localStorage.setItem("products", JSON.stringify(products));
-
   };
 };
 
-/*Cargar imágenes */
+/*uploaded image*/
 let reader;
 document.getElementById("photoFile").addEventListener("change", function () {
   reader = new FileReader();
@@ -47,25 +45,24 @@ document.getElementById("photoFile").addEventListener("change", function () {
   });
   reader.readAsDataURL(this.files[0]);
 });
+
 /********************************************* */
 
 const form = document.getElementById("formCreateProduct");
-
 form.addEventListener("submit", function (event) {
 
   const infoErrorBox = document.getElementById('form-error-info');
-  const nomProductoInput = document.getElementById('nom-producto').value;//.value solo se puede utilizar cuando se quiere obtener el valor de una etiq. input.
+  const nomProductoInput = document.getElementById('nom-producto').value;
   const priceInput = document.getElementById('price').value;
   const sizeInput = document.getElementById('size').value;
   const stockInput = document.getElementById('stock').value;
   const disguiseInput = document.getElementById('disguise').value;
   const descriptionInput = document.getElementById('description').value;
 
-  //const numRegExp =  /\d{10}/;
   const lettersRegExp = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
   const nRegExp = /^\d{1,}$/;
   const hideRegExp = /^[0-1]{1}$/;
-  let message = [];  //cambie el const a let por que me marcaba un error.
+  let message = [];
 
   if (!nomProductoInput) {
     message.push("<p class='alert'>Hace falta el nombre del producto</p>");
@@ -75,7 +72,7 @@ form.addEventListener("submit", function (event) {
     );
   }
 
-  if (!priceInput) { //Valida entrada de numeros
+  if (!priceInput) { 
     message.push("<p class='alert'> Hace falta el precio</p>");
   } else if (!nRegExp.test(priceInput)) {
     message.push(
@@ -83,13 +80,13 @@ form.addEventListener("submit", function (event) {
     );
   }
 
-  if (!sizeInput) { //Valida entrada de letras 
+  if (!sizeInput) { 
     message.push("<p class='alert'>Ingrese el tamaño </p>");
   } else if (!lettersRegExp.test(sizeInput)) {
     message.push("<p class='alert'> No es un tamaño valido</p>");
   }
 
-  if (!stockInput) {  // Valida el numero de stock
+  if (!stockInput) {
     message.push("<p class='alert'>Ingrese la cantidad</p>");
   } else if (!nRegExp.test(stockInput)) {
     message.push(
@@ -109,7 +106,6 @@ form.addEventListener("submit", function (event) {
     message.push("<p class='alert'>Ingrese la descripcion del producto</p>");
   }
 
-
   if (!reader?.result) {
     message.push("<p class='alert'>Hace falta agregar la foto</p>");
   }
@@ -117,16 +113,15 @@ form.addEventListener("submit", function (event) {
   message = message.join("");
   infoErrorBox.innerHTML = message;
 
-  if (message != []) { //Si hay errores
-    event.preventDefault(); //No nos manda a admin
-  } else { //Si no hay errores
+  if (message != []) { 
+    event.preventDefault();
+  } else { 
 
     const nameNewProduct = document.getElementById("nom-producto");
     const sizeNewProduct = document.getElementById("size");
     const stockNewProduct = document.getElementById("stock");
     const disguiseNewProduct = document.getElementById("disguise");
     const descriptionNewProduct = document.getElementById("description");
-    //const photoFileNewProduct = document.getElementById("photoFile");
     const priceNewProduct = document.getElementById("price");
 
     const productInf = new NewProduct(
@@ -142,4 +137,3 @@ form.addEventListener("submit", function (event) {
   }
 
 });
-

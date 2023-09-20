@@ -1,5 +1,4 @@
 const storedData = JSON.parse(localStorage.getItem("products"));
-// traernos el id del producto a modificar
 const storedId = localStorage.getItem("productModify");
 
 let i;
@@ -18,7 +17,6 @@ const description = document.getElementById("descripcion");
 const hide = document.getElementById("disguise");
 const photo = document.getElementById("img-form-producto");
 
-
 name.setAttribute("value", productoUno.name);
 price.setAttribute("value", productoUno.price);
 size.setAttribute("value", productoUno.size);
@@ -28,9 +26,7 @@ description.innerHTML = productoUno.description;
 
 hide.setAttribute("value", productoUno.hide);
 
-//buscamos el producto en el arreglo del local storage
-/* mostrar los datos del producto en los inputs */
-
+/* show products */
 class NewProduct {
     constructor(id, name, price, size, stock, disguise, description, photoFile) {
         this.id = id;
@@ -41,24 +37,23 @@ class NewProduct {
         this.hide = disguise;
         this.description = description;
         this.photo = photoFile;
-
     }
 
-    calculateProductID() { //Calculating ID for each product
+    /* Calculating ID for each product */
+    calculateProductID() {
         if (localStorage.getItem("products")) {
             let productos = JSON.parse(localStorage.getItem("products"));
-
             return parseInt(productos[productos.length - 1].id) + 1;
         } else {
             return 0;
         }
     };
 
-    loadDataLocalStorage() {  //Function to save data in LS
-        let arrayOfProducts = []; //Creating array of products
+    /*Function to save data in LS */
+    loadDataLocalStorage() {
+        let arrayOfProducts = [];
         let products;
         if (localStorage.getItem("products")) {
-
             products = JSON.parse(localStorage.getItem("products"));
             let i;
             for (i = 0; i < products.length; i++) {
@@ -66,16 +61,12 @@ class NewProduct {
                     products[i] = this;
                 }
             }
-
         } else {
             products = [this];
         }
-
         localStorage.setItem("products", JSON.stringify(products));
-
     };
 };
-
 
 /*Cargar imágenes */
 let reader;
@@ -90,25 +81,22 @@ document.getElementById("formFile").addEventListener("change", function () {
 
 /********************************************* */
 
-
 const form = document.getElementById("formEditProduct");
 
 form.addEventListener("submit", function (event) {
     event.preventDefault()
     const infoErrorBox = document.getElementById('form-error-info');
-    const nomProductoInput = document.getElementById('nom-producto').value;//.value solo se puede utilizar cuando se quiere obtener el valor de una etiq. input.
+    const nomProductoInput = document.getElementById('nom-producto').value;
     const priceInput = document.getElementById('price').value;
     const sizeInput = document.getElementById('size').value;
     const stockInput = document.getElementById('stock').value;
     const disguiseInput = document.getElementById('disguise').value;
     const descriptionInput = document.getElementById('descripcion').value;
-    
 
-    //const numRegExp =  /\d{10}/;
     const lettersRegExp = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
     const nRegExp = /^\d{1,}$/;
     const hideRegExp = /^[0-1]{1}$/;
-    let message = [];  //cambie el const a let por que me marcaba un error.
+    let message = [];
 
     if (!nomProductoInput) {
         message.push("<p class='alert'>Hace falta el nombre del producto</p>");
@@ -118,7 +106,7 @@ form.addEventListener("submit", function (event) {
         );
     }
 
-    if (!priceInput) { //Valida entrada de numeros
+    if (!priceInput) { 
         message.push("<p class='alert'> Hace falta el precio</p>");
     } else if (!nRegExp.test(priceInput)) {
         message.push(
@@ -126,13 +114,13 @@ form.addEventListener("submit", function (event) {
         );
     }
 
-    if (!sizeInput) { //Valida entrada de letras 
+    if (!sizeInput) { 
         message.push("<p class='alert'>Ingrese el tamaño </p>");
     } else if (!lettersRegExp.test(sizeInput)) {
         message.push("<p class='alert'> No es un tamaño valido</p>");
     }
 
-    if (!stockInput) {  // Valida el numero de stock
+    if (!stockInput) { 
         message.push("<p class='alert'>Ingrese la cantidad</p>");
     } else if (!nRegExp.test(stockInput)) {
         message.push(
@@ -152,10 +140,8 @@ form.addEventListener("submit", function (event) {
         message.push("<p class='alert'>Ingrese la descripcion del producto</p>");
     }
 
-
     message = message.join("");
     infoErrorBox.innerHTML = message;
-    //
 
     if (message != []) {
         event.preventDefault();
@@ -168,7 +154,6 @@ form.addEventListener("submit", function (event) {
         const photoFileNewProduct = document.getElementById("photoFile");
         const priceNewProduct = document.getElementById("price");
 
-
         const productInf = new NewProduct(parseInt(storedId),
             nameNewProduct.value,
             priceNewProduct.value,
@@ -178,13 +163,10 @@ form.addEventListener("submit", function (event) {
             descriptionNewProduct.value,
             reader?.result || productoUno.photo
         );
-
         productInf.loadDataLocalStorage();
-
         form.submit();
     }
-
-})
+});
 
 
 

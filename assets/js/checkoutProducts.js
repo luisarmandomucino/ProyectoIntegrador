@@ -2,16 +2,13 @@
 const storedData = JSON.parse(localStorage.getItem("products"));
 const storedId = localStorage.getItem("product");//"1"
 
-// const arreglo = ["a","b","c"], arreglo [2]
-//parseInt("1") => 1
-
 let i;
 for( i=0; i<storedData.length;i++){
     if(storedData[i].id == storedId){
         break;
     }
 }
-const productoUno =  storedData[i] ;//storedData[1]
+const productoUno =  storedData[i] ;
 
 const name = document.getElementById("nom-producto");
 const price = document.getElementById("price");
