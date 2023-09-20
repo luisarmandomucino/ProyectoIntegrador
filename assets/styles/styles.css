@@ -15,6 +15,7 @@
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
     margin-bottom: 50px;
+    margin-top: 0px;
 }
 
 .div-input {
@@ -57,7 +58,8 @@
     }
 }
 
-.container-login-main{
+.container-login-main {
+    color:black;
     margin-top: 10rem;
     margin-bottom: 5rem;
 }
@@ -84,6 +86,15 @@
 .titulo{
     margin-top: 3rem;
 }
+        
+#contraseña, #correo{
+    border-radius: 12px;
+}
+
+.titulo{
+    margin-top: 3rem;
+}
+
 
 .section-login {
     width: 100%;
@@ -137,6 +148,9 @@
     height: 70%;
     object-fit: contain;
     border-radius: 30px;
+ 
+    
+  
   }
 
 .bubble {
@@ -212,9 +226,3 @@
         margin-top: 150px;
     }
 }
-@media (max-width: 767px) {
-    .pink {
-        max-width: 90%;
-    }
-}
-
