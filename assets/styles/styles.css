@@ -108,8 +108,9 @@
 
 .pink { 
     background-color: var(--rosadito);
-    margin:  10em auto;
+    margin:  10em 10em 10em 10em ;    
     border-radius: 1em;
+    align-self: center; 
 }
 
 .container-purple{
@@ -209,6 +210,11 @@
     #carouselExampleIndicators {
         width: 100%;  
         margin-top: 150px;
+    }
+}
+@media (max-width: 767px) {
+    .pink {
+        max-width: 90%;
     }
 }
 
