@@ -17,10 +17,11 @@
     justify-content:end;
 }
 
-.gatito img{
+.gatito img, .abeja img{
     height:300px;
     width:235px;
 }
+
 
 .signup-h2{
     color: black;
@@ -44,6 +45,16 @@
         width: 100%;
         max-width: 100% ;
         padding: 30px;
+    }
+}
+@media(max-width:700px){
+     .abeja img{
+        width: 20em;
+        height: 20em; 
+        
+    }
+    .abeja{        
+        justify-content: center;  
     }
 }
 
