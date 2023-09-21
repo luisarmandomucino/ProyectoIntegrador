@@ -10,13 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cherry+Bomb+One&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
   <link rel="stylesheet" href="/assets/styles/initialize.css" />
   <link rel="stylesheet" href="/assets/styles/nav.css" />
   <link rel="stylesheet" href="/assets/styles/footer.css" />
   <link rel="stylesheet" href="/assets/styles/styles.css" />
-  <link rel="stylesheet" href="/assets/styles/products.css" >
+  <link rel="stylesheet" href="/assets/styles/product.css" >
   <link rel="shortcut icon" href="/assets/img/bubble_bear_logo.png" type="image/x-icon" >
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" >
   <title>Productos</title>
 </head>
 
@@ -69,128 +70,142 @@
       </div>
     </div>
   </nav>
- <!-- Bootstrap Nav Bar -->
-
-  <!-- Products -->
-  <h1 class="h1-title">Productos</h1>
-
-  <main class="container-fluid container-products p-0">
-
-    <div class="row m-0 ">
-      <div class="col-12 search-products-bar  m-0 pe-0">
-        <select name="selection" id="option-selection" class="products-options">
-          <option value="destacado">Ordenar por: Más destacado</option>
-          <option value="barato">Ordenar por: Más barato</option>
-          <option value="caro">Ordenar por: Más caro</option>
-        </select>
-        <div class="search-box">
-          <i class="bi bi-search"></i>
-          <input  class="inputSearch" placeholder="Search" type="text">
-        </div>
-      </div>
-    </div>
-
-    <div class="row section-products-containers">
-      <section class="section-products-filters col-lg-2" id="section-products-filters">
-
+  <!-- Bootstrap Nav Bar -->
+ 
+  <!-- Product container -->
+  <main class="producto-main">
+    <section class="producto-main container-fluid">
         <div class="row m-0 p-0">
-          <div class="col filter-title-box">
-            <span>FILTROS</span>
-          </div>
-        </div>
+            <div class="col-md-6 text-center">
+                <img src="/assets/img/chocolate.webp" class="imagen-producto" alt="Imagen producto">
+            </div>
+            <div class="col-md-6 producto-right">
 
-        <div class="filters-sections">
-          <div class="row p-0 m-0">
-            <div class="col  p-0">
-              <div class="filter-section-title">
-                <div class="filter-input-field">
-                  <input type="checkbox" name="ofertaFilter" id="ofertaFilter"> 
-                  <label for="ofertaFilter">En oferta</label>
+                <div class="producto">
+                    <div class="row m-0 p-0">
+                        <div class="col-12">
+                            <h1 class="text-center">Explosión de chocolate</h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="text-center precio-producto">$80</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+                <div class="botones-producto">
+                    <div class="row m-0 p-0 mt-5">
+                        <div class="col-12 text-center">
+                            <button class="boton-comprar">Comprar ahora</button>
+                        </div>
+                    </div>
+
+                    <div class="row m-0 p-0 mt-4">
+                        <div class="col-12 text-center">
+                            <button class="boton-carrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="row p-0 m-0">
-            <div class="col p-0 filter-section-title">
-              <span>Sabores</span>
-              <div class="filter-input-field">
-                <input type="checkbox" name="fresaCheck" id="fresaCheck"> 
-                <label for="fresaCheck">Fresa</label>
-              </div>
-
-              <div class="filter-input-field">
-                <input type="checkbox" name="chocolateCheck" id="chocolateCheck"> 
-                <label for="chocolateCheck">Chocolate</label>
-              </div>
-              
-              <div class="filter-input-field">
-                <input type="checkbox" name="maracuyaFilter" id="maracuyaFilter"> 
-                <label for="maracuyaFilter">En oferta</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="row p-0 m-0 ">
-            <div class="col p-0  filter-section-title">
-              <span>Tamaños</span>
-              <div class="filter-input-field">
-                <input type="radio" name="tamanofilter" id="pequenoFilter"> 
-                <label for="pequenoFilter">Pequeño</label>
-              </div>
-
-              <div class="filter-input-field">
-                <input type="radio" name="tamanofilter" id="medianoFilter"> 
-                <label for="medianoFilter">Mediano</label>
-              </div>
-              
-              <div class="filter-input-field">
-                <input type="radio" name="tamanofilter" id="grandeFilter"> 
-                <label for="grandeFilter">Grande</label>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </section>
+    </section>
+    <section class="producto-info mb-5">
+        <div class="row m-0 px-5">
+            <div class="col-lg-6">
+                <p class="producto-desc">Descripción:</p>
+                <p>
+Nuestra Bebida de Tapioca de Chocolate no es solo una delicia para el paladar, sino también un regalo visual. Observa cómo las perlas de tapioca reposan en el fondo del vaso, invitándote a sumergirte en una experiencia sensorial única.</p>
+            </div>
+        </div>
+        <div class="row m-0 px-5">
+            <div class="col-lg-6">
+                <p class="producto-desc">Tamaño: <span>Grande</span></p>
+            </div>
+        </div>
+    </section>
+  </main>
 
 
-<!-- --Productos-- -->
-      <section class="section-products col-lg">
-          <div class="grid-products-container" id="grid-products-container">
+  <!-- Product Carousel -->
+  <section class="product-carousel container ">
+      
+    <section class="splide m-0 p-0" aria-labelledby="carousel-heading">
+        <h2 id="carousel-heading" class="mt-4 ms-4">También te puede interesar...</h2>
 
-          </div>
-      </section>
+        <div class="splide__track">
+          <ul class="splide__list">
+              <li class="splide__slide">
+                <a href="/assets/pages/product.html">
+                  <img src="/assets/img/maracuya.webp" class="d-block w-100" alt="...">
+                  <p class="titulo-producto">Maracuyá</p>
+                  <p class="producto-precio">$50</p>
+                </a>
+              </li>
 
-      <section class="row change-page-box">
-        <div class="col-12">
-          <ul>
-            <li>
-              <a href="#"><i class="bi bi-caret-left-fill"></i></a>
-            </li>
-            <li>
-              <a href="#">1</a>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-            <li>
-              <a href="#">...</a>
-            </li>
-            <li>
-              <a href="#">5</a>
-            </li>
-            <li>
-              <a href="#"><i class="bi bi-caret-right-fill"></i></a>
-            </li>
+              <li class="splide__slide">
+                <a href="/assets/pages/product.html">
+                  <img src="/assets/img/granada.webp" class="d-block w-100" alt="...">
+                  <p class="titulo-producto">Granada</p>
+                  <p class="producto-precio">$60</p>
+                </a>
+              </li>
+
+              <li class="splide__slide">
+                <a href="/assets/pages/product.html">
+                  <img src="/assets/img/kiwirefresher.webp" class="d-block w-100" alt="...">
+                  <p class="titulo-producto">Kiwi Refresher</p>
+                  <p class="producto-precio">$60</p>
+                </a>
+              </li>
+
+              <li class="splide__slide">
+                <a href="/assets/pages/product.html">
+                  <img src="/assets/img/carmelo.webp" class="d-block w-100" alt="...">
+                  <p class="titulo-producto">Caramelo</p>
+                  <p class="producto-precio">$70</p>
+                </a>
+              </li>
+
+              <li class="splide__slide">
+                <a href="/assets/pages/product.html">
+                  <img src="/assets/img/ken.webp" class="d-block w-100" alt="...">
+                  <p class="titulo-producto">Ken</p>
+                  <p class="producto-precio">$90</p>
+                </a>
+              </li>
+
+              <li class="splide__slide">
+                <a href="/assets/pages/product.html">
+                  <img src="/assets/img/chocolate.webp" class="d-block w-100" alt="...">
+                  <p class="titulo-producto">Explosión de chocolate</p>
+                  <p class="producto-precio">$80</p>
+                </a>
+              </li>
+
+              <li class="splide__slide">
+                <a href="/assets/pages/product.html">
+                  <img src="/assets/img/vanilla.webp" class="d-block w-100" alt="...">
+                  <p class="titulo-producto">Vainilla</p>
+                  <p class="producto-precio">$80</p>
+                </a>
+              </li>
+
+              <li class="splide__slide">
+                <a href="/assets/pages/product.html">
+                  <img src="/assets/img/fresarefresher.webp" class="d-block w-100" alt="...">
+                  <p class="titulo-producto">Fresa refresher</p>
+                  <p class="producto-precio">$50</p>
+                </a>
+              </li>
+
           </ul>
         </div>
-      </section>
-  </main>
-  
+    </section>
+  </section>
+
+
   <!-- Footer -->
   <footer class="footer container mw-100">
     <div class="row px-4 py-4" id="footerSuperior">
@@ -249,8 +264,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
-  <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
-  <script src="/assets/js/products.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="/assets/js/splidejs-product.js"></script>
 </body>
 
 </html>
