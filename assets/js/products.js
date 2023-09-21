@@ -44,7 +44,7 @@ function downloadDataLocalStorage() {
 /* Creating cards from array of objects */
 function displayCards(products) {
     let productCards = products.map(product =>
-        `<a href="#" class="grid-product-item">
+        `<a href="/assets/pages/product.html" class="grid-product-item">
             <img src="${product.photo}" class="card-img-top" alt="Bebida Crazy Ichigo(Maracuya)">
             <div class="card-body">
             <p class="card-description text-center" > ${product.name} </p>
