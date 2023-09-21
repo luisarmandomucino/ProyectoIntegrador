@@ -25,9 +25,11 @@
 .sectionPay{
     background-color: var(--amarillo);
     height: 100%;
+    max-width: 100%;
     border-radius: 20px;
     flex: 1;
     font-family: 'IBM Plex Serif', serif;
+    margin-top: 20px;
   
 }
 
@@ -37,14 +39,14 @@
     }
 }
 
-#img{
+.img-carrito img{
 
-    border: 20px; 
-    margin-right: 20px;
+    border-radius: 15px;
+    /* margin-right: 20px;  Esto ocasionaba que el icono de bote de basura se desbordara*/
 }
 
 .product-description{
-    font-size: 13px;
+    font-size: 20px;
 }
 
 .counter{
@@ -57,4 +59,79 @@
     background-color: black;
     margin: 10px 0;
 
+}
+
+.payment {
+    font-family: 'IBM Plex Serif', serif;
+    color: black;
+    text-align: center;
+}
+
+#debitCard {
+    width: 30px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+#creditCard {
+    width: 30px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+#visaCreditCard {
+    width: 40px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+#payPal {
+    width: 30px; 
+    height: auto;
+    margin-right: 10px; 
+    
+}
+
+#applyCouponButton {
+font-family: 'IBM Plex Serif', serif;
+color: black;
+font-size: medium;
+height: 25px;
+margin-bottom: 10px;
+background-color: var(--moradito);
+border-radius: 10px;
+
+}
+
+#couponCode {
+    height: 25px;
+}
+
+#dcDetails{
+    font-family: 'IBM Plex Serif', serif;
+    color: black;
+    text-align: center;
+}
+
+#date {
+    width: 80px;
+}
+
+.payment-details {
+  /* display: none; */
+}
+.container-button-payment{
+    margin: 3em auto;
+    
+}
+.title-drinks{
+    font-size: 2em;
+}
+.size-icon{
+    font-size: 30px;
+}
+
+#shippingAddress {
+    height: auto;
+    width: 150px;
 }

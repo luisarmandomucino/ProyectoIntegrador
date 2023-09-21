@@ -29,3 +29,55 @@ pagination: false,
 } );
 
 splide.mount();
+
+botonCarrito = document.getElementById("agregar-carrito");
+
+botonCarrito.addEventListener("click", (e)=>{
+  e.preventDefault();
+  idItem = botonCarrito.getAttribute("data-id");
+
+  if(localStorage.getItem("carrito")){
+
+    carrito = JSON.parse( localStorage.getItem("carrito") );
+
+    let id = -1;
+    
+    for(let i = 0 ; i<carrito.length ; i++){
+
+      if(carrito[i].id==idItem){
+        id = i;
+        break;
+
+      }
+
+    }
+
+    if(id!= -1){
+
+      carrito[id].quantity++;
+
+    }else{
+
+      newItem = {
+        id: idItem,
+        quantity: 1,
+      };
+
+      carrito.push(newItem);
+    }
+    
+    carrito = JSON.stringify(carrito);
+    localStorage.setItem("carrito", carrito);
+
+  }else{
+
+    newItem = {
+      id: idItem,
+      quantity: 0
+    };
+
+    carrito = JSON.stringify([newItem]);
+    localStorage.setItem("carrito",carrito);
+
+  }
+})

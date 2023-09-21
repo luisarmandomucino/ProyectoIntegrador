@@ -90,13 +90,11 @@
  <!-- Carrito  -->
 
         <main class="shopingCart">
-            <div >
-                <div class="col-md-12  align-items-center text-center">
-                    <h1 class="h1-title">Carrito</h1>
-                </div>
+       
+            <div class="col-md-12  align-items-center text-center">
+                <h1 class="h1-title">Carrito</h1>
             </div>
-
-
+        
 
         <section class="col-md-12 section-products">
             <div class="row my-3">
@@ -104,130 +102,151 @@
                 <div class="col-md-8">
 
 
-                    <div class="addedProduct">
+                    <div class="addedProduct row" id="container-carrito">
                         <div class="col-12 m-0 p-0">
                             <div class="row g-0 align-items-center">
                         
-                                <div class="col-2" id="img">
-                                    <img src="/assets/img/Bubble Mora.png" class="img-fluid rounded-start" alt="...">
-                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-3 m-0 p-0 d-flex align-items-center justify-content-center img-carrito" >
+                                            <img src="/assets/img/Bubble Mora.png" class="img-fluid " alt="...">
+                                        </div>
 
-                                <div class="col-6 text-center">
-                                    <p class="product-description">Bebida Ken </p>
-                                    <p class="product-description">Deliciosa bebida con perlas de tapioca sabor a uva jugosa y dulce. </p>
-                                </div>   
+                                        <div class="col-9 text-center d-flex align-items-center justify-content-center flex-column">
+                                            <div class="row">
+                                                <h1 class=" title-drinks">Bebida Ken </h1>
+                                            </div>
 
-                                <div class="col-2 text-center">
-                                    <p class="product-description"> $90 </p>
-                                    <label class="counter" for="contador"> Cantidad: </label>
-                                    <input type="number" id="counter" min="0" max="10" step="1"> 
+                                            <div class="row">
+                                                <p class="product-d☺escription">Deliciosa bebida con perlas de tapioca sabor a uva jugosa y dulce. </p>
+                                            </div>
+                                        </div>   
+                                    </div>
                                 </div>
-                        
-                                <div class="col-2 text-center">
-                                <div>
-                                    <a class="icon-delete" href="/assets/pages/404.html">
-                                    <i class="bi bi-trash3"></i>  
-                                    </a>
+                               
+                                
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-8 text-center">
+                                            <p class="product-description"> Precio: $ <span class="precio-producto">90</span> </p>
+                                            <label class="counter" for="contador"> Cantidad: </label>
+                                            <input type="number" id="counter" min="0" max="10" step="1" value="1"> 
+                                        </div>
+                                
+                                        <div class="col-4 text-center d-flex align-items-center justify-content-center ">
+                                            <div >
+                                                <a class="icon-delete" href="/assets/pages/404.html">
+                                                    <i class="bi bi-trash3 size-icon" ></i>  
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div> 
                                 </div>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-
-                    <div class="addedProduct">
-                        <div class="col-12 m-0 p-0">
-                            <div class="row g-0 align-items-center">
-                        
-                                <div class="col-2" id="img">
-                                    <img src="/assets/img/Maracuya.png" class="img-fluid rounded-start" alt="...">
-                                </div>
-
-                                <div class="col-6 text-center">
-                                    <p class="product-description">Bebida Maracuyá </p>
-                                    <p class="product-description">Exótica bebida con perlas de tapioca y el sabor del Maracuyá. </p>
-                                </div>   
-
-                                <div class="col-2 text-center">
-                                    <p class="product-description"> $90 </p>
-                                    <label class="counter" for="contador"> Cantidad: </label>
-                                    <input type="number" id="counter" min="0" max="10" step="1"> 
-                                </div>
-                        
-                                <div class="col-2 text-center">
-                                <div>
-                                    <a class="icon-delete" href="/assets/pages/404.html">
-                                    <i class="bi bi-trash3"></i>  
-                                    </a>
-                                </div>
-                                </div>
-
-                            </div> 
-                        </div>
-                    </div>
-
-                    <div class="addedProduct">
-                        <div class="col-12 m-0 p-0">
-                            <div class="row g-0 align-items-center">
-                        
-                                <div class="col-2" id="img">
-                                    <img src="/assets/img/KiwiRefresher.png" class="img-fluid rounded-start" alt="...">
-                                </div>
-
-                                <div class="col-6 text-center">
-                                    <p class="product-description">Bebida KiwiRefresher </p>
-                                    <p class="product-description">Refrescante bebida con perlas de tapioca en sabor kiwi tropical y vivaz. </p>
-                                </div>   
-
-                                <div class="col-2 text-center">
-                                    <p class="product-description"> $90 </p>
-                                    <label class="counter" for="contador"> Cantidad: </label>
-                                    <input type="number" id="counter" min="0" max="10" step="1"> 
-                                </div>
-                        
-                                <div class="col-2 text-center">
-                                <div>
-                                    <a class="icon-delete" href="/assets/pages/404.html">
-                                    <i class="bi bi-trash3"></i>  
-                                    </a>
-                                </div>
-                                </div>
-
-                            </div> 
+                            </div>
                         </div>
                     </div>
 
                 </div>
-
-
-
         
             <div class="row-md-12 sectionPay">
                 <div class="tablePay">
                 
                     <div class="col-12 m-0 p-0">
-                        <div class="row g-0 align-items-center">
-
-                            <div class="row-12 text-center">
-                                <label>TOTAL</label>  
-                            </div>   
-
-                            <div class="row-12 text-left">
-                                <label> Subtotal:  $270 </label>
+                        <form action="#">
+                            <div class="row g-0 align-items-center">
+    
+                                <div class="row-12 text-center">
+                                    <h3 class="payment">Resumen</h3>  
+                                </div>   
+    
+                                <div class="row-12 text-left" id="total">
+                                    <label> Subtotal: $<span id="totalAmount">270</span></label>
+                                </div>
                                 
-                            </div>
-                            <div class="row-12 text-left">
-                                <label> Envío:  $50 </label>
+                                <div class="row-12 text-left" id="total">
+                                    <label> Envío: $<span id="totalAmount">50</span></label>
+                                </div>
+
+                                <div class="row-12 text-left" id="shippingAddress">
+                                   <label>Dirección de Envío:</label>
+                                   <input type="text" id="shippingAddress" name="shippingAddress" placeholder="Ingresa tu dirección de envío">
+                                </div>
+                                <div class="coupon-section">
+                                    <label for="couponCode">Cupón de descuento:</label>
+                                    <input type="text" id="couponCode" name="couponCode" placeholder="Introduce el código">
+                                    <button id="applyCouponButton" type="button">Aplicar Cupón</button>
+                                </div>
                                 
-                            </div>
-
-                            <div class="line"></div>
-
-                            <div class="row-12" id="total">
-                                <label> Total:  $310 </label>
+    
+                                <div class="line"></div>
+    
+                                <div class="row-12 text-left" id="total">
+                                    <label> Total: $<span id="totalAmount">320</span></label>
+                                </div>
+    
+                                <div class="line"></div>
+    
+                                <div class="paymentInfo">
+                                    <h3 class="payment">Método de pago</h3>
+    
+                                    <div class="paymentOption">
+                                        <input type="radio" id="debitCard" name="payMethod" checked>
+                                        <label>  Tarjeta de Débito <img id="debitCard" src="/assets/img/tarjeta-de-credito.png" alt="debitCard"></label>
+    
+                                        <div id="debitCardInfo" class="payment-details">
+                                            <h4 id="dcDetails">Detalles de la Tarjeta</h4>
+                                            <label for="debitCardNumber">Número de Tarjeta:</label>
+                                            <input type="text" id="creditCardNumber" name="debitCardNumber">
+                                        </div>
+                                        <div id="debitCardInfo" class="payment-details">
+                                            <label for="debitCardNumber">Fecha de vencimiento:</label>
+                                            <div></div>
+                                            <input type="text" id="date" name="debitCardNumber" placeholder="DD/MM">
+                                            <input type="text" id="date" name="debitCardNumber" placeholder="YY">
+                                        </div>
+                                        <div id="debitCardInfo" class="payment-details">
+                                            <input type="text" id="date" name="debitCardNumber" placeholder="CVV">
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="paymentOption">
+                                        <input type="radio" id="debitCard" name="payMethod">
+                                        <label>  Tarjeta de Crédito <img id="creditCard" src="/assets/img/shoppaymentorderbuy-22_icon-icons.com_73841.png" alt="debitCard"> <img id="visaCreditCard" src="/assets/img/1495815261-jd08_84586.png" alt="debitCard"></label>
+    
+                                        <div id="debitCardInfo" class="payment-details">
+                                            <h4 id="dcDetails">Detalles de la Tarjeta</h4>
+                                            <label for="debitCardNumber">Número de Tarjeta:</label>
+                                            <input type="text" id="creditCardNumber" name="debitCardNumber">
+                                        </div>
+                                        <div id="debitCardInfo" class="payment-details">
+                                            <label for="debitCardNumber">Fecha de vencimiento:</label>
+                                            <div></div>
+                                            <input type="text" id="date" name="debitCardNumber" placeholder="DD/MM">
+                                            <input type="text" id="date" name="debitCardNumber" placeholder="YY">
+                                        </div>
+                                        <div id="debitCardInfo" class="payment-details">
+                                            <input type="text" id="date" name="debitCardNumber" placeholder="CVV">
+                                        </div>
+    
+    
+                                    </div>
+    
+                                    <div class="paymentOption">
+                                        <input type="radio" id="payPal" name="payMethod">
+                                        <label>  PayPal <img id="payPal" src="/assets/img/paypal.png" alt="debitCard"></label>
+                                    </div>
+    
+                                </div>
                                 
-                            </div>
-
-                        </div> 
+                                <div class="text-center container-button-payment">
+                                    <button type="submit" class="form-div-button">
+                                        Pagar
+                                    </button> 
+                                </div>                           
+    
+                            </div> 
+                        </form>
                     </div>
                 </div>
             </div>
@@ -299,5 +318,6 @@
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
             crossorigin="anonymous"></script>
             <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script>
+        <script src="/assets/js/carrito.js"> </script>
     </body>
 </html>
