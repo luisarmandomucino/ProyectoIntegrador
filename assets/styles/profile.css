@@ -6,19 +6,27 @@
 
 #button-deletePerfil{
     background-color: red;
+    font-size: 1.5rem;
     
 }
 
-.buttonEdit{
+#button-edit{
     background-color: var(--azulFuerte);
     color: white;
-    border-radius: 10px;
-    border-style: none;
-    padding: 10px;
-    width: 100px;
-    margin: 10px;
+    border-radius: 10px;    
+    border: 2px solid black;   
+    padding: 15px 0;
+    width: 50%;
+    margin-top: 20px;
+    margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 50px;
+    font-size: 1.5rem;
+    font-family: "Cherry Bomb One";
+    max-width: 100%;
+    text-align: center;
+
+    
 }
 
 .avatar-image{
@@ -26,7 +34,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-      /*  height: 100%; */
+
      
    }
 

@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="/assets/styles/nav.css">
         <link rel="stylesheet" href="/assets/styles/footer.css">
         <link rel="stylesheet" href="/assets/styles/styles.css">
+        <link rel="stylesheet" href="/assets/styles/carrito.css">
         <link rel="shortcut icon" href="/assets/img/bubble_bear_logo.png"
             type="image/x-icon">
         <link rel="stylesheet"
@@ -86,9 +87,143 @@
                 </div>
             </div>
         </nav>
- <!-- Bootstrap Nav Bar -->
 
-        <h1>Carrito de compras</h1>
+ <!-- Carrito  -->
+
+        <main class="shopingCart">
+       
+            <div class="col-md-12  align-items-center text-center">
+                <h1 class="h1-title">Carrito</h1>
+            </div>
+        
+
+        <section class="col-md-12 section-products">
+            <div class="row my-3 column-gap-3">
+                
+                <div class="col-lg-8 ">
+
+                    <div class="row" >
+                        <div class="col-12 p-0" id="container-carrito">
+                            
+                        </div>
+                    </div>
+
+                </div>
+        
+            <div class="col-lg-4 sectionPay">
+                <div class="tablePay">
+                
+                    <div class="col-12 m-0 p-0">
+                        <form action="#">
+                            <div class="row g-0 align-items-center">
+    
+                                <div class="row text-center mt-5">
+                                    <h2 class="payment">Resumen</h2>  
+                                </div>   
+    
+                                <div class="row mt-3">
+                                    <label class="fw-900"> Subtotal: $<span id="subTotalAmount">270</span></label>
+                                </div>
+                                
+                                <div class="row mt-2">
+                                    <label class="fw-900"> Envío: $<span>50</span></label>
+                                </div>
+
+                                <div class="row w-100 mt-5" >
+                                    <div class="col-4">
+                                        <label class=" fw-900" for="shippingAddress">Dirección de Envío:</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <input class="w-75" type="text" id="shippingAddress" name="shippingAddress" placeholder="Ingresa tu dirección de envío" required>
+                                    </div>
+                                </div>
+                                <div class="row coupon-section mt-2">
+                                    <div class="col-4">
+                                        <label for="couponCode" class="fw-900">Cupón de descuento:</label>
+                                    </div>
+                                    <div class="col-4">
+
+                                        <input type="text" id="couponCode" name="couponCode" placeholder="Introduce el código">
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="cuponButton" type="button">Aplicar Cupón</button>
+                                    </div>
+                                </div>
+                                
+    
+                                <div class="line"></div>
+    
+                                <div class="row" id="total">
+                                    <label class="fw-900"> Total: $<span id="totalAmount">320</span></label>
+                                </div>
+    
+                                <div class="line"></div>
+    
+                                <div class="paymentInfo row">
+                                    <h2 class="payment ">Método de pago</h2>
+    
+                                    <div class="paymentOption row mt-3">
+                                        <div class="col-6">
+                                            <input type="radio" id="debitCard" name="payMethod" checked>
+                                            <label for="debitCard">  Tarjeta de Débito <img id="debitCard" src="/assets/img/tarjeta-de-credito.png" alt="debitCard"></label>    
+                                        </div>
+
+                                        <div class="col-6">
+                                            <input type="radio" id="creditCard" name="payMethod">
+                                            <label for="creditCard">  Tarjeta de Crédito <img id="creditCard" src="/assets/img/shoppaymentorderbuy-22_icon-icons.com_73841.png" alt="debitCard"> <img id="visaCreditCard" src="/assets/img/1495815261-jd08_84586.png" alt="debitCard"></label>
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="row">
+                                        <h4 class="fw-bold mt-2" id="dcDetails">Detalles de la Tarjeta</h4>
+                                    </div>
+
+                                    <div class="paymentOption mt-4 row">
+                                       
+                                        <div id="" class="payment-details row">
+                                            <div class="col-4">
+                                                <label class="fw-bold" for="cardNumber">Número de Tarjeta:</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input class="w-75" type="text" id="cardNumber" name="debitCardNumber" required>
+                                            </div>
+                                        </div>
+                                        <div id="" class=" row mt-3">
+                                            <div class="col-4">
+                                                <label class="fw-bold " for="date">Fecha de vencimiento:</label>
+                                            </div>
+
+                                            <div class="col-8 ">
+                                                <input class="w-25" type="text" id="date" name="debitCardNumber" placeholder="DD/MM" required>
+                                                <input class="w-25" type="text"  name="debitCardNumber" placeholder="YY" required>
+                                                <input class="w-25 type="text"  name="debitCardNumber" placeholder="CVV" required>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+                                
+                                <div class="text-center container-button-payment">
+                                    <button id="carrito-submit" type="submit" class="form-div-button">
+                                        Pagar
+                                    </button> 
+                                </div>                           
+    
+                            </div> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+        </section>
+
+
+
+        </main>
 
                         <!-- Footer -->
         <footer class="footer container mw-100">
@@ -149,5 +284,6 @@
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
             crossorigin="anonymous"></script>
             <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script>
+        <script src="/assets/js/carrito.js"> </script>
     </body>
 </html>
