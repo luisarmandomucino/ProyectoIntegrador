@@ -73,7 +73,7 @@ botonCarrito.addEventListener("click", (e)=>{
 
     newItem = {
       id: idItem,
-      quantity: 0
+      quantity: 1
     };
 
     carrito = JSON.stringify([newItem]);
