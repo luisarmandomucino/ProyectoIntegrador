@@ -1,14 +1,57 @@
-.scroll-container {
+
+.conteinerTextTerms{
+    margin: auto auto;
+    width: 60%; 
+    max-height: 400px; 
+    height: 400px; 
     background-color:var(--rosadito);
-    display: flex;
+    display: flex;    
     justify-content: center;
     align-items: center;
-    height: 400px; 
-    max-height: 400px; 
-    overflow-y: auto; 
     border-radius: 10px;
+    overflow: auto;
+    position: relative;
 }
 
+.contentTerms {
+    width: 100vh;
+    text-align: justify;
+    margin-top: 80em;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1200px){
+    .contentTerms {
+        width: 100%;
+        margin-top: 150em;
+    }
+}
+
+.conteinerTextWarning{
+    margin: auto auto;
+    width: 60%; 
+    max-height: 400px; 
+    height: 400px; 
+    background-color:var(--rosadito);
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: auto;
+    position: relative;
+}
+
+.contentWarning {
+    width: 100vh;
+    text-align: justify;
+    margin-top: 100em;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1200px){
+    .contentWarning {
+        width: 100%;
+        margin-top: 180em;
+    }
+}
 #tituloAviso{
     padding: 10px;
     display: flex;
@@ -16,17 +59,3 @@
     align-items: center;
     height: 300px; 
 }
-
-.content {
-    width: 100vh;
-    text-align: justify;
-    margin-top: 110em;
-}
-
-@media screen and (min-width: 300px) and (max-width: 600px){
-    .content {
-        width: 100%;
-        margin-top: 110em;
-    }
-}
-
