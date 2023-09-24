@@ -1,13 +1,11 @@
 class User {
-    constructor(name, phone, email, password, birthday, address, profilePhoto) {
+    constructor(name, phone, email, password, birthday) {
         this.id = this.calculateID();
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.password = password;
         this.birthday = birthday;
-        this.address = address;
-        this.photo = profilePhoto;
     }
     calculateID() {
         if (localStorage.getItem("users")) {
@@ -30,14 +28,6 @@ class User {
     };
 };
 
-let reader;
-document.getElementById("photoFile").addEventListener("change", function () {
-    reader = new FileReader();
-    reader.addEventListener("load", () => {
-    });
-    reader.readAsDataURL(this.files[0]);
-});
-
 /********************************************* */
 
 const btn = document.getElementById("form-button");
@@ -50,8 +40,6 @@ btn.addEventListener("submit", function (e) {
     const password = document.getElementById("password");
     const passwordConfirmation = document.getElementById("password-confirmation")
     const birthday = document.getElementById("date");
-    const phone = document.getElementById("phone");
-    const address = document.getElementById("address");
 
     const lettersRegExp = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
     const nRegExp = /^\d{10,14}$/;
@@ -94,16 +82,8 @@ btn.addEventListener("submit", function (e) {
         );
     }
 
-    if (!address.value) {
-        message.push("<p class='alert'>Ingrese tu domicilio</p>");
-    }
-
-    if (!date.value) {
+    if (!birthday.value) {
         message.push("<p class='alert'>Ingrese su fecha de nacimiento</p>");
-    }
-
-    if (!reader?.result) {
-        message.push("<p class='alert'>Hace falta agregar tu foto</p>");
     }
 
     message = message.join("");
@@ -113,7 +93,7 @@ btn.addEventListener("submit", function (e) {
         e.preventDefault(); 
     } else { 
        
-        const user = new User(name.value, phone.value, email.value, password.value, birthday.value, address.value);
+        const user = new User(name.value, phone.value, email.value, password.value);
         user.emailExists();
         user.loadDataLocalStorage();
     }
