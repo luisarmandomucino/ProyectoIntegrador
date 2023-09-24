@@ -66,16 +66,16 @@
     -o-border-radius: 15px;
 }
 
-.splide img{
+.splide img {
     max-height: auto;
     max-width: 100%;
 }
 
-.splide__track{
-    padding: 50px 90px ;
+.splide__track {
+    padding: 50px 90px;
 }
 
-.titulo-producto{
+.titulo-producto {
     margin-top: 15px;
     color: #fff;
     font-weight: 500;
@@ -83,12 +83,25 @@
     font-size: 1.6rem;
 }
 
-.producto-precio{
+.producto-precio {
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
 }
 
-.producto-desc span{
+.producto-desc span {
     font-weight: 100;
+}
+
+a {
+    height: 100%;
+}
+
+.boton-comprar {
+    display: block;
+    font-family: "Cherry Bomb One";
+    width: 250px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    font-size: 23px;
 }

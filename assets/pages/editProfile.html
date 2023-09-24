@@ -132,71 +132,73 @@
                         </div>
                         <div class="row div-input first-div-input">
                             <div class="row m-0 p-0">
-                                <label for="">Nombre completo</label>
+                                <label for="full-name" class="w-100 form-label ">Nombre completo:</label>
                             </div>
                             
                             <div class="row m-0 p-0">
-                                <input type="text">
+                                 <input type="text" value="antonio maldonado" class="form-control shadow" id="full-name">
+                                 <div id="error-name" class="p-0"></div>
                             </div>
                         </div>
 
                         <div class="row  div-input">
                             <div class="row m-0 p-0">
-                                <label for="">Correo Electrónico</label>
+                                 <label for="mail" class="w-100 form-label"
+                                >Correo Electrónico:</label
+                              >
                             </div>
 
                             <div class="row m-0 p-0">
-                                <input type="email">
-                            </div>
-                        </div>
-
-                        <div class="row div-input">
-                            <div class="row m-0 p-0">
-                                <label for="">Contraseña actual</label>
-                            </div>
-
-                            <div class="row m-0 p-0">
-                                <input type="password" name="" id="currentPassword">
+                              <input type="text" class="form-control shadow" id="mail">
+                              <div id="error-email" class="p-0"></div>
                             </div>
                         </div>
 
                         <div class="row div-input">
                             <div class="row m-0 p-0">
-                                <label for="">Nueva Contraseña</label>
+                                <label for="password"  class=" w-100form-label"
+                                >Contraseña:</label>
                             </div>
 
                             <div class="row m-0 p-0">
-                                <input type="password">
-                            </div>
-                        </div>
-
-                        <div class="row div-input">
-                            <div class="row m-0 p-0">
-                                <label for="">Confirmar Nueva Contraseña</label>
-                            </div>
-
-                            <div class="row m-0 p-0">
-                                <input type="password">
+                              <input type="password" value="123ABCDEF" class="form-control shadow"  id="password">
+                              <div id="error-password" class="p-0"></div>
                             </div>
                         </div>
 
                         <div class="row div-input">
                             <div class="row m-0 p-0">
-                                <label for="">Fecha de nacimiento</label>
+                                <label for="password-confirmation"  class="w-100 form-label"
+                                >Confirma tu contraseña:</label>
                             </div>
 
                             <div class="row m-0 p-0">
-                                <input type="date" name="" id="user-date">
+                              <input type="password" value="123ABCDEF" class="form-control shadow"  id="password-confirmation">
+                              <div id="error-password-confirmation" class="p-0"></div>
                             </div>
                         </div>
 
                         <div class="row div-input">
                             <div class="row m-0 p-0">
-                                <label for="">Numero telefónico</label>
+                              <label for="date" class="w-100 form-label"> Fecha de nacimiento:</label>
                             </div>
 
                             <div class="row m-0 p-0">
-                                <input type="text">
+                              <input type="date" value="2023-12-12" class="form-control shadow" id="date">
+                              <div id="error-date" class="p-0"></div>
+                            </div>
+                        </div>
+
+                        <div class="row div-input">
+                            <div class="row m-0 p-0">
+                                <label for="phone" class="w-100 form-label"
+                                >Número telefónico:
+                              </label>
+                            </div>
+
+                            <div class="row m-0 p-0">
+                                <input type="text" value="1234567890" class="form-control shadow" id="phone">
+                              <div id="error-phone" class="p-0"></div>
                             </div>
                         </div>
                         
@@ -282,5 +284,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="/assets/js/editProfile.js"></script>
   </body>
 </html>

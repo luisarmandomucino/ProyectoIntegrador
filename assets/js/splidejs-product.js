@@ -30,10 +30,8 @@ pagination: false,
 
 splide.mount();
 
-botonCarrito = document.getElementById("agregar-carrito");
+function agregarAlCarrito(e){
 
-botonCarrito.addEventListener("click", (e)=>{
-  e.preventDefault();
   idItem = botonCarrito.getAttribute("data-id");
 
   if(localStorage.getItem("carrito")){
@@ -80,4 +78,26 @@ botonCarrito.addEventListener("click", (e)=>{
     localStorage.setItem("carrito",carrito);
 
   }
-})
+      const Toast = Swal.mixin({
+      toast: true,
+      position: 'bottom-start',
+      showConfirmButton: false,
+      timer: 5000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+
+    Toast.fire({
+      icon: 'success',
+      title: 'Agregado al carrito'
+    })
+}
+
+botonCarrito = document.getElementById("agregar-carrito");
+botonComprar = document.getElementById("comprar-ahora");
+
+botonCarrito.addEventListener("click", agregarAlCarrito);
+botonComprar.addEventListener("click", agregarAlCarrito);

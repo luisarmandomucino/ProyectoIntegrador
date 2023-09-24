@@ -3,7 +3,7 @@
     padding: 70px 70px;
     border-radius: 25px;
     color: black;
-    width: 700px;
+    width: 600px;
 }
 
 .main-signup{
@@ -22,7 +22,6 @@
     width:235px;
 }
 
-
 .signup-h2{
     color: black;
     margin-bottom: 50px;
@@ -30,7 +29,7 @@
 
  @media(max-width:1050px){
     .container-signup{
-       padding: 70px 30px;
+       padding: 40px 40px;
        width:100% ;
        max-width: 500px ;
     }
@@ -73,10 +72,8 @@ body{
     border: 2px solid black;   
     padding: 15px 0;
     width: 50%;
-    margin-top: 20px;
     margin: 0 auto;
-    margin-top: 70px;
-    margin-bottom: 50px;
+    margin-top: 50px;
     font-size: 1.5rem;
     font-family: "Cherry Bomb One";
     max-width: 100%;
