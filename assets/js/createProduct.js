@@ -15,8 +15,7 @@ class NewProduct {
   calculateProductID() {
     if (localStorage.getItem("products")) {
       let productos = JSON.parse(localStorage.getItem("products"));
-      console.log(productos)
-      return parseInt(productos[productos.length - 1].id) + 1;
+      return (parseInt(productos[productos.length - 1]?.id) + 1) || 0;
     } else {
       return 0;
     }
@@ -26,6 +25,7 @@ class NewProduct {
   loadDataLocalStorage() {
     let products;
     if (localStorage.getItem("products")) {
+     
       products = JSON.parse(localStorage.getItem("products"));
       products.push(this);
     } else {
@@ -36,14 +36,25 @@ class NewProduct {
 };
 
 /*uploaded image*/
-let reader;
-document.getElementById("photoFile").addEventListener("change", function () {
-  reader = new FileReader();
+let url="";
+const img = document.getElementById("photoFile");
+img.addEventListener("change",  (e)=> {
+  const formdata = new FormData();
+  formdata.append("image",e.target.files[0]);
 
-  reader.addEventListener("load", () => {
-
+  fetch("https://api.imgur.com/3/image",{
+    method: "post",
+    body: formdata,
+    headers: {
+        Authorization: `Client-ID 93949727e1e8d5f`
+    },
+  }
+  
+  ).then(data=>data.json()).then(data=>{
+      url=data.data.link
+      img.setAttribute("data-url",url);
+      console.log(url);
   });
-  reader.readAsDataURL(this.files[0]);
 });
 
 /********************************************* */
@@ -58,6 +69,7 @@ form.addEventListener("submit", function (event) {
   const stockInput = document.getElementById('stock').value;
   const disguiseInput = document.getElementById('disguise').value;
   const descriptionInput = document.getElementById('description').value;
+ const dataUrl = img.getAttribute("data-url");
 
   const lettersRegExp = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
   const nRegExp = /^\d{1,}$/;
@@ -106,7 +118,7 @@ form.addEventListener("submit", function (event) {
     message.push("<p class='alert'>Ingrese la descripcion del producto</p>");
   }
 
-  if (!reader?.result) {
+  if (url=="") {
     message.push("<p class='alert'>Hace falta agregar la foto</p>");
   }
 
@@ -116,14 +128,14 @@ form.addEventListener("submit", function (event) {
   if (message != []) { 
     event.preventDefault();
   } else { 
-
+    console.log("holi")
     const nameNewProduct = document.getElementById("nom-producto");
     const sizeNewProduct = document.getElementById("size");
     const stockNewProduct = document.getElementById("stock");
     const disguiseNewProduct = document.getElementById("disguise");
     const descriptionNewProduct = document.getElementById("description");
     const priceNewProduct = document.getElementById("price");
-
+   
     const productInf = new NewProduct(
       nameNewProduct.value,
       priceNewProduct.value,
@@ -131,7 +143,7 @@ form.addEventListener("submit", function (event) {
       stockNewProduct.value,
       disguiseNewProduct.value,
       descriptionNewProduct.value,
-      reader?.result)
+      dataUrl)
 
     productInf.loadDataLocalStorage();
   }
