@@ -1,12 +1,13 @@
 class User {
-    constructor(name, phone, email, password, birthday) {
-        this.id = this.calculateID();
+
+    constructor(id, name, phone, email, password, birthday) {
+        this.id = id;
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.password = password;
         this.birthday = birthday;
-    }
+    } 
 
     calculateID() {
         if (localStorage.getItem("users")) {
@@ -40,6 +41,7 @@ class User {
         }
     }
 };
+
 
 const btn = document.getElementById("form-button");
 btn.addEventListener("click", function (e) {
@@ -131,7 +133,7 @@ btn.addEventListener("click", function (e) {
     if (message.length > 0) { 
         e.preventDefault(); 
     } else { 
-        const user = new User(name.value, phone.value, email.value, password.value, birthday.value);
+        const user = new User( 1, name.value, phone.value, email.value, password.value, birthday.value );
         if (user.emailExists()) { 
             e.preventDefault();
             const errorMessage = document.getElementById("error-email");

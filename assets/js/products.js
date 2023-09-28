@@ -44,8 +44,8 @@ function downloadDataLocalStorage() {
 /* Creating cards from array of objects */
 function displayCards(products) {
     let productCards = products.map(product =>
-        `<a href="#" class="grid-product-item">
-            <img src="${product.photo}" class="card-img-top" alt="Bebida Crazy Ichigo(Maracuya)">
+        `<a href="/assets/pages/product.html" class="grid-product-item text-center">
+            <img src="${product.photo}" referrerpolicy="no-referrer" class="card-img-top" alt="Bebida tapioca">
             <div class="card-body">
             <p class="card-description text-center" > ${product.name} </p>
             <p class="card-description text-center"> $${product.price} </p>
@@ -93,3 +93,4 @@ function createProducts() {
 }
 
 downloadDataLocalStorage();
+

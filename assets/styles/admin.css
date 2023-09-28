@@ -46,7 +46,14 @@
 }
 
 .img-product {
+    max-height: 70px;
+    min-height: 70px;
     max-width: 150px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 @media(max-width:767px) {

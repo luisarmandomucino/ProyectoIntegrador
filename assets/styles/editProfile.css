@@ -6,7 +6,9 @@
 }
 
 .form-edit-profile {
-    max-width: 700px;
+    max-width: 600px ;
+    width: 600px;
+
     background-color: var(--rosadito);
     padding: 50px 100px;
     border-radius: 25px;

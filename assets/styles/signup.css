@@ -3,7 +3,7 @@
     padding: 70px 70px;
     border-radius: 25px;
     color: black;
-    width: 700px;
+    width: 600px;
 }
 
 .main-signup{
@@ -17,7 +17,7 @@
     justify-content:end;
 }
 
-.gatito img{
+.gatito img, .abeja img{
     height:300px;
     width:235px;
 }
@@ -29,7 +29,7 @@
 
  @media(max-width:1050px){
     .container-signup{
-       padding: 70px 30px;
+       padding: 40px 40px;
        width:100% ;
        max-width: 500px ;
     }
@@ -46,6 +46,16 @@
         padding: 30px;
     }
 }
+@media(max-width:700px){
+     .abeja img{
+        width: 20em;
+        height: 20em; 
+        
+    }
+    .abeja{        
+        justify-content: center;  
+    }
+}
 
 body{
     background-image: url(/assets/img/FondoCuenta2.jpg);
@@ -53,4 +63,19 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+}
+
+#form-button{
+    background-color: var(--azulFuerte);
+    color: white;
+    border-radius: 10px;    
+    border: 2px solid black;   
+    padding: 15px 0;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-family: "Cherry Bomb One";
+    max-width: 100%;
+    text-align: center;
 }

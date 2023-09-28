@@ -15,7 +15,7 @@ function showProducts(products) {
         `
         <div class=" header-product py-3 p-0 m-0 ">
             <p class="id-product ">${product.id}</p>
-            <img class="img-product mw-100" src="${product.photo}" alt="bebida de tapioca"> 
+            <img class="img-product mw-100" src="${product.photo}" alt="bebida de tapioca" referrerpolicy="no-referrer"> 
             <p class="name-product text ">${product.name}</p>
             <p class="price-product ">$${product.price}</p>
             <p class="description-product mw-100">${product.description}</p> 
