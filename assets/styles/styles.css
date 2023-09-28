@@ -35,9 +35,10 @@
     background-color: red;
     color: white;
     text-align: center;
-    font-size:1rem;
-    padding: 0px 0;
+    font-size: 1rem;
+    min-width: 100%;
     width: 100%;
+    padding: 2px 0;
     margin-bottom: 10px;
 }
 
