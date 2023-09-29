@@ -191,15 +191,11 @@
           </div>
 
           <div class="m-0-p-0">
-            <p class="m-0 p-0">Cantidad</p>
-          </div>
-
-          <div class="m-0-p-0">
             <p class="m-0 p-0">Precio</p>
           </div>
           
           <div class="m-0-p-0">
-            <p class="m-0 p-0">Productos</p>
+            <p class="m-0 p-0">Fecha</p>
           </div>
 
           <div class="m-0-p-0">
@@ -207,34 +203,8 @@
           </div>
         </div>
 
-        <div class="row pedidos-container fila-container containerProducts row  m-0 visuallyhidden hidden">
-          <div class="p-0 m-0 col-12 header-pedido">
-            <div class="m-0-p-0 d-flex  justify-content-center">
-              <p class="m-0 p-0">1</p>
-            </div>
-            
-            <div class="m-0 p-0 d-flex align-items-center justify-content-center">
-              <p class="m-0 p-0">2</p>
-            </div>
-
-            <div class="m-0 p-0 d-flex align-items-center justify-content-center">
-              <p class="m-0 p-0">$100</p>
-            </div>
-            
-            <div class="m-0 p-0 d-flex align-items-center justify-content-center">
-              <p class="m-0 p-0">Bebida1,Bebida 2</p>
-            </div>
-
-            <div class="icons icon-actions-products text-center m-0 p-0">        
-                <a class="icon-link checkoutProduct mb-1 " aria-current="page" href="./verPedido.html">
-                    <i class="bi bi-eye-fill"></i>
-                </a>          
-       
-                <a class="icon-link deleteProduct p-0 " aria-current="page" href="#">
-                    <i class="bi bi-x-square-fill"></i>
-                </a> 
-            </div>
-          </div>
+        <div class="row pedidos-container fila-container containerProducts row  m-0 visuallyhidden hidden" id="order-container">
+          
       
           <div class="p-0 col-12 header-pedido">
             <div class="m-0 p-0 d-flex align-items-center justify-content-center">
@@ -254,11 +224,11 @@
             </div>
 
             <div class="icons icon-actions-products text-center m-0 p-0">        
-                <a class="icon-link checkoutProduct mb-1  " aria-current="page" href="./verPedido.html">
+                <a class="icon-link checkoutOrder mb-1  " aria-current="page" idOrder="2" href="./verPedido.html">
                     <i class="bi bi-eye-fill"></i>
                 </a>          
         
-                <a class="icon-link deleteProduct p-0  " aria-current="page" href="#">
+                <a class="icon-link deleteOrder p-0" idOrder="2" aria-current="page" href="#">
                     <i class="bi bi-x-square-fill"></i>
                 </a> 
             </div>
@@ -270,7 +240,7 @@
     </section>
 
     <!-- Asuntos -->
-    <section class=" container-fluid text-center">
+    <section class=" container-fluid text-center d-none">
       <article class="asuntos text-center mw-100 pt-2 pb-5">
         <div class="row m-0 p-0 mw-100">
           <div class="col-3 d-flex align-items-center justify-content-center">

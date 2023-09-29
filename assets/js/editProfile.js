@@ -8,49 +8,68 @@ class User {
         this.password = password;
         this.birthday = birthday;
     } 
+}
+//     calculateID() {
+//         if (localStorage.getItem("users")) {
+//             let users = localStorage.getItem("users");
+//             users = JSON.parse(users);
+//             return users.length;
+//         } else {
+//             return 0;
+//         }
+//     }
 
-    calculateID() {
-        if (localStorage.getItem("users")) {
-            let users = localStorage.getItem("users");
-            users = JSON.parse(users);
-            return users.length;
-        } else {
-            return 0;
-        }
-    }
+//     loadDataLocalStorage() {
+//         let users;
+//         if (localStorage.getItem("users")) {
+//             users = JSON.parse(localStorage.getItem("users"));
+//             users.push(this);
+//         } else {
+//             users = [this];
+//         }
+//         localStorage.setItem("users", JSON.stringify(users));
+//     }
 
-    loadDataLocalStorage() {
-        let users;
-        if (localStorage.getItem("users")) {
-            users = JSON.parse(localStorage.getItem("users"));
-            users.push(this);
-        } else {
-            users = [this];
-        }
-        localStorage.setItem("users", JSON.stringify(users));
-    }
+//     emailExists() {
+//         if (!localStorage.getItem("users")) return false;
+//         const users = JSON.parse(localStorage.getItem("users"));
+//         const userFound = users.filter((value) => value.email == this.email);
+//         if (userFound.length > 0) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
+// };
 
-    emailExists() {
-        if (!localStorage.getItem("users")) return false;
-        const users = JSON.parse(localStorage.getItem("users"));
-        const userFound = users.filter((value) => value.email == this.email);
-        if (userFound.length > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-};
+
+
+
 
 
 const btn = document.getElementById("form-button");
-btn.addEventListener("click", function (e) {
 
-    const name = document.getElementById("full-name");
-    const email = document.getElementById("mail");
-    const password = document.getElementById("password");
-    const passwordConfirmation = document.getElementById("password-confirmation")
-    const birthday = document.getElementById("date");
+const name = document.getElementById("full-name");
+const email = document.getElementById("mail");
+const password = document.getElementById("password");
+const passwordConfirmation = document.getElementById("password-confirmation")
+const birthday = document.getElementById("date");
+
+fetch("http://localhost:8080/api/user/2") 
+    .then(response => response.json())
+    .then (userData => {
+
+        name.value = userData.fullname;
+        email.value = userData.email;
+        password.value = userData.password;
+       console.log( userData.birthday);
+        birthday.value = userData.birthday
+    })
+    .catch(error => {
+        console.log("Error al obtener datos del usuario", error)
+    });
+
+btn.addEventListener("click", function (e) {
 
     const lettersRegExp = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
     const nRegExp = /^\d{10,14}$/;

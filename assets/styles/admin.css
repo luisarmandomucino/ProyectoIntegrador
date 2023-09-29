@@ -168,13 +168,13 @@
 
 .header-pedido {
     display: grid;
-    grid-template-columns: 7.5% 20% 15% 32.5% 25%;
+    grid-template-columns: 10% 25% 35% 30% ;
     align-items: center;
 }
 
 .header-pedido-layout {
     font-weight: 900;
-}
+} 
 
 a.icon-link>i.bi {
     height: fit-content;

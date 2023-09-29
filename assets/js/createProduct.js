@@ -1,7 +1,7 @@
 //---------------Crear producto
 class NewProduct {
-  constructor(name, price, size, stock, disguise, description, photoFile) {
-    this.id = this.calculateProductID();
+  constructor(name, price, size, stock, disguise, description, photoFile,flavor, category) {
+    
     this.name = name;
     this.price = price;
     this.size = size;
@@ -9,7 +9,7 @@ class NewProduct {
     this.hide = disguise;
     this.photo = photoFile;
     this.description = description;
-    this.flavor="Fresa";
+    this.flavor=flavor;
     this.category = {
       id: 1,
       sale: true,
@@ -17,17 +17,17 @@ class NewProduct {
     };
   }
   
-
-/*Calculating ID for each product*/
-  calculateProductID() {
-    if (localStorage.getItem("products")) {
-      let productos = JSON.parse(localStorage.getItem("products"));
-      return (parseInt(productos[productos.length - 1]?.id) + 1) || 0;
-    } else {
-      return 0;
-    }
-  };
 }
+
+// /*Calculating ID for each product*/
+//   calculateProductID() {
+//     if (localStorage.getItem("products")) {
+//       let productos = JSON.parse(localStorage.getItem("products"));
+//       return (parseInt(productos[productos.length - 1]?.id) + 1) || 0;
+//     } else {
+//       return 0;
+//     }
+//   };
 
 /*Function to save data in LS*/
 //   loadDataLocalStorage() {
@@ -48,8 +48,11 @@ let urlImg = "";
 const img = document.getElementById("photoFile");
 const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dxoltjl8n/image/upload";
 const CLOUDINARY_UPLOAD_PRESET = "sues4ajl";
+const button = document.getElementById("save-button");
 
 img.addEventListener("change",  async (e)=> {
+  button.disabled=true;
+  button.classList.add("invisible");
   const file = e.target.files[0];
   const formData = new FormData();
   formData.append("file", file);
@@ -68,6 +71,8 @@ img.addEventListener("change",  async (e)=> {
     urlImg = res.data.url;
      img.setAttribute("data-url", urlImg);
     console.log(urlImg);
+    button.disabled=false;
+    button.classList.remove("invisible");
   // const formdata = new FormData();
   // formdata.append("image",e.target.files[0]);
 
@@ -116,6 +121,7 @@ async function createProduct (product) {
 /********************************************* */
 
 const form = document.getElementById("formCreateProduct");
+
 form.addEventListener("submit", function (event) {
 
   const infoErrorBox = document.getElementById('form-error-info');
@@ -126,6 +132,8 @@ form.addEventListener("submit", function (event) {
   const disguiseInput = document.getElementById('disguise').value;
   const descriptionInput = document.getElementById('description').value;
  const dataUrl = img.getAttribute("data-url");
+ const flavor = document.getElementById("flavor").value;
+ const category = document.getElementById("category").value;
 
   const lettersRegExp = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
   const nRegExp = /^\d{1,}$/;
@@ -199,7 +207,7 @@ form.addEventListener("submit", function (event) {
       stockNewProduct.value,
       disguiseNewProduct.value,
       descriptionNewProduct.value,
-      dataUrl)
+      dataUrl,flavor,category)
 
     createProduct(productInf);
   }

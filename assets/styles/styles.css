@@ -228,3 +228,61 @@
         margin-top: 150px;
     }
 }
+
+.card-description {
+    font-family: "Cherry Bomb One";
+    color: black;
+    font-size: 25px;
+}
+
+.grid-products-containerStart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+   
+}
+
+.grid-product-item {
+    display: block;
+    margin-bottom: 80px ;
+}
+
+
+
+
+@media(max-width: 500px) {
+    .grid-products-containerStart {
+        display: block;
+    }
+}
+
+
+@media(max-width:767px) {
+
+    .grid-products-containerStart{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:991px) {
+   
+    .section-products {
+        margin-left: 0;
+        margin-top: 50px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+}
+
+.products-conteiner img{
+    max-height: 200px;
+    max-width: fit-content;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}

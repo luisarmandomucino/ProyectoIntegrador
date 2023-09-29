@@ -59,10 +59,13 @@ async function getAllProducts(){
     
     }
 
+
+    
+
 /* Creating cards from array of objects */
 function displayCards(products) {
     let productCards = products.map(product =>
-        `<a href="/assets/pages/product.html" class="grid-product-item text-center">
+        `<a href="/assets/pages/product.html" class="grid-product-item text-center" idProduct="${product.id}">
             <img src="${product.photo}" referrerpolicy="no-referrer" class="card-img-top" alt="Bebida tapioca">
             <div class="card-body">
             <p class="card-description text-center" > ${product.name} </p>
@@ -73,7 +76,17 @@ function displayCards(products) {
     );
     const productosContainer = document.getElementById("grid-products-container");
     productosContainer.innerHTML = productCards.join("");
+
+    const productos = document.querySelectorAll(".grid-product-item");
+    productos.forEach(product=>{
+        product.addEventListener("click",(e)=>{
+            const keyProduct = product.getAttribute("idProduct");
+            localStorage.setItem("idProduct",keyProduct);
+    });
+});
 };
+
+
 
 function createProducts() {
     const products = [];
