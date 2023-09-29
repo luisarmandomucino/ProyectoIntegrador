@@ -32,7 +32,7 @@ class Product {
     };
 };
 
-function downloadDataLocalStorage() {
+/* function downloadDataLocalStorage() {
     if (localStorage.getItem("products")) {
         const products = JSON.parse(localStorage.getItem("products"));
         displayCards(products);
@@ -40,6 +40,24 @@ function downloadDataLocalStorage() {
         createProducts();
     }
 };
+ */
+async function getAllProducts(){
+    const url = "http://localhost:8080/api/products"
+        try {
+            
+            const responseJSON = await fetch(url);
+            console.log(responseJSON.status);
+            const response = await responseJSON.json();
+            console.log(response); 
+            displayCards(response)      
+            
+            
+        } catch (error) {
+            console.log(error);
+        }
+    
+    
+    }
 
 /* Creating cards from array of objects */
 function displayCards(products) {
@@ -92,5 +110,7 @@ function createProducts() {
     product.loadDataLocalStorage();
 }
 
-downloadDataLocalStorage();
+//downloadDataLocalStorage();    
+getAllProducts()
+    
 

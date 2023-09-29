@@ -7,9 +7,16 @@ class NewProduct {
     this.size = size;
     this.stock = stock;
     this.hide = disguise;
-    this.description = description;
     this.photo = photoFile;
+    this.description = description;
+    this.flavor="Fresa";
+    this.category = {
+      id: 1,
+      sale: true,
+      outstanding: true,
+    };
   }
+  
 
 /*Calculating ID for each product*/
   calculateProductID() {
@@ -20,42 +27,91 @@ class NewProduct {
       return 0;
     }
   };
+}
 
 /*Function to save data in LS*/
-  loadDataLocalStorage() {
-    let products;
-    if (localStorage.getItem("products")) {
+//   loadDataLocalStorage() {
+//     let products;
+//     if (localStorage.getItem("products")) {
      
-      products = JSON.parse(localStorage.getItem("products"));
-      products.push(this);
-    } else {
-      products = [this];
-    }
-    localStorage.setItem("products", JSON.stringify(products));
-  };
-};
+//       products = JSON.parse(localStorage.getItem("products"));
+//       products.push(this);
+//     } else {
+//       products = [this];
+//     }
+//     localStorage.setItem("products", JSON.stringify(products));
+//   };
+// };
 
 /*uploaded image*/
-let url="";
+let urlImg = "";
 const img = document.getElementById("photoFile");
-img.addEventListener("change",  (e)=> {
-  const formdata = new FormData();
-  formdata.append("image",e.target.files[0]);
+const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dxoltjl8n/image/upload";
+const CLOUDINARY_UPLOAD_PRESET = "sues4ajl";
 
-  fetch("https://api.imgur.com/3/image",{
-    method: "post",
-    body: formdata,
-    headers: {
-        Authorization: `Client-ID 93949727e1e8d5f`
-    },
-  }
+img.addEventListener("change",  async (e)=> {
+  const file = e.target.files[0];
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
+
+   const res = await axios.post(
+        CLOUDINARY_URL,
+        formData,
+        {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            },
+
+        }
+    );
+    urlImg = res.data.url;
+     img.setAttribute("data-url", urlImg);
+    console.log(urlImg);
+  // const formdata = new FormData();
+  // formdata.append("image",e.target.files[0]);
+
+  // fetch("https://api.imgur.com/3/image", {
+  //   method: "post",
+  //   body: formdata,
+  //   headers: {
+  //     Authorization: `Client-ID c441a4c0ed1d8f4`,
+  //   },
+  // })
+  //   .then((data) => data.json())
+  //   .then((data) => {
+  //     urlImg = data.data.link;
+  //     img.setAttribute("data-url", urlImg);
+  //     console.log(urlImg);
+  //   });
+
   
-  ).then(data=>data.json()).then(data=>{
-      url=data.data.link
-      img.setAttribute("data-url",url);
-      console.log(url);
-  });
 });
+
+ // solicitud post 
+const url = "http://localhost:8080/api/products"; 
+
+async function createProduct (product) {
+
+    try {
+        const response = await fetch (url, {
+            method: "POST", 
+            headers: { 'Content-Type': 'application/json' ,
+        }
+        ,
+        body: JSON.stringify(product)
+    });    
+        if (response.ok) {
+            const data = await response.json();
+        } else {
+            console.error("Error al crear producto");
+        }
+    }catch (error) {
+        console.error("Error de red: ", error);
+    } 
+}
+
+
 
 /********************************************* */
 
@@ -118,7 +174,7 @@ form.addEventListener("submit", function (event) {
     message.push("<p class='alert'>Ingrese la descripcion del producto</p>");
   }
 
-  if (url=="") {
+  if (urlImg == "") {
     message.push("<p class='alert'>Hace falta agregar la foto</p>");
   }
 
@@ -128,14 +184,14 @@ form.addEventListener("submit", function (event) {
   if (message != []) { 
     event.preventDefault();
   } else { 
-    console.log("holi")
+
     const nameNewProduct = document.getElementById("nom-producto");
     const sizeNewProduct = document.getElementById("size");
     const stockNewProduct = document.getElementById("stock");
     const disguiseNewProduct = document.getElementById("disguise");
     const descriptionNewProduct = document.getElementById("description");
     const priceNewProduct = document.getElementById("price");
-   
+
     const productInf = new NewProduct(
       nameNewProduct.value,
       priceNewProduct.value,
@@ -145,7 +201,7 @@ form.addEventListener("submit", function (event) {
       descriptionNewProduct.value,
       dataUrl)
 
-    productInf.loadDataLocalStorage();
+    createProduct(productInf);
   }
 
 });

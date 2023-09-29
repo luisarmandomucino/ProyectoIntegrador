@@ -1,11 +1,12 @@
 class User {
-    constructor(name, phone, email, password, birthday) {
-        this.id = this.calculateID();
-        this.name = name;
-        this.phone = phone;
+    constructor(fullname, phone_number, email, password, birthday) {
+        //this.id = this.calculateID();
+        this.fullname = fullname;
+        this.phone_number = phone_number;
         this.email = email;
         this.password = password;
         this.birthday = birthday;
+        this.role = 0;
     }
 
     calculateID() {
@@ -17,7 +18,7 @@ class User {
             return 0;
         }
     }
-
+/*
     loadDataLocalStorage() {
         let users;
         if (localStorage.getItem("users")) {
@@ -38,11 +39,13 @@ class User {
         } else {
             return false;
         }
-    }
+    }*/
 };
 
 const btn = document.getElementById("form-button");
 btn.addEventListener("click", function (e) {
+
+    e.preventDefault()
 
     const name = document.getElementById("full-name");
     const email = document.getElementById("mail");
@@ -132,7 +135,7 @@ btn.addEventListener("click", function (e) {
         e.preventDefault(); 
     } else { 
         const user = new User(name.value, phone.value, email.value, password.value, birthday.value);
-        if (user.emailExists()) { 
+        /* if (user.emailExists()) { 
             e.preventDefault();
             const errorMessage = document.getElementById("error-email");
             errorMessage.innerHTML = "<p class='alert mt-3'>Ese email ya existe, intenta con otro</p>";
@@ -140,9 +143,60 @@ btn.addEventListener("click", function (e) {
             const errorMessage = document.getElementById("error-email");
             errorMessage.innerHTML = "";
             user.loadDataLocalStorage();
-        }
+        } */
+        console.log(user);
+        
+        postUser(user)
+        
     }
-}
-);
+});
+
+/* Solicitud get */
+
+
+const urlUsers = "http://localhost:8080/api/user"
+async function getUsers ( url ){
+    try{
+        const responseJSON = await fetch( url );
+        console.log(responseJSON.status);
+        const response = await responseJSON.json();
+        console.log( response );
+    }
+    catch( error ){
+       console.error(error);
+    }
+           
+   };
+   getUsers(urlUsers);
+
+
+
+
+
+   //solicitud Post
+async function postUser (users) {
+    const url = 'http://localhost:8080/api/user'
+    try{
+        const response = await fetch (url, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(users)
+            
+        });
+
+    } catch (error){
+        console.warn(error);
+    }
+};
+
+const urlSignup = "http://localhost:8080/api/user/signup";
+const userData = {
+    Name: 'Allan Espitia',
+    email: 'espitiaallan@gmail.com',
+    password: 'dia123',
+    passwordConfirmation: 'dia123',
+    birthday: '30-10-1997',
+    phone_number: '3333947714'
+};
 
 
