@@ -1,5 +1,41 @@
 
 /* getUserById */
+let productos;
+
+async function getAllProducts(){
+    const url = "http://localhost:8080/api/products"
+    try {
+        
+        const responseJSON = await fetch(url);
+        //console.log(responseJSON.status);
+        if(responseJSON.ok){
+            productos = await responseJSON.json();
+
+            //productos = response;    
+        }
+        //console.log(response); 
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+const urlOrderHasProduct = "http://localhost:8080/api/ordershasproducts";
+async function getOrdersHasProducts( url ){
+    try {
+        const responseJSON = await fetch( url );
+        const response = await responseJSON.json(); 
+        orderProducts=response;
+    } catch(error) {
+        console.error(error);
+    }
+}
+
+getAllProducts();
+getOrdersHasProducts(urlOrderHasProduct); 
+
 async function getUserById(id){
     try {
         const url='http://localhost:8080/api/user/'+ id;
@@ -91,111 +127,79 @@ if(userData){
     console.log("no hay datos");
 }
 
-/* async function getProfile() {
-    try {
-        const user = await getUserById(storedId);
-       
-        if(user) {
-            userData = user;
-        
-        
-        
-        fullname.value = profileData.fullname;
-        email.value = profileData.email;
-       }
-    } catch (error) {
-        console.log(error);
-    }
-} */
 
-//getProfile();  Llamada a la función para obtener el perfil
-
-/* 
-// render mi perfil
-
-const name = document.getElementById("name");
-const email = document.getElementById("correo");
-
-function getProfile() {
-    fetch ("http://localhost:8080/api/user/2")
-    .then (response => response.json())
-    .then(userData => {
-        name.value = userData.fullname;
-        email.value= userData.email;
-    })
-    .catch(error => {
-        console.log("Error al obtener datos del usuario", error);
-    });
-
-}
-
-async function getOrderById(orderId){
-    const orderUrl = "http://localhost:8080/api/orders/" + orderId;
-    try{
-        const response = await fetch(orderUrl);
-        
-        if (!response.ok) {
-            throw new Error("Error");
-        }
-
-        const order = await response.json();
-        //console.table(order);
-        return order;
-    } catch(error) {
-        throw error;
-    }
-}*/
-
+let order;
 async function getOrders(){
     const orderUrl = "http://localhost:8080/api/orders";
     try{
-        const response = await fetch(orderUrl);
+        const response1 = await fetch(orderUrl);
         
-        if (!response.ok) {
-            throw new Error("Error");
+        if (response1.ok) {
+      
+            const order = await response1.json();
+            console.log(order);
+            showOrder((order));
         }
 
-        const order = await response.json();
-        console.table(order);
+   
 
-        showOrder(order);
-        return order;
+       
     } catch(error) {
         throw error;
     }
 }
-async function getOrdersByUserId(userId){
-    try {
-        const orders = await getOrders();
 
-        const ordersMatch = orders.filter(order => order.userData.user_id=== userId);
+getOrders();
 
-        if(ordersMatch.length === 0) {
-            console.log("no exiten ordenes");
-            return;
-        }
 
-        showOrder(ordersMatch);
-    }catch(error){
-        console.error(error);
-    }
-
+let orderProducts;
 function showOrder(orderId){ 
-    //  No puede ser el mismo nombre que tu parámetro: orderId
-    let orderHTML = orderId.map( ord =>
-      
-        `
+
+    const userID = parseInt((localStorage.getItem("userID")));
+    orderId = orderId.filter(value=>value.fk_user_id==userID);
+    console.log(orderId);
+
+    console.log(productos)
+    console.log(orderProducts)
+
+
+    let products = orderProducts.map(value=>{
+
+        return value.product;
+    });
+    const productsArea = document.getElementById("listProducts");
+    
+    console.log(products);
+  
+    //productos = productos.filter(value=>products.includes(value.id));
+
+    //  products = orderProducts.map((value,index)=>{
+
+    //     return `${productos[index].name} x ${value.quantity}\n `;
+    // });
+
+    //productsArea.innerHTML=(products.join(""));
+
+    let orderHTML = orderId.map( ord =>{
+      let productsOrder=orderProducts.filter(value=>value.order==ord.order_id);
+    
+      productOrder=productsOrder.map(value=>value.product);
+       //productsOrder=Object.values(productsOrder).join("");
+       productOrder=productos.filter(value=>productOrder.includes(value.id));
+       productOrder=productOrder.map(value=>value.name)
+      console.log(productOrder);
+      return  `
         <div class="p-0 m-0 col-12 header-pedido">
             <div class="m-0-p-0 d-flex  justify-content-center">
-              <p class="m-0 p-0">${ord.order_id}</p>
+              <p class="m-0 p-0">${ord.total_amount}</p>
             </div>
 
             <div class="m-0 p-0 d-flex align-items-center justify-content-center">
-              <p class="m-0 p-0">${ord.total_amount}</p>
+              <p class="m-0 p-0">${ord.purchase_date}</p>
             </div>
             
             <div class="m-0 p-0 d-flex align-items-center justify-content-center">
-              <p class="m-0 p-0">${ord.purchase_date}</p>
+              <p class="m-0 p-0">${productOrder}</p>
             </div>
 
             <div class="icons icon-actions-products text-center m-0 p-0">        
@@ -203,15 +207,13 @@ function showOrder(orderId){
                     <i class="bi bi-eye-fill"></i>
                 </a>          
        
-                <a class="icon-link deleteOrder p-0 " aria-current="page" idOrder="${ord.order_id}" href="./admin.html">
-                    <i class="bi bi-x-square-fill"></i>
-                </a> 
+                
             </div>
           </div>
-        `
-    );
+        `}
+);
 
-    const orderContainer=document.getElementById("order-container");
+    const orderContainer=document.getElementById("order-conteiner");
     orderContainer.innerHTML=orderHTML.join("");
 
     const checkoutOrder = document.querySelectorAll(".checkoutOrder");
@@ -222,40 +224,4 @@ function showOrder(orderId){
 
 }
 
-}
 
-getOrdersByUserId(2);
-//getOrders(); 
-
-
-
-/* 
-    const ordersContainer = document.querySelector(".header-pedido");
-    console.log(orders); //No imprime nada
-    ordersContainer.innerHTML = `
-        
-    `;
-
-    orders.forEach (order => {
-        const orderRow= document.createElement("div");
-        orderRow.classList.add ("p-0", "col-12", "header-order");
-
-        const id = createTableCell(order.id); //No existe createTableCell
-        const quantity = createTableCell(order.quantity)
-        const price = createTableCell(`${order.price_product}`);
-        const products = createTableCell(order.fk_product_id);
-
-        orderRow.appendChild(id);
-        orderRow.appendChild(quantity);
-        orderRow.appendChild(price);
-        orderRow.appendChild(products);
-
-        ordersContainer.appendChild(orderRow);
-
-        ordersContainer.classList.remove("hidden");
-
-   
-
-    })
-
-}*/

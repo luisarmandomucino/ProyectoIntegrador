@@ -54,14 +54,6 @@
     border-radius: 15px;
 }
 
-
-
-
-
-
-
-
-
 .pedidos h2 {
     color: black;
 }
@@ -72,7 +64,7 @@
 
 .header-pedido{
     display: grid;
-    grid-template-columns: 10% 15% 35% 20% 10%;
+    grid-template-columns: 10% 15% 60% 15% ;
     align-items: center;
 }
 

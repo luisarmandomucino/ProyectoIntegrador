@@ -1,71 +1,32 @@
-class Product {
-    constructor(name, price, size, stock, hide, photo, description) {
-        this.id = this.calculateProductID();
-        this.name = name;
-        this.price = price;
-        this.size = size;
-        this.stock = stock;
-        this.hide = hide;
-        this.photo = photo;
-        this.description = description;
-    };
-    /* Calculating ID for each product */
-    calculateProductID() {
-        if (localStorage.getItem("products")) {
-            let productos = JSON.parse(localStorage.getItem("products"));
-            return parseInt(productos[productos.length - 1].id) + 1;
-        } else {
-            return 0;
+obtenerProductos();
+function obtenerProductos() {
+
+    const apiUrl = 'http://localhost:8080/api/products';
+
+    // Realizar la solicitud POST con el objeto JSON como cuerpo
+    fetch(apiUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("La solicitud no fue exitosa");
         }
-    };
-    /* Function to save data in LS */
-    loadDataLocalStorage() {
-        let arrayOfProducts = [];
-        let products;
-        if (localStorage.getItem("products")) {
-            products = JSON.parse(localStorage.getItem("products"));
-            products.push(this);
-        } else {
-            products = [this];
-        }
-        localStorage.setItem("products", JSON.stringify(products));
-    };
-};
+        return response.json();
+      })
+      .then((responseData) => {
+        console.log("responseData");
 
-/* function downloadDataLocalStorage() {
-    if (localStorage.getItem("products")) {
-        const products = JSON.parse(localStorage.getItem("products"));
-        displayCards(products);
-    } else { 
-        createProducts();
-    }
-};
- */
-async function getAllProducts(){
-    const url = "http://localhost:8080/api/products"
-        try {
-            
-            const responseJSON = await fetch(url);
-            console.log(responseJSON.status);
-            const response = await responseJSON.json();
-            console.log(response); 
-            displayCards(response)      
-            
-            
-        } catch (error) {
-            console.log(error);
-        }
-    
-    
-    }
+        console.log(responseData);
+        mostrarProductos(responseData);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+
+}
 
 
-    
-
-/* Creating cards from array of objects */
-function displayCards(products) {
+function mostrarProductos(products) {
     let productCards = products.map(product =>
-        `<a href="/assets/pages/product.html" class="grid-product-item text-center" idProduct="${product.id}">
+        `<a href="../pages/product.html?productoId=${product.id}" onclick="saveIdLocalStorage(${product.id})"  class="grid-product-item text-center">
             <img src="${product.photo}" referrerpolicy="no-referrer" class="card-img-top" alt="Bebida tapioca">
             <div class="card-body">
             <p class="card-description text-center" > ${product.name} </p>
@@ -76,54 +37,12 @@ function displayCards(products) {
     );
     const productosContainer = document.getElementById("grid-products-container");
     productosContainer.innerHTML = productCards.join("");
-
-    const productos = document.querySelectorAll(".grid-product-item");
-    productos.forEach(product=>{
-        product.addEventListener("click",(e)=>{
-            const keyProduct = product.getAttribute("idProduct");
-            localStorage.setItem("idProduct",keyProduct);
-    });
-});
 };
 
 
+function saveIdLocalStorage(id){
 
-function createProducts() {
-    const products = [];
-    let product;
-
-    product = new Product("Caramelo", "80", "grande", 50, 1, "/assets/img/carmelo.webp", "Dulce bebida con perlas de tapioca en caramelo suave y delicioso.");
-    product.loadDataLocalStorage();
-
-    product = new Product("Explosión de chocolate", "70", "grande", 50, 1, "/assets/img/chocolate.webp", "Sedosa bebida con perlas de tapioca sumergidas en un cremoso y rico chocolate.")
-    product.loadDataLocalStorage();
-
-    product = new Product("Fresa Refresher", "60", "grande", 50, 1, "/assets/img/fresaRefresher.webp", "Refrescante bebida con perlas de tapioca en aroma y sabor a fresa jugosa.")
-    product.loadDataLocalStorage();
-
-    product = new Product("Granada", "50", "grande", 50, 1, "/assets/img/granada.webp", "Vibrante bebida con perlas de tapioca y el dulzor único de la granada.")
-    product.loadDataLocalStorage();
-
-    product = new Product("Ken", "90", "grande", 50, 1, "/assets/img/ken.webp", "Refrescante bebida con perlas de tapioca en sabor a uva jugosa y dulce.");
-    product.loadDataLocalStorage();
-
-    product = new Product("Mora Azul", "70", "grande", 50, 1, "/assets/img/moraazul.webp", "Deliciosa bebida con perlas de tapioca y el sabor agridulce de las moras azules.");
-    product.loadDataLocalStorage();
-
-    product = new Product("Kiwi Refresher", "80", "grande", 50, 1, "/assets/img/kiwirefresher.webp", "Refrescante bebida con perlas de tapioca en sabor a kiwi tropical y vivaz.");
-    product.loadDataLocalStorage();
-
-    product = new Product("Maracuyá", "60", "grande", 50, 1, "/assets/img/maracuya.webp", "Exótica bebida con perlas de tapioca y el sabor audaz del maracuyá.");
-    product.loadDataLocalStorage();
-
-    product = new Product("Maracuyá", "60", "grande", 50, 1, "/assets/img/maracuya.webp", "Exótica bebida con perlas de tapioca y el sabor audaz del maracuyá.");
-    product.loadDataLocalStorage();
-
-    product = new Product("Vanilla", "65", "grande", 50, 1, "/assets/img/vanilla.webp", " Suave bebida con perlas de tapioca y el delicado aroma de la vainilla.");
-    product.loadDataLocalStorage();
+    localStorage.setItem("idProductSaved", id)
 }
 
-//downloadDataLocalStorage();    
-getAllProducts()
-    
-
+//../pages/product.html?productoId=${product.id}

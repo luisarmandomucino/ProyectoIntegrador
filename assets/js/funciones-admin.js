@@ -16,9 +16,9 @@ async function getAllProducts(){
     try {
         
         const responseJSON = await fetch(url);
-        //console.log(responseJSON.status);
+      
         const response = await responseJSON.json();
-        //console.log(response); 
+     
         showProducts(response)      
         
         

@@ -39,8 +39,8 @@
   <body>
 
     <!-- Bootstrap Nav Bar -->
-    <nav class="navbar navbar-expand-lg p-0">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg m-0 p-0">
+      <div class="container-fluid m-0">
         <a class="navbar-brand" href="/index.html"
           ><img src="/assets/img/bubble_bear_logo.png" alt="Logo Bubble Bear"
         /></a>
@@ -66,7 +66,10 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-end" href="/assets/pages/products.html"
+              <a
+                class="nav-link text-end"
+                aria-current="page"
+                href="/assets/pages/products.html"
                 >Productos</a
               >
             </li>
@@ -93,10 +96,30 @@
                 href="/assets/pages/login.html"
                 >Login</a
               >
-            <li class="nav-item">
-                <a class="nav-link text-end" aria-current="page"
-                    href="/assets/pages/admin.html">Administrador</a>
             </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-end"
+                aria-current="page"
+                href="/assets/pages/profile.html"
+                >Mi Perfil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-end"
+                aria-current="page"
+                href="/assets/pages/admin.html"
+                >Administrador</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-end"
+                aria-current="page"
+                href="/index.html"
+                >Cerrar Sesión</a
+              >
             </li>
             <li class="nav-item">
               <a
@@ -315,5 +338,6 @@
     ></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/assets/js/editProduct.js"></script>
+    <script src="/assets/js/navBar.js"></script>
   </body>
 </html>

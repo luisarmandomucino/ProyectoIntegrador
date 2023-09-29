@@ -17,17 +17,17 @@ class NewProduct {
     };
   }
   
-}
 
-// /*Calculating ID for each product*/
-//   calculateProductID() {
-//     if (localStorage.getItem("products")) {
-//       let productos = JSON.parse(localStorage.getItem("products"));
-//       return (parseInt(productos[productos.length - 1]?.id) + 1) || 0;
-//     } else {
-//       return 0;
-//     }
-//   };
+
+/*Calculating ID for each product*/
+  calculateProductID() {
+    if (localStorage.getItem("products")) {
+      let productos = JSON.parse(localStorage.getItem("products"));
+      return (parseInt(productos[productos.length - 1]?.id) + 1) || 0;
+    } else {
+      return 0;
+    }
+  };
 
 /*Function to save data in LS*/
 //   loadDataLocalStorage() {
@@ -42,7 +42,7 @@ class NewProduct {
 //     localStorage.setItem("products", JSON.stringify(products));
 //   };
 // };
-
+}
 /*uploaded image*/
 let urlImg = "";
 const img = document.getElementById("photoFile");

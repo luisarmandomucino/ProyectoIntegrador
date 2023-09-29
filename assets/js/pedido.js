@@ -47,8 +47,8 @@ async function getAllProducts(){
 
 function print1(orderProducts){
     const idOrder=localStorage.getItem("orderId");
-    orderProducts=orderProducts.filter(order=>order.order == (idOrder));
     console.log(orderProducts)
+    orderProducts=orderProducts.filter(order=>order.order == (parseInt(idOrder)));
     const cantidad = document.getElementById("quantities");
     const sum=orderProducts.reduce((accumulator,value)=>accumulator+parseInt(value.quantity),0);
 

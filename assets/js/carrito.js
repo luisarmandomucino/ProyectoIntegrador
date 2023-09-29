@@ -185,7 +185,7 @@ calcularTotal();
 botonSubmit = document.getElementById("carrito-submit");
 botonSubmit.addEventListener("click", (e) => {
 
-    e.preventDefault();
+    //e.preventDefault();
     if(!localStorage.getItem("carrito")||JSON.parse( localStorage.getItem("carrito")).length<1 ){
     
         const Toast = Swal.mixin({
@@ -214,21 +214,21 @@ botonSubmit.addEventListener("click", (e) => {
     }
 
     postOrders(orders1);
-
-    getOrders();
+    setTimeout(()=>{   getOrders();},500);
+ 
 
     //postOrders(orderObject);
 
    
     calcularTotal();
-    //localStorage.removeItem("carrito");
+    localStorage.removeItem("carrito");
 });
 
 function getAllOrders(orders){
      let carrito = JSON.parse( localStorage.getItem("carrito"));
   
+     console.log(orders);
     orders=(orders[orders.length-1])
-    console.log(orders);
     const precioProductos = document.querySelectorAll(".precio-producto");
     const cantidadProductos = document.querySelectorAll(".cantidad");
     let orderProducts;

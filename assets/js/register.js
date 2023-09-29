@@ -1,6 +1,6 @@
 class User {
     constructor(fullname, phone_number, email, password, birthday) {
-        //this.id = this.calculateID();
+        this.id = this.calculateID();
         this.fullname = fullname;
         this.phone_number = phone_number;
         this.email = email;
@@ -18,7 +18,7 @@ class User {
             return 0;
         }
     }
-/*
+
     loadDataLocalStorage() {
         let users;
         if (localStorage.getItem("users")) {
@@ -39,13 +39,12 @@ class User {
         } else {
             return false;
         }
-    }*/
+    }
 };
 
 const btn = document.getElementById("form-button");
 btn.addEventListener("click", function (e) {
 
-    e.preventDefault()
 
     const name = document.getElementById("full-name");
     const email = document.getElementById("mail");
@@ -135,7 +134,7 @@ btn.addEventListener("click", function (e) {
         e.preventDefault(); 
     } else { 
         const user = new User(name.value, phone.value, email.value, password.value, birthday.value);
-        /* if (user.emailExists()) { 
+         if (user.emailExists()) { 
             e.preventDefault();
             const errorMessage = document.getElementById("error-email");
             errorMessage.innerHTML = "<p class='alert mt-3'>Ese email ya existe, intenta con otro</p>";
@@ -143,7 +142,7 @@ btn.addEventListener("click", function (e) {
             const errorMessage = document.getElementById("error-email");
             errorMessage.innerHTML = "";
             user.loadDataLocalStorage();
-        } */
+        } 
         console.log(user);
         
         postUser(user)
@@ -153,7 +152,7 @@ btn.addEventListener("click", function (e) {
 
 /* Solicitud get */
 
-
+/* 
 const urlUsers = "http://localhost:8080/api/user"
 async function getUsers ( url ){
     try{
@@ -200,3 +199,4 @@ const userData = {
 };
 
 
+ */

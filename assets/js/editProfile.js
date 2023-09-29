@@ -62,6 +62,7 @@ fetch("http://localhost:8080/api/user/2")
         name.value = userData.fullname;
         email.value = userData.email;
         password.value = userData.password;
+        passwordConfirmation.value= userData.password;
        console.log( userData.birthday);
         birthday.value = userData.birthday
     })
