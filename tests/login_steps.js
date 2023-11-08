@@ -17,7 +17,7 @@ After(async function() {
 });
 
 Given("I am on the home page", async function() {
-    await driver.get("http://localhost:5500/index.html")
+    await driver.get("http://localhost:5500/index.html");
 });
 
 When("I click on the login button", async function() { 
